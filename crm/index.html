@@ -1293,6 +1293,9 @@ function renderStreetView(h) {
   const img = document.createElement('img');
   img.style.cssText = 'width:100%;height:180px;object-fit:cover;display:block;';
   img.alt = 'Street View — ' + h.address;
+  // CRITICAL: set referrerPolicy BEFORE src so the full URL is sent as Referer.
+  // Browser default policy strips the path, breaking the *country-club-services/* referrer match.
+  img.referrerPolicy = 'no-referrer-when-downgrade';
   img.src = `https://maps.googleapis.com/maps/api/streetview?size=400x250&location=${h.lat},${h.lng}&fov=80&heading=0&pitch=0&key=${apiKey}`;
   img.onerror = function() {
     this.style.display = 'none';
