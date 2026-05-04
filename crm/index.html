@@ -1579,9 +1579,16 @@ function handleFileSelect(e) {
 }
 
 function parseCSVFile(file) {
+  console.log('[CCS-CRM] parseCSVFile: file=', file?.name, 'size=', file?.size);
   const reader = new FileReader();
+  reader.onerror = function(e) {
+    console.error('[CCS-CRM] FileReader error:', e);
+    showToast('Could not read file', 'error');
+  };
   reader.onload = function(e) {
+    console.log('[CCS-CRM] FileReader loaded; bytes=', e.target.result?.length);
     const lines = e.target.result.split('\n').map(l => l.trim()).filter(l => l && !l.startsWith('#'));
+    console.log('[CCS-CRM] non-comment lines:', lines.length);
     if (lines.length < 2) { showToast('CSV appears empty', 'error'); return; }
 
     const headers = lines[0].split(',').map(h => h.trim().toLowerCase().replace(/\s+/g, '_'));
@@ -1898,11 +1905,68 @@ document.addEventListener('keydown', e => {
 });
 
 // ========================================
+// AUTO-LOAD on first run (empty localStorage → fetch neighborhood.csv)
+// ========================================
+async function autoLoadNeighborhoodCSV() {
+  if (houses.length > 0) {
+    console.log('[CCS-CRM] localStorage already populated:', houses.length, 'houses — skipping auto-load');
+    return;
+  }
+  console.log('[CCS-CRM] Empty localStorage — auto-loading neighborhood.csv');
+  try {
+    const res = await fetch('../data/neighborhood.csv');
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const csvText = await res.text();
+    const lines = csvText.split('\n').map(l => l.trim()).filter(l => l && !l.startsWith('#'));
+    if (lines.length < 2) throw new Error('CSV has no data rows');
+    const headers = lines[0].split(',').map(h => h.trim().toLowerCase().replace(/\s+/g, '_'));
+    const VALID_STATUSES = ['not-contacted','knocked-no-answer','pitched-thinking','declined','booked','active-customer','do-not-knock'];
+    const newHouses = [];
+    for (let i = 1; i < lines.length; i++) {
+      const vals = lines[i].split(',').map(v => v.trim());
+      const row = {};
+      headers.forEach((h, idx) => { row[h] = vals[idx] || ''; });
+      if (!row.address) continue;
+      const slug = row.address.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      newHouses.push({
+        id: slug + '-' + i,
+        address: row.address,
+        household_name: row.household_name || '',
+        phone: row.phone || '',
+        email: row.email || '',
+        status: VALID_STATUSES.includes(row.status) ? row.status : 'not-contacted',
+        services_interested: [],
+        active_services: [],
+        first_contact_date: '',
+        last_contact_date: '',
+        next_follow_up: '',
+        notes: row.notes || '',
+        service_history: [],
+        tags: [],
+        lat: row.lat || '',
+        lng: row.lng || '',
+        geocode_status: row.geocode_status || '',
+      });
+    }
+    houses = newHouses;
+    saveData();
+    console.log('[CCS-CRM] Auto-loaded', newHouses.length, 'houses');
+    if (typeof showToast === 'function') showToast('Loaded ' + newHouses.length + ' houses from neighborhood.csv', 'success');
+    updateCounts();
+    renderList();
+    if (typeof renderMap === 'function') renderMap();
+  } catch (e) {
+    console.warn('[CCS-CRM] Auto-load failed (you can still import manually via the Import button):', e.message);
+  }
+}
+
+// ========================================
 // INIT
 // ========================================
 loadData();
 updateCounts();
 renderList();
+autoLoadNeighborhoodCSV();
 </script>
 </body>
 </html>
