@@ -4,6 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 <title>Country Club Services — CRM</title>
+
+<!-- Leaflet 1.9.4 — no API key needed, OpenStreetMap tiles -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
 <style>
 /* ===== BRAND TOKENS ===== */
 :root {
@@ -270,6 +274,21 @@ body {
 }
 .followup-dot.visible { display: block; }
 
+/* ===== GET DIRECTIONS BUTTON ===== */
+.btn-directions {
+  background: transparent;
+  border: 1.5px solid var(--gray-200);
+  border-radius: 8px;
+  padding: .28rem .5rem;
+  font-size: .82rem;
+  cursor: pointer;
+  color: var(--gray-500);
+  line-height: 1;
+  transition: all .15s;
+  flex-shrink: 0;
+}
+.btn-directions:hover { border-color: var(--green); color: var(--green); background: var(--green-light); }
+
 /* ===== EMPTY STATE ===== */
 .empty-state {
   text-align: center;
@@ -289,6 +308,68 @@ body {
   font-size: .84rem;
   color: var(--green);
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+.route-stats { font-size: .78rem; color: var(--green-mid); font-weight: 600; }
+
+/* ===== MAP VIEW TAB ===== */
+#mapContainer {
+  display: none;
+  height: calc(100vh - 160px);
+  min-height: 400px;
+  position: relative;
+}
+#mapContainer.active { display: block; }
+#leafletMap { width: 100%; height: 100%; }
+
+/* Map filter toolbar */
+.map-toolbar {
+  position: absolute;
+  top: .75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  gap: .4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  pointer-events: none;
+}
+.map-filter-btn {
+  background: var(--white);
+  border: 2px solid var(--gray-200);
+  border-radius: 100px;
+  padding: .3rem .75rem;
+  font-size: .74rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: var(--shadow);
+  transition: all .15s;
+  pointer-events: all;
+  white-space: nowrap;
+}
+.map-filter-btn:hover { border-color: var(--green); color: var(--green); }
+.map-filter-btn.active { background: var(--green); color: var(--white); border-color: var(--green); }
+.map-no-coords-notice {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: rgba(0,0,0,.75);
+  color: var(--white);
+  padding: .5rem 1rem;
+  border-radius: 100px;
+  font-size: .76rem;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  display: none;
 }
 
 /* ===== DETAIL PANEL (MODAL) ===== */
@@ -342,6 +423,42 @@ body {
   margin: 1rem 0 .4rem;
   border-bottom: 1px solid var(--green-light);
   padding-bottom: .25rem;
+}
+
+/* STREET VIEW THUMBNAIL */
+.street-view-wrap {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: .5rem;
+  background: var(--gray-100);
+  position: relative;
+}
+.street-view-wrap img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.street-view-unavailable {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  color: var(--gray-400);
+  text-align: center;
+  padding: 1rem;
+  line-height: 1.5;
+}
+.street-view-label {
+  position: absolute;
+  bottom: 0; left: 0;
+  background: rgba(0,0,0,.55);
+  color: var(--white);
+  font-size: .65rem;
+  font-weight: 600;
+  padding: .18rem .5rem;
+  letter-spacing: .04em;
 }
 
 /* DOOR-KNOCK ACTION BUTTONS */
@@ -440,6 +557,25 @@ body {
   border-top: 1px solid var(--gray-200);
 }
 
+/* PANEL DIRECTIONS BUTTON */
+.panel-directions-btn {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  background: var(--green-light);
+  border: 1.5px solid #b7d4bf;
+  border-radius: 8px;
+  padding: .45rem .85rem;
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--green);
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: none;
+  transition: all .15s;
+}
+.panel-directions-btn:hover { background: var(--green); color: var(--white); }
+
 /* ===== IMPORT MODAL ===== */
 .modal-overlay {
   display: none;
@@ -477,7 +613,7 @@ body {
 .drop-zone:hover, .drop-zone.drag-over { border-color: var(--green); color: var(--green); background: var(--green-light); }
 .drop-zone .drop-icon { font-size: 2rem; margin-bottom: .4rem; }
 
-/* ===== CONFIRM PANEL (inline, no alert()) ===== */
+/* ===== CONFIRM PANEL (inline, no dialog prompts) ===== */
 .confirm-inline {
   background: var(--red-light);
   border: 1.5px solid var(--red);
@@ -553,13 +689,14 @@ body {
 <div class="tabs">
   <button class="tab active" data-tab="all" onclick="switchTab('all')">All Houses</button>
   <button class="tab" data-tab="route" onclick="switchTab('route')">Today's Route</button>
+  <button class="tab" data-tab="map" onclick="switchTab('map')">Map View</button>
   <button class="tab" data-tab="customers" onclick="switchTab('customers')">Active Customers</button>
   <button class="tab" data-tab="followups" onclick="switchTab('followups')">Follow-ups</button>
   <button class="tab" data-tab="dnk" onclick="switchTab('dnk')">Do-Not-Knock</button>
 </div>
 
-<!-- ===== FILTER ROW ===== -->
-<div class="filter-bar">
+<!-- ===== FILTER ROW (hidden on map tab) ===== -->
+<div class="filter-bar" id="filterBar">
   <input class="search-box" id="searchBox" type="text" placeholder="Search address or name…" oninput="renderList()" />
   <select class="filter-select" id="statusFilter" onchange="renderList()">
     <option value="">All statuses</option>
@@ -579,11 +716,41 @@ body {
   </select>
 </div>
 
-<!-- ===== MAIN LIST ===== -->
+<!-- ===== ROUTE HEADER (only on route tab) ===== -->
 <div id="routeHeader" class="route-header" style="display:none">
-  📍 Today's door-knock route — houses with open status or follow-ups due today, sorted by address
+  <div>
+    📍 Today's door-knock route — sorted by address
+    <div class="route-stats" id="routeStats"></div>
+  </div>
+  <button class="btn btn-sm btn-green" onclick="generateWalkRoute()">🚶 Walking Route</button>
 </div>
+
+<!-- ===== MAP VIEW ===== -->
+<div id="mapContainer">
+  <div class="map-toolbar">
+    <button class="map-filter-btn active" onclick="setMapFilter('all')">All Houses</button>
+    <button class="map-filter-btn" onclick="setMapFilter('not-contacted')">Not Contacted</button>
+    <button class="map-filter-btn" onclick="setMapFilter('active-customer')">Active</button>
+    <button class="map-filter-btn" onclick="setMapFilter('booked')">Booked</button>
+  </div>
+  <div id="leafletMap"></div>
+  <div class="map-no-coords-notice" id="mapNoCoordsNotice">
+    Some houses don't have coordinates yet — run the geocoding script to pin them.
+  </div>
+</div>
+
+<!-- ===== MAIN LIST ===== -->
 <div class="house-list" id="houseList"></div>
+
+<!-- ===== WALKING ROUTE RESULT PANEL ===== -->
+<div id="walkRoutePanel" style="display:none; background:var(--white); border:1px solid var(--gray-200); border-radius:var(--radius); padding:.85rem 1rem; margin:.75rem 1.25rem 0; font-size:.84rem;">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.5rem;">
+    <strong style="color:var(--green)">🚶 Optimized Walking Route</strong>
+    <button class="btn btn-sm btn-ghost" onclick="clearWalkRoute()">✕ Clear</button>
+  </div>
+  <div id="walkRouteSummary" style="font-size:.78rem;color:var(--gray-500);margin-bottom:.6rem;"></div>
+  <ol id="walkRouteList" style="padding-left:1.2rem;font-size:.82rem;line-height:1.8;color:var(--charcoal);"></ol>
+</div>
 
 <!-- ===== DETAIL PANEL ===== -->
 <div class="panel-overlay" id="detailOverlay" onclick="closePanel(event)">
@@ -591,6 +758,17 @@ body {
     <button class="panel-close" onclick="closePanelDirect()">✕</button>
     <div class="panel-title" id="panelAddress">—</div>
     <div class="panel-subtitle" id="panelName">—</div>
+
+    <!-- STREET VIEW THUMBNAIL -->
+    <div id="streetViewSection">
+      <div class="street-view-wrap" id="streetViewWrap">
+        <div class="street-view-unavailable" id="streetViewPlaceholder">Loading street view…</div>
+      </div>
+      <!-- Directions button -->
+      <a class="panel-directions-btn" id="panelDirectionsBtn" href="#" target="_blank" rel="noopener">
+        📍 Get Directions
+      </a>
+    </div>
 
     <div class="section-label">Door-Knock</div>
     <div class="doorknock-grid">
@@ -716,7 +894,7 @@ body {
       <button class="btn btn-sm btn-ghost" style="margin-left:auto;color:var(--red);border-color:var(--red)" onclick="openDeleteConfirm()">Delete House</button>
     </div>
 
-    <!-- DELETE CONFIRM (inline, no confirm()) -->
+    <!-- DELETE CONFIRM (inline, no dialog prompts) -->
     <div class="confirm-inline" id="deleteConfirm">
       <div class="confirm-inline-text">Remove this house from your CRM? This cannot be undone.</div>
       <div class="confirm-inline-actions">
@@ -783,6 +961,12 @@ body {
 
 <!-- ===== TOAST CONTAINER ===== -->
 <div class="toast-container" id="toastContainer"></div>
+
+<!-- config.js provides window.CCS_CONFIG.mapsApiKey (gitignored — see config.example.js) -->
+<script src="config.js" onerror="window.CCS_CONFIG = { mapsApiKey: '' }"></script>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/sp8=" crossorigin=""></script>
 
 <script>
 // ========================================
@@ -890,8 +1074,24 @@ function switchTab(tab) {
   document.getElementById('searchBox').value = '';
 
   const routeHeader = document.getElementById('routeHeader');
-  routeHeader.style.display = tab === 'route' ? 'block' : 'none';
-  renderList();
+  const mapContainer = document.getElementById('mapContainer');
+  const houseList = document.getElementById('houseList');
+  const filterBar = document.getElementById('filterBar');
+  const walkRoutePanel = document.getElementById('walkRoutePanel');
+
+  routeHeader.style.display = tab === 'route' ? 'flex' : 'none';
+  filterBar.style.display = tab === 'map' ? 'none' : 'flex';
+  walkRoutePanel.style.display = 'none';
+
+  if (tab === 'map') {
+    mapContainer.classList.add('active');
+    houseList.style.display = 'none';
+    initMap();
+  } else {
+    mapContainer.classList.remove('active');
+    houseList.style.display = 'flex';
+    renderList();
+  }
 }
 
 // ========================================
@@ -928,7 +1128,6 @@ function getFilteredHouses() {
       !['do-not-knock', 'declined', 'active-customer'].includes(h.status) &&
       (h.next_follow_up ? h.next_follow_up <= todayStr : true)
     );
-    // Sort by address
     list.sort((a, b) => a.address.localeCompare(b.address));
   } else if (currentTab === 'customers') {
     list = list.filter(h => h.status === 'active-customer');
@@ -952,7 +1151,12 @@ function getFilteredHouses() {
   return list;
 }
 
+function getDirectionsUrl(address) {
+  return 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(address + ', West Des Moines, IA');
+}
+
 function renderList() {
+  if (currentTab === 'map') return;
   const list = getFilteredHouses();
   const todayStr = today();
   const container = document.getElementById('houseList');
@@ -963,7 +1167,16 @@ function renderList() {
                   currentTab === 'followups' ? 'No follow-ups due today' :
                   currentTab === 'dnk' ? 'No do-not-knock entries' : 'No houses match your filters';
     container.innerHTML = `<div class="empty-state"><h3>${label}</h3><p>${currentTab === 'all' && houses.length === 0 ? 'Tap "+ House" to add your first address.' : 'Keep knocking! 🚪'}</p></div>`;
+
+    // Update route stats
+    if (currentTab === 'route') {
+      document.getElementById('routeStats').textContent = '0 stops today';
+    }
     return;
+  }
+
+  if (currentTab === 'route') {
+    document.getElementById('routeStats').textContent = `${list.length} stop${list.length !== 1 ? 's' : ''} today`;
   }
 
   container.innerHTML = list.map(h => {
@@ -973,6 +1186,9 @@ function renderList() {
     const followupDot = hasFollowup ? '<span class="followup-dot visible" title="Follow-up due"></span>' : '<span class="followup-dot"></span>';
     const lv = lifetimeValue(h);
     const lvBadge = lv > 0 ? `<span class="service-pill" style="background:var(--green-light);color:var(--green)">$${lv.toFixed(0)}</span>` : '';
+
+    // Directions button — zero API key needed
+    const directionsBtn = `<a class="btn-directions" href="${getDirectionsUrl(h.address)}" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="Get directions">📍</a>`;
 
     return `<div class="house-row status-${h.status}" onclick="openHouse('${h.id}')">
       ${followupDot}
@@ -985,6 +1201,7 @@ function renderList() {
         </div>
       </div>
       <div class="house-row-actions">
+        ${directionsBtn}
         <span style="font-size:.8rem;color:var(--gray-300)">›</span>
       </div>
     </div>`;
@@ -1032,8 +1249,63 @@ function openHouse(id) {
   // Reset delete confirm
   document.getElementById('deleteConfirm').classList.remove('open');
 
+  // Directions button
+  document.getElementById('panelDirectionsBtn').href = getDirectionsUrl(h.address);
+
+  // Street view thumbnail
+  renderStreetView(h);
+
   updateDoorknockHighlight();
   document.getElementById('detailOverlay').classList.add('active');
+}
+
+// ========================================
+// STREET VIEW THUMBNAIL (Feature 3)
+// ========================================
+function renderStreetView(h) {
+  const wrap = document.getElementById('streetViewWrap');
+  const placeholder = document.getElementById('streetViewPlaceholder');
+
+  // Remove any previously inserted image
+  const oldImg = wrap.querySelector('img');
+  if (oldImg) oldImg.remove();
+  const oldLabel = wrap.querySelector('.street-view-label');
+  if (oldLabel) oldLabel.remove();
+
+  const apiKey = window.CCS_CONFIG && window.CCS_CONFIG.mapsApiKey;
+  const isKeyReal = apiKey && !apiKey.includes('{{TBD') && apiKey.length > 10;
+  const hasCoords = h.lat && h.lng && parseFloat(h.lat) !== 0;
+
+  if (!isKeyReal) {
+    placeholder.style.display = 'flex';
+    placeholder.innerHTML = 'Street View available once the Maps API key is set up — ask JDM to provision the browser-restricted key.';
+    return;
+  }
+
+  if (!hasCoords) {
+    placeholder.style.display = 'flex';
+    placeholder.innerHTML = 'No coordinates for this address yet — run the geocoding script to enable Street View.';
+    return;
+  }
+
+  // Key + coords available — render the static Street View image
+  placeholder.style.display = 'none';
+  const img = document.createElement('img');
+  img.style.cssText = 'width:100%;height:180px;object-fit:cover;display:block;';
+  img.alt = 'Street View — ' + h.address;
+  img.src = `https://maps.googleapis.com/maps/api/streetview?size=400x250&location=${h.lat},${h.lng}&fov=80&heading=0&pitch=0&key=${apiKey}`;
+  img.onerror = function() {
+    this.style.display = 'none';
+    placeholder.style.display = 'flex';
+    placeholder.innerHTML = 'Street View image not available for this address.';
+  };
+
+  const label = document.createElement('div');
+  label.className = 'street-view-label';
+  label.textContent = 'STREET VIEW';
+
+  wrap.insertBefore(img, placeholder);
+  wrap.appendChild(label);
 }
 
 function setServiceChecks(containerId, values) {
@@ -1156,7 +1428,6 @@ function saveHouse(silent = false) {
   const h = houses.find(x => x.id === currentHouseId);
   if (!h) return;
 
-  const oldStatus = h.status;
   h.address = document.getElementById('fAddress').value.trim() || h.address;
   h.household_name = document.getElementById('fName').value.trim();
   h.phone = document.getElementById('fPhone').value.trim();
@@ -1174,6 +1445,7 @@ function saveHouse(silent = false) {
   saveData();
   renderList();
   updateCounts();
+  if (leafletMap) refreshMapMarkers();
   if (!silent) {
     showToast('Saved!', 'success');
     closePanelDirect();
@@ -1189,7 +1461,7 @@ function closePanelDirect() {
 }
 
 // ========================================
-// DELETE CONFIRM (no confirm())
+// DELETE CONFIRM (no dialog prompts)
 // ========================================
 function openDeleteConfirm() {
   document.getElementById('deleteConfirm').classList.add('open');
@@ -1203,6 +1475,7 @@ function deleteCurrentHouse() {
   saveData();
   renderList();
   updateCounts();
+  if (leafletMap) refreshMapMarkers();
   closePanelDirect();
   showToast('House removed', 'error');
 }
@@ -1228,7 +1501,6 @@ function addHouse() {
   const address = document.getElementById('newAddress').value.trim();
   if (!address) { showToast('Address is required', 'error'); return; }
 
-  // Dedup check
   const dup = houses.find(h => h.address.toLowerCase() === address.toLowerCase());
   if (dup) { showToast('Address already exists in CRM', 'error'); return; }
 
@@ -1248,6 +1520,9 @@ function addHouse() {
     notes: document.getElementById('newNotes').value.trim(),
     service_history: [],
     tags: [],
+    lat: '',
+    lng: '',
+    geocode_status: '',
   };
 
   houses.push(newHouse);
@@ -1306,7 +1581,7 @@ function handleFileSelect(e) {
 function parseCSVFile(file) {
   const reader = new FileReader();
   reader.onload = function(e) {
-    const lines = e.target.result.split('\n').map(l => l.trim()).filter(l => l && !l.startsWith('//'));
+    const lines = e.target.result.split('\n').map(l => l.trim()).filter(l => l && !l.startsWith('#'));
     if (lines.length < 2) { showToast('CSV appears empty', 'error'); return; }
 
     const headers = lines[0].split(',').map(h => h.trim().toLowerCase().replace(/\s+/g, '_'));
@@ -1326,6 +1601,9 @@ function parseCSVFile(file) {
         email: row.email || '',
         status: ['not-contacted','knocked-no-answer','pitched-thinking','declined','booked','active-customer','do-not-knock'].includes(row.status) ? row.status : 'not-contacted',
         notes: row.notes || '',
+        lat: row.lat || '',
+        lng: row.lng || '',
+        geocode_status: row.geocode_status || '',
         duplicate: !!existing,
       });
     }
@@ -1371,6 +1649,9 @@ function confirmImport() {
       notes: r.notes,
       service_history: [],
       tags: [],
+      lat: r.lat || '',
+      lng: r.lng || '',
+      geocode_status: r.geocode_status || '',
     });
     added++;
   });
@@ -1382,7 +1663,7 @@ function confirmImport() {
 }
 
 function exportData() {
-  const headers = ['id','address','household_name','phone','email','status','services_interested','active_services','first_contact_date','last_contact_date','next_follow_up','notes','tags','lifetime_value'];
+  const headers = ['id','address','household_name','phone','email','status','services_interested','active_services','first_contact_date','last_contact_date','next_follow_up','notes','tags','lifetime_value','lat','lng','geocode_status'];
   const rows = houses.map(h => [
     h.id, h.address, h.household_name || '', h.phone || '', h.email || '',
     h.status, (h.services_interested || []).join('|'), (h.active_services || []).join('|'),
@@ -1390,6 +1671,7 @@ function exportData() {
     (h.notes || '').replace(/,/g, ';'),
     (h.tags || []).join('|'),
     lifetimeValue(h).toFixed(2),
+    h.lat || '', h.lng || '', h.geocode_status || '',
   ]);
   const csv = [headers, ...rows].map(r => r.join(',')).join('\n');
   const blob = new Blob([csv], { type: 'text/csv' });
@@ -1400,6 +1682,208 @@ function exportData() {
   a.click();
   URL.revokeObjectURL(url);
   showToast('Exported!', 'info');
+}
+
+// ========================================
+// LEAFLET MAP VIEW (Feature 2)
+// ========================================
+let leafletMap = null;
+let mapMarkers = [];
+let mapFilterState = 'all';
+
+// Status → Leaflet marker color
+const STATUS_COLORS = {
+  'not-contacted':   '#6b7280',  // gray
+  'knocked-no-answer':'#d97706', // orange
+  'pitched-thinking':'#7c3aed',  // purple
+  'declined':        '#c0392b',  // red
+  'booked':          '#16a34a',  // green
+  'active-customer': '#1B4332',  // dark green
+  'do-not-knock':    '#374151',  // charcoal
+};
+
+function makeMarkerIcon(color) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="28" viewBox="0 0 20 28">
+    <path fill="${color}" stroke="#fff" stroke-width="1.5" d="M10 0C4.477 0 0 4.477 0 10c0 7.5 10 18 10 18S20 17.5 20 10C20 4.477 15.523 0 10 0z"/>
+    <circle fill="#fff" cx="10" cy="10" r="4"/>
+  </svg>`;
+  return L.divIcon({
+    html: svg,
+    className: '',
+    iconSize: [20, 28],
+    iconAnchor: [10, 28],
+    popupAnchor: [0, -28],
+  });
+}
+
+function initMap() {
+  if (leafletMap) {
+    refreshMapMarkers();
+    return;
+  }
+
+  leafletMap = L.map('leafletMap', { zoomControl: true });
+
+  // OpenStreetMap tiles — no API key needed
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    maxZoom: 19,
+  }).addTo(leafletMap);
+
+  refreshMapMarkers();
+}
+
+function setMapFilter(filter) {
+  mapFilterState = filter;
+  document.querySelectorAll('.map-filter-btn').forEach(b => {
+    b.classList.toggle('active', b.textContent.toLowerCase().includes(filter === 'all' ? 'all' : filter.replace('-', ' ')));
+  });
+  refreshMapMarkers();
+}
+
+function refreshMapMarkers() {
+  if (!leafletMap) return;
+
+  // Remove old markers
+  mapMarkers.forEach(m => m.remove());
+  mapMarkers = [];
+
+  const filtered = mapFilterState === 'all'
+    ? houses
+    : houses.filter(h => h.status === mapFilterState);
+
+  const geocoded = filtered.filter(h => h.lat && h.lng && parseFloat(h.lat) !== 0);
+  const missing  = filtered.length - geocoded.length;
+
+  const notice = document.getElementById('mapNoCoordsNotice');
+  notice.style.display = missing > 0 ? 'block' : 'none';
+  if (missing > 0) notice.textContent = `${missing} house${missing !== 1 ? 's' : ''} missing coordinates — run geocoding script to pin them.`;
+
+  if (geocoded.length === 0) {
+    // No coords at all — center on West Des Moines
+    leafletMap.setView([41.577, -93.711], 14);
+    return;
+  }
+
+  const bounds = [];
+  geocoded.forEach(h => {
+    const lat = parseFloat(h.lat);
+    const lng = parseFloat(h.lng);
+    const color = STATUS_COLORS[h.status] || '#6b7280';
+    const icon  = makeMarkerIcon(color);
+
+    const marker = L.marker([lat, lng], { icon })
+      .addTo(leafletMap)
+      .bindPopup(
+        `<strong style="font-size:.88rem">${h.address}</strong><br>` +
+        `<span style="font-size:.78rem;color:#6b7280">${h.household_name || ''}</span><br>` +
+        `<span style="font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em">${getStatusLabel(h.status)}</span>` +
+        `<br><br><button onclick="closePanelDirect();leafletMap.closePopup();openHouse('${h.id}')" style="background:#1B4332;color:#fff;border:none;border-radius:6px;padding:.3rem .7rem;font-size:.76rem;font-weight:700;cursor:pointer;font-family:inherit;">Open Details</button>`
+      );
+
+    mapMarkers.push(marker);
+    bounds.push([lat, lng]);
+  });
+
+  // Auto-fit to all markers
+  if (bounds.length > 0) {
+    leafletMap.fitBounds(bounds, { padding: [32, 32], maxZoom: 17 });
+  }
+}
+
+// ========================================
+// WALKING ROUTE OPTIMIZER (Feature 5)
+// ========================================
+function haversineKm(lat1, lng1, lat2, lng2) {
+  const R = 6371;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLng = (lng2 - lng1) * Math.PI / 180;
+  const a = Math.sin(dLat/2) ** 2 +
+            Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+            Math.sin(dLng/2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+function generateWalkRoute() {
+  // Get today's route targets that have coordinates
+  const todayStr = today();
+  const targets = houses.filter(h =>
+    !['do-not-knock', 'declined', 'active-customer'].includes(h.status) &&
+    (h.next_follow_up ? h.next_follow_up <= todayStr : true) &&
+    h.lat && h.lng && parseFloat(h.lat) !== 0
+  );
+
+  if (targets.length === 0) {
+    showToast('No geocoded stops on today\'s route. Import the geocoded CSV first.', 'error');
+    return;
+  }
+
+  // Try browser geolocation for starting point; fallback to map center of targets
+  if (navigator.geolocation) {
+    showToast('Getting your location…', 'info');
+    navigator.geolocation.getCurrentPosition(
+      pos => runNearestNeighbor(targets, pos.coords.latitude, pos.coords.longitude),
+      () => {
+        // Fallback: centroid of all target coords
+        const avgLat = targets.reduce((s, h) => s + parseFloat(h.lat), 0) / targets.length;
+        const avgLng = targets.reduce((s, h) => s + parseFloat(h.lng), 0) / targets.length;
+        runNearestNeighbor(targets, avgLat, avgLng);
+      },
+      { timeout: 5000 }
+    );
+  } else {
+    const avgLat = targets.reduce((s, h) => s + parseFloat(h.lat), 0) / targets.length;
+    const avgLng = targets.reduce((s, h) => s + parseFloat(h.lng), 0) / targets.length;
+    runNearestNeighbor(targets, avgLat, avgLng);
+  }
+}
+
+function runNearestNeighbor(targets, startLat, startLng) {
+  // Nearest-neighbor TSP heuristic — O(n²), fine for ≤444 stops
+  const remaining = [...targets];
+  const ordered = [];
+  let curLat = startLat;
+  let curLng = startLng;
+  let totalKm = 0;
+
+  while (remaining.length > 0) {
+    let bestIdx = 0;
+    let bestDist = Infinity;
+
+    remaining.forEach((h, i) => {
+      const d = haversineKm(curLat, curLng, parseFloat(h.lat), parseFloat(h.lng));
+      if (d < bestDist) { bestDist = d; bestIdx = i; }
+    });
+
+    const next = remaining.splice(bestIdx, 1)[0];
+    totalKm += bestDist;
+    ordered.push({ house: next, legKm: bestDist });
+    curLat = parseFloat(next.lat);
+    curLng = parseFloat(next.lng);
+  }
+
+  // Render route result
+  const totalMiles = (totalKm * 0.621371).toFixed(1);
+  const panel = document.getElementById('walkRoutePanel');
+  const summary = document.getElementById('walkRouteSummary');
+  const list = document.getElementById('walkRouteList');
+
+  summary.textContent = `${ordered.length} stops · ~${totalMiles} mi total walking distance`;
+  list.innerHTML = ordered.map((item, i) => {
+    const legMiles = (item.legKm * 0.621371).toFixed(2);
+    return `<li style="padding:.15rem 0">
+      <strong>${item.house.address}</strong>
+      <span style="color:var(--gray-400);font-size:.74rem;margin-left:.4rem">+${legMiles} mi</span>
+    </li>`;
+  }).join('');
+
+  panel.style.display = 'block';
+  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  showToast(`Route optimized — ${ordered.length} stops, ~${totalMiles} mi`, 'success');
+}
+
+function clearWalkRoute() {
+  document.getElementById('walkRoutePanel').style.display = 'none';
 }
 
 // ========================================
