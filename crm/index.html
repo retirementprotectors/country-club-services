@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>Country Club Services — CRM</title>
+<style>
+/* ===== BRAND TOKENS ===== */
+:root {
+  --green:       #1B4332;
+  --green-mid:   #2D6A4F;
+  --green-light: #e8f0eb;
+  --gold:        #C8A35E;
+  --gold-light:  #f7f0e2;
+  --cream:       #F8F4ED;
+  --charcoal:    #1F1F1F;
+  --white:       #ffffff;
+
+  --gray-50:  #fafafa;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-700: #374151;
+
+  --red:        #c0392b;
+  --red-light:  #fdf2f2;
+  --orange:     #d97706;
+  --orange-light:#fef3c7;
+  --blue:       #2563eb;
+  --blue-light: #eff6ff;
+  --purple:     #7c3aed;
+  --purple-light:#f5f3ff;
+
+  --status-not-contacted:   #6b7280;
+  --status-knocked:         #d97706;
+  --status-pitched:         #7c3aed;
+  --status-declined:        #c0392b;
+  --status-booked:          #16a34a;
+  --status-active:          #1B4332;
+  --status-dnk:             #374151;
+
+  --radius: 10px;
+  --shadow: 0 2px 8px rgba(0,0,0,.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,.14);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--cream);
+  color: var(--charcoal);
+  min-height: 100vh;
+}
+
+/* ===== TOP BAR ===== */
+.topbar {
+  background: var(--green);
+  padding: .6rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+.brand {
+  color: var(--white);
+  font-size: .78rem;
+  font-weight: 900;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.brand span { color: var(--gold); }
+.topbar-counts {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.count-chip {
+  background: rgba(255,255,255,.12);
+  color: var(--white);
+  font-size: .72rem;
+  font-weight: 700;
+  padding: .25rem .6rem;
+  border-radius: 100px;
+  letter-spacing: .03em;
+}
+.count-chip.gold { background: var(--gold); color: var(--charcoal); }
+.count-chip.alert { background: var(--orange); }
+.topbar-actions { display: flex; gap: .5rem; }
+.btn {
+  padding: .45rem .9rem;
+  border-radius: 8px;
+  font-size: .78rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: all .18s;
+  letter-spacing: .02em;
+}
+.btn-gold { background: var(--gold); color: var(--charcoal); }
+.btn-gold:hover { filter: brightness(1.08); }
+.btn-outline-w { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,.35); }
+.btn-outline-w:hover { background: rgba(255,255,255,.1); }
+.btn-ghost { background: transparent; color: var(--gray-500); border: 1.5px solid var(--gray-200); }
+.btn-ghost:hover { border-color: var(--green); color: var(--green); }
+.btn-green { background: var(--green); color: var(--white); }
+.btn-green:hover { background: var(--green-mid); }
+.btn-red { background: var(--red); color: var(--white); }
+.btn-sm { padding: .3rem .65rem; font-size: .72rem; }
+
+/* ===== FOLLOW-UP ALERT BAR ===== */
+.followup-bar {
+  background: var(--orange-light);
+  border-bottom: 2px solid var(--orange);
+  padding: .6rem 1.25rem;
+  display: none;
+  align-items: center;
+  gap: .6rem;
+  flex-wrap: wrap;
+}
+.followup-bar.active { display: flex; }
+.followup-bar-text { font-size: .84rem; font-weight: 700; color: var(--charcoal); }
+.followup-bar-count {
+  background: var(--orange);
+  color: var(--white);
+  padding: .15rem .5rem;
+  border-radius: 100px;
+  font-size: .76rem;
+  font-weight: 800;
+}
+
+/* ===== TABS ===== */
+.tabs {
+  background: var(--white);
+  border-bottom: 2px solid var(--gray-200);
+  padding: 0 1.25rem;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.tab {
+  padding: .65rem 1rem;
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--gray-500);
+  cursor: pointer;
+  border-bottom: 2.5px solid transparent;
+  white-space: nowrap;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background: none;
+  font-family: inherit;
+  margin-bottom: -2px;
+  letter-spacing: .03em;
+  transition: color .15s;
+}
+.tab.active { color: var(--green); border-bottom-color: var(--green); }
+.tab:hover:not(.active) { color: var(--green-mid); }
+
+/* ===== FILTER ROW ===== */
+.filter-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  padding: .5rem 1.25rem;
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.search-box {
+  flex: 1;
+  min-width: 180px;
+  padding: .4rem .75rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: 8px;
+  font-size: .84rem;
+  outline: none;
+  font-family: inherit;
+  background: var(--gray-50);
+}
+.search-box:focus { border-color: var(--green); background: var(--white); }
+.filter-select {
+  padding: .4rem .65rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: 8px;
+  font-size: .8rem;
+  font-family: inherit;
+  background: var(--gray-50);
+  color: var(--charcoal);
+  cursor: pointer;
+  outline: none;
+}
+.filter-select:focus { border-color: var(--green); }
+
+/* ===== HOUSE LIST ===== */
+.house-list {
+  padding: .75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+}
+.house-row {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: .75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  cursor: pointer;
+  transition: box-shadow .15s, border-color .15s;
+  border-left: 4px solid var(--gray-200);
+  position: relative;
+}
+.house-row:hover { box-shadow: var(--shadow-lg); border-color: var(--gray-300); }
+.house-row.status-not-contacted { border-left-color: var(--status-not-contacted); }
+.house-row.status-knocked-no-answer { border-left-color: var(--status-knocked); }
+.house-row.status-pitched-thinking { border-left-color: var(--status-pitched); }
+.house-row.status-declined { border-left-color: var(--status-declined); opacity: .7; }
+.house-row.status-booked { border-left-color: var(--status-booked); }
+.house-row.status-active-customer { border-left-color: var(--status-active); }
+.house-row.status-do-not-knock { border-left-color: var(--status-dnk); opacity: .5; }
+
+.house-row-main { flex: 1; min-width: 0; }
+.house-address { font-size: .9rem; font-weight: 800; color: var(--charcoal); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.house-name { font-size: .78rem; color: var(--gray-500); margin-top: .1rem; }
+.house-row-meta { display: flex; align-items: center; gap: .4rem; flex-wrap: wrap; margin-top: .3rem; }
+.status-badge {
+  font-size: .68rem;
+  font-weight: 700;
+  padding: .15rem .45rem;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  white-space: nowrap;
+}
+.sb-not-contacted   { background: var(--gray-100); color: var(--gray-500); }
+.sb-knocked-no-answer { background: var(--orange-light); color: var(--orange); }
+.sb-pitched-thinking { background: var(--purple-light); color: var(--purple); }
+.sb-declined        { background: var(--red-light); color: var(--red); }
+.sb-booked          { background: var(--green-light); color: var(--green); }
+.sb-active-customer { background: var(--green); color: var(--white); }
+.sb-do-not-knock    { background: var(--gray-700); color: var(--white); }
+
+.service-pill {
+  font-size: .66rem;
+  font-weight: 600;
+  padding: .12rem .4rem;
+  border-radius: 4px;
+  background: var(--gold-light);
+  color: var(--charcoal);
+  white-space: nowrap;
+}
+.last-contact { font-size: .72rem; color: var(--gray-400); white-space: nowrap; }
+.house-row-actions { display: flex; gap: .4rem; align-items: center; flex-shrink: 0; }
+.followup-dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--orange);
+  flex-shrink: 0;
+  display: none;
+}
+.followup-dot.visible { display: block; }
+
+/* ===== EMPTY STATE ===== */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: var(--gray-400);
+}
+.empty-state h3 { font-size: 1rem; color: var(--gray-500); margin-bottom: .4rem; }
+.empty-state p { font-size: .84rem; }
+
+/* ===== ROUTE VIEW ===== */
+.route-header {
+  background: var(--green-light);
+  border: 1px solid #b7d4bf;
+  border-radius: var(--radius);
+  padding: .75rem 1rem;
+  margin: .75rem 1.25rem 0;
+  font-size: .84rem;
+  color: var(--green);
+  font-weight: 700;
+}
+
+/* ===== DETAIL PANEL (MODAL) ===== */
+.panel-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 600;
+  align-items: flex-end;
+  justify-content: center;
+}
+.panel-overlay.active { display: flex; }
+@media (min-width: 640px) {
+  .panel-overlay { align-items: center; }
+  .panel { max-width: 580px; border-radius: 16px; max-height: 90vh; }
+}
+.panel {
+  background: var(--white);
+  width: 100%;
+  max-height: 92vh;
+  overflow-y: auto;
+  border-radius: 16px 16px 0 0;
+  padding: 1.5rem 1.25rem 2rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+.panel-close {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  background: var(--gray-100);
+  border: none;
+  border-radius: 50%;
+  width: 32px; height: 32px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gray-500);
+  font-family: inherit;
+}
+.panel-close:hover { background: var(--gray-200); }
+.panel-title { font-size: 1.1rem; font-weight: 800; color: var(--charcoal); margin-bottom: .2rem; padding-right: 2rem; }
+.panel-subtitle { font-size: .8rem; color: var(--gray-400); margin-bottom: 1rem; }
+
+.section-label {
+  font-size: .7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--green);
+  margin: 1rem 0 .4rem;
+  border-bottom: 1px solid var(--green-light);
+  padding-bottom: .25rem;
+}
+
+/* DOOR-KNOCK ACTION BUTTONS */
+.doorknock-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .45rem;
+  margin: .5rem 0;
+}
+.dk-btn {
+  padding: .7rem .6rem;
+  border-radius: 10px;
+  font-size: .8rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-family: inherit;
+  text-align: center;
+  transition: all .15s;
+  line-height: 1.2;
+}
+.dk-btn:hover { transform: scale(1.02); }
+.dk-btn:active { transform: scale(.98); }
+.dk-no-answer { background: var(--orange-light); color: var(--orange); border-color: var(--orange); }
+.dk-pitched   { background: var(--purple-light); color: var(--purple); border-color: var(--purple); }
+.dk-booked    { background: var(--green-light); color: var(--green); border-color: var(--green); }
+.dk-declined  { background: var(--red-light); color: var(--red); border-color: var(--red); }
+.dk-dnk       { background: var(--gray-700); color: var(--white); border-color: var(--gray-700); grid-column: span 2; }
+.dk-btn.selected { filter: saturate(1.5) brightness(.92); box-shadow: 0 0 0 2px currentColor; }
+
+/* FORM FIELDS */
+.form-group { margin-bottom: .65rem; }
+.form-label { font-size: .76rem; font-weight: 700; color: var(--gray-700); margin-bottom: .25rem; display: block; }
+.form-input, .form-textarea, .form-select-full {
+  width: 100%;
+  padding: .45rem .7rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: 8px;
+  font-size: .84rem;
+  font-family: inherit;
+  background: var(--gray-50);
+  color: var(--charcoal);
+  outline: none;
+  transition: border-color .15s;
+}
+.form-input:focus, .form-textarea:focus, .form-select-full:focus { border-color: var(--green); background: var(--white); }
+.form-textarea { min-height: 70px; resize: vertical; }
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
+
+/* SERVICE CHECKBOXES */
+.service-checks { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .25rem; }
+.svc-check {
+  display: flex; align-items: center; gap: .35rem;
+  background: var(--gray-50);
+  border: 1.5px solid var(--gray-200);
+  border-radius: 8px;
+  padding: .4rem .65rem;
+  cursor: pointer;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  transition: all .15s;
+  user-select: none;
+}
+.svc-check input { display: none; }
+.svc-check.checked { background: var(--gold-light); border-color: var(--gold); color: var(--charcoal); }
+
+/* SERVICE HISTORY */
+.service-history-table { width: 100%; border-collapse: collapse; font-size: .78rem; }
+.service-history-table th {
+  text-align: left; padding: .3rem .5rem;
+  background: var(--gray-50); border-bottom: 1px solid var(--gray-200);
+  font-size: .7rem; font-weight: 700; color: var(--gray-500); text-transform: uppercase;
+}
+.service-history-table td { padding: .4rem .5rem; border-bottom: 1px solid var(--gray-100); }
+.lifetime-value { font-size: 1.1rem; font-weight: 800; color: var(--green); }
+
+/* LOG SERVICE FORM */
+.log-service-form {
+  background: var(--green-light);
+  border: 1px solid #b7d4bf;
+  border-radius: var(--radius);
+  padding: .85rem 1rem;
+  margin-top: .5rem;
+  display: none;
+}
+.log-service-form.open { display: block; }
+
+/* PANEL FOOTER ACTIONS */
+.panel-footer {
+  display: flex;
+  gap: .5rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray-200);
+}
+
+/* ===== IMPORT MODAL ===== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 700;
+  align-items: center;
+  justify-content: center;
+}
+.modal-overlay.active { display: flex; }
+.modal {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 92%;
+  max-width: 480px;
+  box-shadow: var(--shadow-lg);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.modal-title { font-size: 1rem; font-weight: 800; margin-bottom: .75rem; color: var(--charcoal); }
+.modal-footer { display: flex; gap: .5rem; margin-top: 1rem; justify-content: flex-end; }
+.drop-zone {
+  border: 2px dashed var(--gray-300);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--gray-400);
+  font-size: .84rem;
+  cursor: pointer;
+  transition: border-color .15s;
+  margin-bottom: .75rem;
+}
+.drop-zone:hover, .drop-zone.drag-over { border-color: var(--green); color: var(--green); background: var(--green-light); }
+.drop-zone .drop-icon { font-size: 2rem; margin-bottom: .4rem; }
+
+/* ===== CONFIRM PANEL (inline, no alert()) ===== */
+.confirm-inline {
+  background: var(--red-light);
+  border: 1.5px solid var(--red);
+  border-radius: var(--radius);
+  padding: .75rem 1rem;
+  margin-top: .75rem;
+  display: none;
+}
+.confirm-inline.open { display: block; }
+.confirm-inline-text { font-size: .84rem; font-weight: 700; color: var(--red); margin-bottom: .6rem; }
+.confirm-inline-actions { display: flex; gap: .5rem; }
+
+/* ===== ADD HOUSE FORM ===== */
+.add-house-modal .form-row-2 { margin-bottom: .5rem; }
+
+/* ===== TOAST ===== */
+.toast-container { position: fixed; bottom: 1.25rem; left: 50%; transform: translateX(-50%); z-index: 9999; display: flex; flex-direction: column; gap: .4rem; align-items: center; pointer-events: none; }
+.toast {
+  background: var(--charcoal);
+  color: var(--white);
+  padding: .6rem 1.2rem;
+  border-radius: 100px;
+  font-size: .82rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .25s, transform .25s;
+  white-space: nowrap;
+}
+.toast.show { opacity: 1; transform: translateY(0); }
+.toast.success { background: var(--green); }
+.toast.error { background: var(--red); }
+.toast.info { background: var(--blue); }
+
+@media (max-width: 480px) {
+  .topbar { padding: .5rem .85rem; }
+  .topbar-counts { gap: .3rem; }
+  .count-chip { font-size: .68rem; padding: .2rem .5rem; }
+  .house-list { padding: .5rem .75rem; }
+  .house-row { padding: .6rem .75rem; }
+  .panel { padding: 1.25rem .9rem 2rem; }
+  .doorknock-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<div class="topbar">
+  <div class="brand">COUNTRY CLUB <span>SERVICES</span></div>
+  <div class="topbar-counts" id="topCounts">
+    <span class="count-chip" id="chipTotal">0 houses</span>
+    <span class="count-chip gold" id="chipActive">0 active</span>
+    <span class="count-chip alert" id="chipFollowup" style="display:none">0 follow-ups today</span>
+  </div>
+  <div class="topbar-actions">
+    <button class="btn btn-outline-w btn-sm" onclick="openImportModal()">Import</button>
+    <button class="btn btn-outline-w btn-sm" onclick="exportData()">Export</button>
+    <button class="btn btn-gold btn-sm" onclick="openAddHouse()">+ House</button>
+  </div>
+</div>
+
+<!-- ===== FOLLOW-UP ALERT BAR ===== -->
+<div class="followup-bar" id="followupBar">
+  <span>📍</span>
+  <span class="followup-bar-text">Follow-ups due today:</span>
+  <span class="followup-bar-count" id="followupCount">0</span>
+  <button class="btn btn-sm btn-gold" onclick="switchTab('route')">View Route</button>
+</div>
+
+<!-- ===== TABS ===== -->
+<div class="tabs">
+  <button class="tab active" data-tab="all" onclick="switchTab('all')">All Houses</button>
+  <button class="tab" data-tab="route" onclick="switchTab('route')">Today's Route</button>
+  <button class="tab" data-tab="customers" onclick="switchTab('customers')">Active Customers</button>
+  <button class="tab" data-tab="followups" onclick="switchTab('followups')">Follow-ups</button>
+  <button class="tab" data-tab="dnk" onclick="switchTab('dnk')">Do-Not-Knock</button>
+</div>
+
+<!-- ===== FILTER ROW ===== -->
+<div class="filter-bar">
+  <input class="search-box" id="searchBox" type="text" placeholder="Search address or name…" oninput="renderList()" />
+  <select class="filter-select" id="statusFilter" onchange="renderList()">
+    <option value="">All statuses</option>
+    <option value="not-contacted">Not Contacted</option>
+    <option value="knocked-no-answer">Knocked, No Answer</option>
+    <option value="pitched-thinking">Pitched – Thinking</option>
+    <option value="declined">Declined</option>
+    <option value="booked">Booked</option>
+    <option value="active-customer">Active Customer</option>
+    <option value="do-not-knock">Do Not Knock</option>
+  </select>
+  <select class="filter-select" id="serviceFilter" onchange="renderList()">
+    <option value="">All services</option>
+    <option value="window-washing">Window Washing</option>
+    <option value="lawn-yardwork">Lawn / Yardwork</option>
+    <option value="car-detailing">Car Detailing</option>
+  </select>
+</div>
+
+<!-- ===== MAIN LIST ===== -->
+<div id="routeHeader" class="route-header" style="display:none">
+  📍 Today's door-knock route — houses with open status or follow-ups due today, sorted by address
+</div>
+<div class="house-list" id="houseList"></div>
+
+<!-- ===== DETAIL PANEL ===== -->
+<div class="panel-overlay" id="detailOverlay" onclick="closePanel(event)">
+  <div class="panel" id="detailPanel">
+    <button class="panel-close" onclick="closePanelDirect()">✕</button>
+    <div class="panel-title" id="panelAddress">—</div>
+    <div class="panel-subtitle" id="panelName">—</div>
+
+    <div class="section-label">Door-Knock</div>
+    <div class="doorknock-grid">
+      <button class="dk-btn dk-no-answer" onclick="quickStatus('knocked-no-answer')">🚪 Knocked,<br>No Answer</button>
+      <button class="dk-btn dk-pitched" onclick="quickStatus('pitched-thinking')">💬 Pitched,<br>Thinking</button>
+      <button class="dk-btn dk-booked" onclick="quickStatus('booked')">✅ Booked!</button>
+      <button class="dk-btn dk-declined" onclick="quickStatus('declined')">❌ Declined</button>
+      <button class="dk-btn dk-dnk" onclick="quickStatus('do-not-knock')">🚫 Do Not Knock — add to exclusion list</button>
+    </div>
+
+    <div class="section-label">House Details</div>
+    <div class="form-row-2">
+      <div class="form-group">
+        <label class="form-label">Address</label>
+        <input class="form-input" id="fAddress" type="text" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Household Name</label>
+        <input class="form-input" id="fName" type="text" placeholder="Last name, once known" />
+      </div>
+    </div>
+    <div class="form-row-2">
+      <div class="form-group">
+        <label class="form-label">Phone</label>
+        <input class="form-input" id="fPhone" type="tel" placeholder="Given by homeowner only" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email</label>
+        <input class="form-input" id="fEmail" type="email" placeholder="Given by homeowner only" />
+      </div>
+    </div>
+
+    <div class="section-label">Status</div>
+    <select class="form-select-full" id="fStatus" onchange="updateDoorknockHighlight()">
+      <option value="not-contacted">Not Contacted</option>
+      <option value="knocked-no-answer">Knocked, No Answer</option>
+      <option value="pitched-thinking">Pitched – Thinking</option>
+      <option value="declined">Declined</option>
+      <option value="booked">Booked</option>
+      <option value="active-customer">Active Customer</option>
+      <option value="do-not-knock">Do Not Knock</option>
+    </select>
+
+    <div class="section-label">Services Interested In</div>
+    <div class="service-checks" id="servicesInterested">
+      <label class="svc-check" data-svc="window-washing"><input type="checkbox" />🪟 Window Washing</label>
+      <label class="svc-check" data-svc="lawn-yardwork"><input type="checkbox" />🌿 Lawn / Yardwork</label>
+      <label class="svc-check" data-svc="car-detailing"><input type="checkbox" />🚗 Car Detailing</label>
+    </div>
+
+    <div class="section-label">Active Services</div>
+    <div class="service-checks" id="servicesActive">
+      <label class="svc-check" data-svc="window-washing"><input type="checkbox" />🪟 Window Washing</label>
+      <label class="svc-check" data-svc="lawn-yardwork"><input type="checkbox" />🌿 Lawn / Yardwork</label>
+      <label class="svc-check" data-svc="car-detailing"><input type="checkbox" />🚗 Car Detailing</label>
+    </div>
+
+    <div class="form-row-2" style="margin-top:.65rem">
+      <div class="form-group">
+        <label class="form-label">Next Follow-up</label>
+        <input class="form-input" id="fFollowup" type="date" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">First Contacted</label>
+        <input class="form-input" id="fFirstContact" type="date" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Notes</label>
+      <textarea class="form-textarea" id="fNotes" placeholder="Conversation context, objections, preferences…"></textarea>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Tags (comma-separated)</label>
+      <input class="form-input" id="fTags" type="text" placeholder="corner-lot, big-yard, referral…" />
+    </div>
+
+    <!-- SERVICE HISTORY -->
+    <div class="section-label">Service History</div>
+    <div style="font-size:.82rem;color:var(--gray-500);margin-bottom:.35rem;">
+      Lifetime value: <span class="lifetime-value" id="lifetimeValue">$0</span>
+    </div>
+    <table class="service-history-table" id="serviceHistoryTable">
+      <thead><tr><th>Date</th><th>Service</th><th>Paid</th><th>Notes</th><th></th></tr></thead>
+      <tbody id="serviceHistoryBody"></tbody>
+    </table>
+    <button class="btn btn-sm btn-ghost" style="margin-top:.5rem" onclick="toggleLogService()">+ Log Completed Service</button>
+    <div class="log-service-form" id="logServiceForm">
+      <div class="form-row-2">
+        <div class="form-group">
+          <label class="form-label">Date</label>
+          <input class="form-input" id="logDate" type="date" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Service</label>
+          <select class="form-select-full" id="logService">
+            <option value="window-washing">Window Washing</option>
+            <option value="lawn-yardwork">Lawn / Yardwork</option>
+            <option value="car-detailing">Car Detailing</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row-2">
+        <div class="form-group">
+          <label class="form-label">Amount Paid ($)</label>
+          <input class="form-input" id="logAmount" type="number" min="0" step="0.01" placeholder="0.00" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Notes</label>
+          <input class="form-input" id="logNotes" type="text" placeholder="Job details…" />
+        </div>
+      </div>
+      <button class="btn btn-green btn-sm" onclick="saveLogEntry()">Save Job</button>
+    </div>
+
+    <!-- BOOKING -->
+    <div class="section-label">Booking</div>
+    <button class="btn btn-sm btn-gold" style="width:100%;margin-bottom:.5rem" onclick="copyBookingLink()">📋 Copy Booking Link</button>
+
+    <!-- FOOTER ACTIONS -->
+    <div class="panel-footer">
+      <button class="btn btn-green" onclick="saveHouse()">Save Changes</button>
+      <button class="btn btn-ghost" onclick="closePanelDirect()">Cancel</button>
+      <button class="btn btn-sm btn-ghost" style="margin-left:auto;color:var(--red);border-color:var(--red)" onclick="openDeleteConfirm()">Delete House</button>
+    </div>
+
+    <!-- DELETE CONFIRM (inline, no confirm()) -->
+    <div class="confirm-inline" id="deleteConfirm">
+      <div class="confirm-inline-text">Remove this house from your CRM? This cannot be undone.</div>
+      <div class="confirm-inline-actions">
+        <button class="btn btn-red btn-sm" onclick="deleteCurrentHouse()">Yes, Delete</button>
+        <button class="btn btn-ghost btn-sm" onclick="closeDeleteConfirm()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ADD HOUSE MODAL ===== -->
+<div class="modal-overlay" id="addHouseOverlay" onclick="closeAddHouse(event)">
+  <div class="modal add-house-modal">
+    <div class="modal-title">Add New House</div>
+    <div class="form-group">
+      <label class="form-label">Street Address *</label>
+      <input class="form-input" id="newAddress" type="text" placeholder="1234 Maple Dr" />
+    </div>
+    <div class="form-row-2">
+      <div class="form-group">
+        <label class="form-label">Household Name</label>
+        <input class="form-input" id="newName" type="text" placeholder="Leave blank until known" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Initial Status</label>
+        <select class="form-select-full" id="newStatus">
+          <option value="not-contacted">Not Contacted</option>
+          <option value="knocked-no-answer">Knocked, No Answer</option>
+          <option value="pitched-thinking">Pitched – Thinking</option>
+          <option value="booked">Booked</option>
+          <option value="active-customer">Active Customer</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Notes</label>
+      <textarea class="form-textarea" id="newNotes" placeholder="Optional notes…" style="min-height:55px"></textarea>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeAddHouseModal()">Cancel</button>
+      <button class="btn btn-green" onclick="addHouse()">Add House</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== IMPORT MODAL ===== -->
+<div class="modal-overlay" id="importOverlay" onclick="closeImportModal(event)">
+  <div class="modal">
+    <div class="modal-title">Import Houses from CSV</div>
+    <div class="drop-zone" id="dropZone" onclick="document.getElementById('csvFileInput').click()"
+         ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragleave="this.classList.remove('drag-over')">
+      <div class="drop-icon">📂</div>
+      Drop your CSV here or tap to browse
+      <br><small style="color:var(--gray-400)">Expected columns: address, household_name, phone, email, status, notes</small>
+    </div>
+    <input type="file" id="csvFileInput" accept=".csv" style="display:none" onchange="handleFileSelect(event)" />
+    <div id="importPreview"></div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost" onclick="closeImportModalDirect()">Cancel</button>
+      <button class="btn btn-green" id="confirmImportBtn" onclick="confirmImport()" style="display:none">Import Houses</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TOAST CONTAINER ===== -->
+<div class="toast-container" id="toastContainer"></div>
+
+<script>
+// ========================================
+// DATA LAYER — localStorage
+// ========================================
+const STORAGE_KEY = 'ccs_crm_v1';
+const BOOKING_URL = 'https://countryclubservices.com/book'; // {{TBD per Brooks/JDM}}
+
+let houses = [];
+let currentHouseId = null;
+let currentTab = 'all';
+let pendingImportRows = [];
+
+function loadData() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    houses = raw ? JSON.parse(raw) : [];
+  } catch(e) {
+    houses = [];
+  }
+}
+
+function saveData() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(houses));
+}
+
+function generateId() {
+  return 'h_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7);
+}
+
+function today() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function isToday(dateStr) {
+  return dateStr && dateStr === today();
+}
+
+function isBeforeToday(dateStr) {
+  return dateStr && dateStr <= today();
+}
+
+function formatDate(d) {
+  if (!d) return '';
+  const [y, m, day] = d.split('-');
+  return `${m}/${day}/${y}`;
+}
+
+function daysSince(dateStr) {
+  if (!dateStr) return null;
+  const diff = Date.now() - new Date(dateStr).getTime();
+  return Math.floor(diff / 86400000);
+}
+
+// ========================================
+// TOAST
+// ========================================
+function showToast(msg, type = 'success') {
+  const t = document.createElement('div');
+  t.className = `toast ${type}`;
+  t.textContent = msg;
+  document.getElementById('toastContainer').appendChild(t);
+  requestAnimationFrame(() => { t.classList.add('show'); });
+  setTimeout(() => {
+    t.classList.remove('show');
+    setTimeout(() => t.remove(), 300);
+  }, 2800);
+}
+
+// ========================================
+// COUNTS + TOPBAR
+// ========================================
+function updateCounts() {
+  const todayStr = today();
+  const total = houses.length;
+  const active = houses.filter(h => h.status === 'active-customer').length;
+  const followupsToday = houses.filter(h => h.next_follow_up && h.next_follow_up <= todayStr && !['do-not-knock','declined'].includes(h.status)).length;
+
+  document.getElementById('chipTotal').textContent = `${total} house${total !== 1 ? 's' : ''}`;
+  document.getElementById('chipActive').textContent = `${active} active`;
+
+  const fChip = document.getElementById('chipFollowup');
+  const fBar = document.getElementById('followupBar');
+  const fCount = document.getElementById('followupCount');
+  if (followupsToday > 0) {
+    fChip.textContent = `${followupsToday} follow-up${followupsToday !== 1 ? 's' : ''} today`;
+    fChip.style.display = '';
+    fBar.classList.add('active');
+    fCount.textContent = followupsToday;
+  } else {
+    fChip.style.display = 'none';
+    fBar.classList.remove('active');
+  }
+}
+
+// ========================================
+// TABS
+// ========================================
+function switchTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
+  // Reset filters on tab switch
+  document.getElementById('statusFilter').value = '';
+  document.getElementById('serviceFilter').value = '';
+  document.getElementById('searchBox').value = '';
+
+  const routeHeader = document.getElementById('routeHeader');
+  routeHeader.style.display = tab === 'route' ? 'block' : 'none';
+  renderList();
+}
+
+// ========================================
+// RENDER HOUSE LIST
+// ========================================
+function getStatusLabel(s) {
+  const map = {
+    'not-contacted': 'Not Contacted',
+    'knocked-no-answer': 'No Answer',
+    'pitched-thinking': 'Thinking…',
+    'declined': 'Declined',
+    'booked': 'Booked',
+    'active-customer': 'Active',
+    'do-not-knock': 'Do Not Knock',
+  };
+  return map[s] || s;
+}
+
+function getSvcLabel(s) {
+  return { 'window-washing': '🪟 Windows', 'lawn-yardwork': '🌿 Lawn', 'car-detailing': '🚗 Detailing' }[s] || s;
+}
+
+function getFilteredHouses() {
+  const todayStr = today();
+  const q = document.getElementById('searchBox').value.toLowerCase().trim();
+  const statusF = document.getElementById('statusFilter').value;
+  const svcF = document.getElementById('serviceFilter').value;
+
+  let list = [...houses];
+
+  // Tab-level filter
+  if (currentTab === 'route') {
+    list = list.filter(h =>
+      !['do-not-knock', 'declined', 'active-customer'].includes(h.status) &&
+      (h.next_follow_up ? h.next_follow_up <= todayStr : true)
+    );
+    // Sort by address
+    list.sort((a, b) => a.address.localeCompare(b.address));
+  } else if (currentTab === 'customers') {
+    list = list.filter(h => h.status === 'active-customer');
+  } else if (currentTab === 'followups') {
+    list = list.filter(h => h.next_follow_up && h.next_follow_up <= todayStr && !['do-not-knock','declined'].includes(h.status));
+    list.sort((a, b) => a.next_follow_up.localeCompare(b.next_follow_up));
+  } else if (currentTab === 'dnk') {
+    list = list.filter(h => h.status === 'do-not-knock');
+  }
+
+  // Row-level filters
+  if (statusF) list = list.filter(h => h.status === statusF);
+  if (svcF) list = list.filter(h => (h.services_interested || []).includes(svcF) || (h.active_services || []).includes(svcF));
+  if (q) list = list.filter(h =>
+    (h.address || '').toLowerCase().includes(q) ||
+    (h.household_name || '').toLowerCase().includes(q) ||
+    (h.notes || '').toLowerCase().includes(q) ||
+    (h.tags || []).join(' ').toLowerCase().includes(q)
+  );
+
+  return list;
+}
+
+function renderList() {
+  const list = getFilteredHouses();
+  const todayStr = today();
+  const container = document.getElementById('houseList');
+
+  if (list.length === 0) {
+    const label = currentTab === 'route' ? 'No houses on today\'s route' :
+                  currentTab === 'customers' ? 'No active customers yet' :
+                  currentTab === 'followups' ? 'No follow-ups due today' :
+                  currentTab === 'dnk' ? 'No do-not-knock entries' : 'No houses match your filters';
+    container.innerHTML = `<div class="empty-state"><h3>${label}</h3><p>${currentTab === 'all' && houses.length === 0 ? 'Tap "+ House" to add your first address.' : 'Keep knocking! 🚪'}</p></div>`;
+    return;
+  }
+
+  container.innerHTML = list.map(h => {
+    const hasFollowup = h.next_follow_up && h.next_follow_up <= todayStr;
+    const activeSvcs = (h.active_services || []).map(s => `<span class="service-pill">${getSvcLabel(s)}</span>`).join('');
+    const lastContact = h.last_contact_date ? `<span class="last-contact">${formatDate(h.last_contact_date)}</span>` : '';
+    const followupDot = hasFollowup ? '<span class="followup-dot visible" title="Follow-up due"></span>' : '<span class="followup-dot"></span>';
+    const lv = lifetimeValue(h);
+    const lvBadge = lv > 0 ? `<span class="service-pill" style="background:var(--green-light);color:var(--green)">$${lv.toFixed(0)}</span>` : '';
+
+    return `<div class="house-row status-${h.status}" onclick="openHouse('${h.id}')">
+      ${followupDot}
+      <div class="house-row-main">
+        <div class="house-address">${h.address}</div>
+        ${h.household_name ? `<div class="house-name">${h.household_name}</div>` : ''}
+        <div class="house-row-meta">
+          <span class="status-badge sb-${h.status}">${getStatusLabel(h.status)}</span>
+          ${activeSvcs}${lvBadge}${lastContact}
+        </div>
+      </div>
+      <div class="house-row-actions">
+        <span style="font-size:.8rem;color:var(--gray-300)">›</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function lifetimeValue(h) {
+  return (h.service_history || []).reduce((sum, j) => sum + (parseFloat(j.amount_paid) || 0), 0);
+}
+
+// ========================================
+// HOUSE DETAIL PANEL
+// ========================================
+function openHouse(id) {
+  const h = houses.find(x => x.id === id);
+  if (!h) return;
+  currentHouseId = id;
+
+  document.getElementById('panelAddress').textContent = h.address;
+  document.getElementById('panelName').textContent = h.household_name || '(No name on file)';
+  document.getElementById('fAddress').value = h.address || '';
+  document.getElementById('fName').value = h.household_name || '';
+  document.getElementById('fPhone').value = h.phone || '';
+  document.getElementById('fEmail').value = h.email || '';
+  document.getElementById('fStatus').value = h.status || 'not-contacted';
+  document.getElementById('fFollowup').value = h.next_follow_up || '';
+  document.getElementById('fFirstContact').value = h.first_contact_date || '';
+  document.getElementById('fNotes').value = h.notes || '';
+  document.getElementById('fTags').value = (h.tags || []).join(', ');
+
+  // Service checkboxes
+  setServiceChecks('servicesInterested', h.services_interested || []);
+  setServiceChecks('servicesActive', h.active_services || []);
+
+  // Lifetime value + history
+  document.getElementById('lifetimeValue').textContent = '$' + lifetimeValue(h).toFixed(2);
+  renderServiceHistory(h);
+
+  // Reset log form
+  document.getElementById('logServiceForm').classList.remove('open');
+  document.getElementById('logDate').value = today();
+  document.getElementById('logAmount').value = '';
+  document.getElementById('logNotes').value = '';
+
+  // Reset delete confirm
+  document.getElementById('deleteConfirm').classList.remove('open');
+
+  updateDoorknockHighlight();
+  document.getElementById('detailOverlay').classList.add('active');
+}
+
+function setServiceChecks(containerId, values) {
+  const container = document.getElementById(containerId);
+  container.querySelectorAll('.svc-check').forEach(label => {
+    const svc = label.dataset.svc;
+    const checked = values.includes(svc);
+    label.classList.toggle('checked', checked);
+    label.querySelector('input').checked = checked;
+    label.onclick = function() {
+      const isNowChecked = !label.classList.contains('checked');
+      label.classList.toggle('checked', isNowChecked);
+      label.querySelector('input').checked = isNowChecked;
+    };
+  });
+}
+
+function getServiceChecks(containerId) {
+  return Array.from(document.getElementById(containerId).querySelectorAll('.svc-check.checked'))
+    .map(l => l.dataset.svc);
+}
+
+function updateDoorknockHighlight() {
+  const current = document.getElementById('fStatus').value;
+  document.querySelectorAll('.dk-btn').forEach(b => b.classList.remove('selected'));
+  const map = {
+    'knocked-no-answer': '.dk-no-answer',
+    'pitched-thinking': '.dk-pitched',
+    'booked': '.dk-booked',
+    'declined': '.dk-declined',
+    'do-not-knock': '.dk-dnk',
+  };
+  if (map[current]) document.querySelector(map[current])?.classList.add('selected');
+}
+
+function quickStatus(status) {
+  document.getElementById('fStatus').value = status;
+  updateDoorknockHighlight();
+
+  // Auto-set first contact if not set
+  const ffc = document.getElementById('fFirstContact');
+  if (!ffc.value) ffc.value = today();
+
+  // Auto-set follow-up for pitched
+  const ffu = document.getElementById('fFollowup');
+  if (status === 'pitched-thinking' && !ffu.value) {
+    const d = new Date(); d.setDate(d.getDate() + 7);
+    ffu.value = d.toISOString().slice(0, 10);
+  }
+
+  // Auto-save immediately on quick status
+  saveHouse(true);
+}
+
+function renderServiceHistory(h) {
+  const history = h.service_history || [];
+  const tbody = document.getElementById('serviceHistoryBody');
+  if (history.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="5" style="color:var(--gray-400);font-style:italic;padding:.5rem">No services logged yet</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = history.slice().reverse().map((j, idx) => {
+    const realIdx = history.length - 1 - idx;
+    return `<tr>
+      <td>${formatDate(j.date)}</td>
+      <td>${getSvcLabel(j.service)}</td>
+      <td><strong>$${parseFloat(j.amount_paid || 0).toFixed(2)}</strong></td>
+      <td style="color:var(--gray-500)">${j.notes || ''}</td>
+      <td><button class="btn btn-sm btn-ghost" style="padding:.2rem .4rem;font-size:.68rem;color:var(--red);border-color:var(--red)" onclick="deleteHistoryEntry(${realIdx})">✕</button></td>
+    </tr>`;
+  }).join('');
+}
+
+function deleteHistoryEntry(idx) {
+  const h = houses.find(x => x.id === currentHouseId);
+  if (!h) return;
+  h.service_history = h.service_history || [];
+  h.service_history.splice(idx, 1);
+  document.getElementById('lifetimeValue').textContent = '$' + lifetimeValue(h).toFixed(2);
+  renderServiceHistory(h);
+  saveData();
+  showToast('Entry removed');
+}
+
+function toggleLogService() {
+  document.getElementById('logServiceForm').classList.toggle('open');
+}
+
+function saveLogEntry() {
+  const h = houses.find(x => x.id === currentHouseId);
+  if (!h) return;
+  const date = document.getElementById('logDate').value;
+  const service = document.getElementById('logService').value;
+  const amount = parseFloat(document.getElementById('logAmount').value) || 0;
+  const notes = document.getElementById('logNotes').value.trim();
+  if (!date || !service) { showToast('Date and service required', 'error'); return; }
+
+  h.service_history = h.service_history || [];
+  h.service_history.push({ date, service, amount_paid: amount, notes });
+
+  // Auto-upgrade to active-customer if booked + service logged
+  if (h.status === 'booked') {
+    h.status = 'active-customer';
+    document.getElementById('fStatus').value = 'active-customer';
+    updateDoorknockHighlight();
+  }
+
+  document.getElementById('lifetimeValue').textContent = '$' + lifetimeValue(h).toFixed(2);
+  renderServiceHistory(h);
+  document.getElementById('logAmount').value = '';
+  document.getElementById('logNotes').value = '';
+  document.getElementById('logServiceForm').classList.remove('open');
+  saveData();
+  renderList();
+  updateCounts();
+  showToast('Service logged! 💰', 'success');
+}
+
+function saveHouse(silent = false) {
+  const h = houses.find(x => x.id === currentHouseId);
+  if (!h) return;
+
+  const oldStatus = h.status;
+  h.address = document.getElementById('fAddress').value.trim() || h.address;
+  h.household_name = document.getElementById('fName').value.trim();
+  h.phone = document.getElementById('fPhone').value.trim();
+  h.email = document.getElementById('fEmail').value.trim();
+  h.status = document.getElementById('fStatus').value;
+  h.next_follow_up = document.getElementById('fFollowup').value;
+  h.first_contact_date = document.getElementById('fFirstContact').value;
+  h.notes = document.getElementById('fNotes').value.trim();
+  h.tags = document.getElementById('fTags').value.split(',').map(t => t.trim()).filter(Boolean);
+  h.services_interested = getServiceChecks('servicesInterested');
+  h.active_services = getServiceChecks('servicesActive');
+  h.last_contact_date = today();
+  if (!h.first_contact_date) h.first_contact_date = today();
+
+  saveData();
+  renderList();
+  updateCounts();
+  if (!silent) {
+    showToast('Saved!', 'success');
+    closePanelDirect();
+  }
+}
+
+function closePanel(e) {
+  if (e.target === document.getElementById('detailOverlay')) closePanelDirect();
+}
+function closePanelDirect() {
+  document.getElementById('detailOverlay').classList.remove('active');
+  currentHouseId = null;
+}
+
+// ========================================
+// DELETE CONFIRM (no confirm())
+// ========================================
+function openDeleteConfirm() {
+  document.getElementById('deleteConfirm').classList.add('open');
+}
+function closeDeleteConfirm() {
+  document.getElementById('deleteConfirm').classList.remove('open');
+}
+function deleteCurrentHouse() {
+  if (!currentHouseId) return;
+  houses = houses.filter(h => h.id !== currentHouseId);
+  saveData();
+  renderList();
+  updateCounts();
+  closePanelDirect();
+  showToast('House removed', 'error');
+}
+
+// ========================================
+// ADD HOUSE
+// ========================================
+function openAddHouse() {
+  document.getElementById('newAddress').value = '';
+  document.getElementById('newName').value = '';
+  document.getElementById('newStatus').value = 'not-contacted';
+  document.getElementById('newNotes').value = '';
+  document.getElementById('addHouseOverlay').classList.add('active');
+  setTimeout(() => document.getElementById('newAddress').focus(), 100);
+}
+function closeAddHouse(e) {
+  if (e.target === document.getElementById('addHouseOverlay')) closeAddHouseModal();
+}
+function closeAddHouseModal() {
+  document.getElementById('addHouseOverlay').classList.remove('active');
+}
+function addHouse() {
+  const address = document.getElementById('newAddress').value.trim();
+  if (!address) { showToast('Address is required', 'error'); return; }
+
+  // Dedup check
+  const dup = houses.find(h => h.address.toLowerCase() === address.toLowerCase());
+  if (dup) { showToast('Address already exists in CRM', 'error'); return; }
+
+  const slug = address.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  const newHouse = {
+    id: slug + '-' + Date.now().toString(36),
+    address,
+    household_name: document.getElementById('newName').value.trim(),
+    phone: '',
+    email: '',
+    status: document.getElementById('newStatus').value,
+    services_interested: [],
+    active_services: [],
+    first_contact_date: ['knocked-no-answer','pitched-thinking','booked','active-customer'].includes(document.getElementById('newStatus').value) ? today() : '',
+    last_contact_date: today(),
+    next_follow_up: '',
+    notes: document.getElementById('newNotes').value.trim(),
+    service_history: [],
+    tags: [],
+  };
+
+  houses.push(newHouse);
+  saveData();
+  renderList();
+  updateCounts();
+  closeAddHouseModal();
+  showToast('House added!', 'success');
+}
+
+// ========================================
+// BOOKING LINK
+// ========================================
+function copyBookingLink() {
+  const h = houses.find(x => x.id === currentHouseId);
+  const addr = encodeURIComponent(h ? h.address : '');
+  const url = `${BOOKING_URL}?address=${addr}`;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(url).then(() => showToast('Booking link copied!', 'info'));
+  } else {
+    showToast('Copy: ' + url, 'info');
+  }
+}
+
+// ========================================
+// IMPORT / EXPORT
+// ========================================
+function openImportModal() {
+  pendingImportRows = [];
+  document.getElementById('importPreview').innerHTML = '';
+  document.getElementById('confirmImportBtn').style.display = 'none';
+  document.getElementById('importOverlay').classList.add('active');
+}
+function closeImportModal(e) {
+  if (e.target === document.getElementById('importOverlay')) closeImportModalDirect();
+}
+function closeImportModalDirect() {
+  document.getElementById('importOverlay').classList.remove('active');
+}
+function handleDragOver(e) {
+  e.preventDefault();
+  document.getElementById('dropZone').classList.add('drag-over');
+}
+function handleDrop(e) {
+  e.preventDefault();
+  document.getElementById('dropZone').classList.remove('drag-over');
+  const file = e.dataTransfer.files[0];
+  if (file) parseCSVFile(file);
+}
+function handleFileSelect(e) {
+  const file = e.target.files[0];
+  if (file) parseCSVFile(file);
+  e.target.value = '';
+}
+
+function parseCSVFile(file) {
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const lines = e.target.result.split('\n').map(l => l.trim()).filter(l => l && !l.startsWith('//'));
+    if (lines.length < 2) { showToast('CSV appears empty', 'error'); return; }
+
+    const headers = lines[0].split(',').map(h => h.trim().toLowerCase().replace(/\s+/g, '_'));
+    pendingImportRows = [];
+
+    for (let i = 1; i < lines.length; i++) {
+      const vals = lines[i].split(',').map(v => v.trim());
+      const row = {};
+      headers.forEach((h, idx) => { row[h] = vals[idx] || ''; });
+      if (!row.address) continue;
+
+      const existing = houses.find(h => h.address.toLowerCase() === row.address.toLowerCase());
+      pendingImportRows.push({
+        address: row.address,
+        household_name: row.household_name || '',
+        phone: row.phone || '',
+        email: row.email || '',
+        status: ['not-contacted','knocked-no-answer','pitched-thinking','declined','booked','active-customer','do-not-knock'].includes(row.status) ? row.status : 'not-contacted',
+        notes: row.notes || '',
+        duplicate: !!existing,
+      });
+    }
+
+    const newCount = pendingImportRows.filter(r => !r.duplicate).length;
+    const dupCount = pendingImportRows.filter(r => r.duplicate).length;
+
+    document.getElementById('importPreview').innerHTML = `
+      <div style="font-size:.82rem;color:var(--gray-700);margin:.75rem 0 .4rem;font-weight:700">
+        Preview: ${newCount} new houses${dupCount > 0 ? `, ${dupCount} duplicates (will skip)` : ''}
+      </div>
+      <div style="max-height:160px;overflow-y:auto;border:1px solid var(--gray-200);border-radius:8px;font-size:.76rem">
+        ${pendingImportRows.slice(0, 30).map(r =>
+          `<div style="padding:.35rem .6rem;border-bottom:1px solid var(--gray-100);display:flex;gap:.5rem;align-items:center">
+            <span style="${r.duplicate ? 'opacity:.4;text-decoration:line-through' : ''}">${r.address}</span>
+            ${r.duplicate ? '<span style="color:var(--orange);font-size:.7rem">skip</span>' : ''}
+          </div>`
+        ).join('')}
+        ${pendingImportRows.length > 30 ? `<div style="padding:.35rem .6rem;color:var(--gray-400)">…and ${pendingImportRows.length - 30} more</div>` : ''}
+      </div>`;
+
+    if (newCount > 0) document.getElementById('confirmImportBtn').style.display = '';
+  };
+  reader.readAsText(file);
+}
+
+function confirmImport() {
+  let added = 0;
+  pendingImportRows.filter(r => !r.duplicate).forEach(r => {
+    const slug = r.address.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    houses.push({
+      id: slug + '-' + Date.now().toString(36) + Math.random().toString(36).slice(2,5),
+      address: r.address,
+      household_name: r.household_name,
+      phone: r.phone,
+      email: r.email,
+      status: r.status,
+      services_interested: [],
+      active_services: [],
+      first_contact_date: '',
+      last_contact_date: '',
+      next_follow_up: '',
+      notes: r.notes,
+      service_history: [],
+      tags: [],
+    });
+    added++;
+  });
+  saveData();
+  renderList();
+  updateCounts();
+  closeImportModalDirect();
+  showToast(`${added} houses imported!`, 'success');
+}
+
+function exportData() {
+  const headers = ['id','address','household_name','phone','email','status','services_interested','active_services','first_contact_date','last_contact_date','next_follow_up','notes','tags','lifetime_value'];
+  const rows = houses.map(h => [
+    h.id, h.address, h.household_name || '', h.phone || '', h.email || '',
+    h.status, (h.services_interested || []).join('|'), (h.active_services || []).join('|'),
+    h.first_contact_date || '', h.last_contact_date || '', h.next_follow_up || '',
+    (h.notes || '').replace(/,/g, ';'),
+    (h.tags || []).join('|'),
+    lifetimeValue(h).toFixed(2),
+  ]);
+  const csv = [headers, ...rows].map(r => r.join(',')).join('\n');
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `ccs-crm-export-${today()}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast('Exported!', 'info');
+}
+
+// ========================================
+// KEYBOARD — ESC closes panels
+// ========================================
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    if (document.getElementById('detailOverlay').classList.contains('active')) closePanelDirect();
+    else if (document.getElementById('addHouseOverlay').classList.contains('active')) closeAddHouseModal();
+    else if (document.getElementById('importOverlay').classList.contains('active')) closeImportModalDirect();
+  }
+});
+
+// ========================================
+// INIT
+// ========================================
+loadData();
+updateCounts();
+renderList();
+</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Country Club Services — Neighborhood House Record",
+  "description": "Schema for every house in Brooks Millang's door-knock territory. One record per address.",
+  "type": "object",
+  "required": ["id", "address", "status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "UUID or slug — e.g. '4521-maple-dr'",
+      "example": "4521-maple-dr"
+    },
+    "address": {
+      "type": "string",
+      "description": "Full street address — the primary display key",
+      "example": "4521 Maple Dr"
+    },
+    "household_name": {
+      "type": "string",
+      "description": "Last name or family name once known — leave blank until confirmed",
+      "example": "{{TBD per Brooks/JDM}}"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Primary phone number — only enter when given by homeowner",
+      "example": "{{TBD per Brooks/JDM}}"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Email — only enter when given by homeowner",
+      "example": "{{TBD per Brooks/JDM}}"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "not-contacted",
+        "knocked-no-answer",
+        "pitched-thinking",
+        "declined",
+        "booked",
+        "active-customer",
+        "do-not-knock"
+      ],
+      "description": "Current pipeline status of this house",
+      "default": "not-contacted"
+    },
+    "services_interested": {
+      "type": "array",
+      "description": "Services the homeowner expressed interest in",
+      "items": {
+        "type": "string",
+        "enum": ["window-washing", "lawn-yardwork", "car-detailing"]
+      },
+      "default": []
+    },
+    "active_services": {
+      "type": "array",
+      "description": "Services currently active / recurring for this customer",
+      "items": {
+        "type": "string",
+        "enum": ["window-washing", "lawn-yardwork", "car-detailing"]
+      },
+      "default": []
+    },
+    "first_contact_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of first knock or contact attempt — ISO 8601",
+      "example": "2025-05-03"
+    },
+    "last_contact_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of most recent contact or attempt",
+      "example": "2025-05-03"
+    },
+    "next_follow_up": {
+      "type": "string",
+      "format": "date",
+      "description": "Scheduled follow-up knock date — used to build Today's Route",
+      "example": "2025-05-10"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Freeform notes — conversation context, objections, preferences",
+      "example": "Has dog, knock on side door. Interested in monthly lawn."
+    },
+    "service_history": {
+      "type": "array",
+      "description": "Log of every completed service job for this house",
+      "items": {
+        "type": "object",
+        "required": ["date", "service", "amount_paid"],
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Date job was completed"
+          },
+          "service": {
+            "type": "string",
+            "enum": ["window-washing", "lawn-yardwork", "car-detailing"],
+            "description": "Which service was performed"
+          },
+          "amount_paid": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Amount paid in USD"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Job-specific notes — e.g. 'exterior only, 2 stories'"
+          }
+        }
+      },
+      "default": []
+    },
+    "tags": {
+      "type": "array",
+      "description": "Freeform tags — e.g. ['referral', 'corner-lot', 'big-yard']",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    }
+  },
+  "examples": [
+    {
+      "id": "4521-maple-dr",
+      "address": "4521 Maple Dr",
+      "household_name": "{{TBD per Brooks/JDM}}",
+      "phone": "",
+      "email": "",
+      "status": "pitched-thinking",
+      "services_interested": ["window-washing", "lawn-yardwork"],
+      "active_services": [],
+      "first_contact_date": "2025-05-03",
+      "last_contact_date": "2025-05-03",
+      "next_follow_up": "2025-05-10",
+      "notes": "Homeowner said to come back next Saturday.",
+      "service_history": [],
+      "tags": ["corner-lot"]
+    }
+  ]
+}
