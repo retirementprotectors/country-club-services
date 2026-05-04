@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Services. One Trusted Neighbor. | Country Club Services</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green:  #1B4332;
+    --gold:   #C8A35E;
+    --cream:  #F8F4ED;
+    --char:   #1F1F1F;
+  }
+
+  html, body {
+    width: 8.5in;
+    background: var(--cream);
+    color: var(--char);
+    font-family: 'Lato', sans-serif;
+    font-size: 10pt;
+    line-height: 1.5;
+  }
+
+  .page {
+    width: 8.5in;
+    min-height: 11in;
+    background: var(--cream);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .top-band {
+    background: var(--green);
+    color: var(--cream);
+    padding: 0.26in 0.4in 0.2in;
+    border-bottom: 3px solid var(--gold);
+  }
+  .wordmark {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 17pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cream);
+    line-height: 1.1;
+  }
+  .wordmark span { color: var(--gold); }
+  .tagline {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 9pt;
+    color: rgba(248,244,237,0.72);
+    margin-top: 3px;
+    letter-spacing: 0.04em;
+  }
+
+  .hero {
+    background: var(--green);
+    color: var(--cream);
+    padding: 0.2in 0.4in 0.28in;
+    position: relative;
+  }
+  .hero-accent {
+    position: absolute;
+    right: 0.38in;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 68pt;
+    opacity: 0.07;
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    pointer-events: none;
+    line-height: 1;
+  }
+  .service-label {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 7.5pt;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .service-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 30pt;
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1.05;
+    margin-bottom: 9px;
+  }
+  .service-pitch {
+    font-size: 10pt;
+    color: rgba(248,244,237,0.82);
+    max-width: 4.6in;
+    line-height: 1.55;
+    font-weight: 300;
+  }
+
+  .gold-rule {
+    height: 1px;
+    background: linear-gradient(to right, var(--gold), rgba(200,163,94,0.15));
+    margin: 0 0.4in;
+  }
+
+  .body-wrap {
+    flex: 1;
+    padding: 0 0.4in;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section {
+    padding: 0.16in 0;
+    border-bottom: 1px solid rgba(27,67,50,0.12);
+  }
+  .section:last-child { border-bottom: none; }
+
+  .section-heading {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 7pt;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 9px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-heading::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.45;
+  }
+
+  .checklist {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 18px;
+  }
+  .checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 9.5pt;
+    line-height: 1.4;
+    color: var(--char);
+  }
+  .check-icon {
+    color: var(--gold);
+    font-size: 10pt;
+    flex-shrink: 0;
+    font-weight: 700;
+  }
+
+  .pricing-band {
+    background: var(--green);
+    margin: 0 -0.4in;
+    padding: 0.14in 0.4in;
+    display: flex;
+    align-items: center;
+    gap: 0.18in;
+  }
+  .price-label {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 7pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    white-space: nowrap;
+    margin-bottom: 3px;
+  }
+  .price-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 20pt;
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1;
+  }
+  .price-note {
+    font-size: 7.5pt;
+    color: rgba(248,244,237,0.6);
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    margin-top: 3px;
+  }
+
+  .price-tiles {
+    display: flex;
+    gap: 0.1in;
+    flex: 1;
+  }
+  .price-tile {
+    flex: 1;
+    border: 1px solid rgba(200,163,94,0.35);
+    border-radius: 4px;
+    padding: 7px 10px;
+    text-align: center;
+  }
+  .tile-service {
+    font-size: 6pt;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 4px;
+  }
+  .tile-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 13pt;
+    color: var(--cream);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .why-brooks {
+    font-size: 9.5pt;
+    line-height: 1.6;
+    color: #3a3a3a;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    padding: 0.14in 0;
+    border-bottom: 1px solid rgba(27,67,50,0.12);
+  }
+  .why-byline {
+    margin-top: 7px;
+    font-style: normal;
+    font-size: 8pt;
+    font-family: 'Lato', sans-serif;
+    color: var(--green);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .cta-row {
+    display: flex;
+    align-items: center;
+    gap: 0.22in;
+    padding: 0.14in 0;
+    border-bottom: 1px solid rgba(27,67,50,0.12);
+  }
+  .qr-wrap {
+    flex-shrink: 0;
+    width: 1.45in;
+    height: 1.45in;
+    border: 2px solid var(--gold);
+    border-radius: 6px;
+    padding: 4px;
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .qr-wrap svg { width: 100%; height: 100%; }
+  .cta-text { flex: 1; }
+  .scan-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 15pt;
+    font-weight: 700;
+    color: var(--green);
+    line-height: 1.1;
+    margin-bottom: 5px;
+  }
+  .scan-sub { font-size: 8.5pt; color: #555; line-height: 1.5; }
+  .phone-field {
+    margin-top: 7px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 11pt;
+    color: var(--green);
+    letter-spacing: 0.04em;
+  }
+  .phone-label {
+    font-size: 7pt;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 300;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .footer-band {
+    background: var(--char);
+    color: rgba(248,244,237,0.68);
+    padding: 0.1in 0.4in;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 7.5pt;
+    letter-spacing: 0.05em;
+    gap: 0.12in;
+    flex-wrap: wrap;
+    border-top: 2px solid var(--gold);
+    margin-top: auto;
+  }
+  .footer-item span { color: var(--gold); font-weight: 700; }
+  .footer-dot { color: rgba(200,163,94,0.4); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+  .service-col {
+    border-left: 2px solid var(--gold);
+    padding-left: 10px;
+  }
+  .service-col-head {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 7pt;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 6px;
+  }
+  .service-col ul {
+    list-style: none;
+    font-size: 8.5pt;
+    line-height: 1.55;
+    color: var(--char);
+  }
+
+  @media print {
+    @page { size: 8.5in 11in; margin: 0; }
+    html, body { width: 8.5in; height: 11in; overflow: hidden; }
+    .page { height: 11in; page-break-after: avoid; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    .no-print { display: none !important; }
+  }
+
+  @media screen and (max-width: 700px) {
+    html, body, .page { width: 100%; }
+    .service-title { font-size: 20pt; }
+    .checklist { grid-template-columns: 1fr; }
+    .cta-row { flex-direction: column; }
+    .pricing-band { flex-direction: column; align-items: flex-start; }
+    .price-tiles { flex-direction: column; }
+    .footer-band { flex-direction: column; align-items: flex-start; }
+    .services-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="top-band">
+    <div class="wordmark">Country Club <span>Services</span></div>
+    <div class="tagline">Three services. One trusted neighbor.</div>
+  </div>
+  <div class="hero">
+    <div class="hero-accent">✦</div>
+    <div class="service-label">Full-Service Neighborhood Care</div>
+    <div class="service-title">Three Services.<br>One Trusted<br>Neighbor.</div>
+    <div class="service-pitch">Window washing, lawn care, and car detailing — all from one reliable neighbor who knows your street, respects your property, and takes pride in the work.</div>
+  </div>
+  <div class="gold-rule"></div>
+
+  <div class="body-wrap">
+    <div class="section">
+      <div class="section-heading">Our Services</div>
+      <div class="services-grid">
+        <div class="service-col">
+          <div class="service-col-head">Window Washing</div>
+          <ul>
+            <li>✓ Interior + exterior</li>
+            <li>✓ Screens included</li>
+            <li>✓ Sill &amp; frame wipe-down</li>
+            <li>✓ Streak-free, guaranteed</li>
+          </ul>
+        </div>
+        <div class="service-col">
+          <div class="service-col-head">Lawn &amp; Yardwork</div>
+          <ul>
+            <li>✓ Mow, edge &amp; trim</li>
+            <li>✓ Clipping blow-off</li>
+            <li>✓ Bed weeding</li>
+            <li>✓ Debris cleanup</li>
+          </ul>
+        </div>
+        <div class="service-col">
+          <div class="service-col-head">Car Detailing</div>
+          <ul>
+            <li>✓ Full exterior wash</li>
+            <li>✓ Interior vacuum</li>
+            <li>✓ Dash + glass clean</li>
+            <li>✓ We come to you</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="pricing-band" style="flex-direction:column; gap:7px; align-items:flex-start;">
+        <div class="price-label" style="font-size:6.5pt;">Pricing — ask Brooks for a quote</div>
+        <div class="price-tiles">
+          <div class="price-tile">
+            <div class="tile-service">Window Washing</div>
+            <div class="tile-price">{{TBD per Brooks}}</div>
+          </div>
+          <div class="price-tile">
+            <div class="tile-service">Lawn &amp; Yardwork</div>
+            <div class="tile-price">{{TBD per Brooks}}</div>
+          </div>
+          <div class="price-tile">
+            <div class="tile-service">Car Detailing</div>
+            <div class="tile-price">{{TBD per Brooks}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="why-brooks">
+    "Hi, I'm Brooks — I live right here in this neighborhood. I started Country Club Services in the summer of 2025 because I believe your home and your car deserve real care from someone who actually lives next to you. I've been going door to door, and my customers know me by name. Give me a shot — I won't let you down."
+    <div class="why-byline">— Brooks Millang, Founder</div>
+  </div>
+  <div class="cta-row">
+    <div class="qr-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 41 41" shape-rendering="crispEdges"><path fill="#F8F4ED" d="M0 0h41v41H0z"/><path stroke="#1B4332" d="M2 2.5h7m1 0h2m2 0h2m2 0h1m1 0h2m1 0h1m1 0h3m4 0h7M2 3.5h1m5 0h1m1 0h1m2 0h2m1 0h1m1 0h2m2 0h2m4 0h1m1 0h1m1 0h1m5 0h1M2 4.5h1m1 0h3m1 0h1m1 0h3m1 0h2m6 0h2m2 0h4m2 0h1m1 0h3m1 0h1M2 5.5h1m1 0h3m1 0h1m2 0h3m3 0h1m1 0h1m1 0h3m2 0h2m1 0h2m1 0h1m1 0h3m1 0h1M2 6.5h1m1 0h3m1 0h1m1 0h1m1 0h2m1 0h3m1 0h3m6 0h1m1 0h1m1 0h1m1 0h3m1 0h1M2 7.5h1m5 0h1m4 0h1m2 0h2m1 0h2m2 0h1m1 0h1m1 0h1m4 0h1m5 0h1M2 8.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M12 9.5h1m1 0h3m5 0h2m2 0h2M2 10.5h1m2 0h6m2 0h2m1 0h3m1 0h4m1 0h2m1 0h1m1 0h2m2 0h1m1 0h3M2 11.5h3m2 0h1m1 0h6m4 0h1m2 0h1m1 0h1m2 0h4m3 0h4M2 12.5h5m1 0h1m1 0h3m3 0h1m6 0h2m1 0h1m2 0h4m2 0h2m1 0h1M3 13.5h1m1 0h3m6 0h2m1 0h1m1 0h1m10 0h1m5 0h3M2 14.5h2m4 0h1m3 0h2m2 0h1m4 0h2m3 0h1m5 0h2m4 0h1M5 15.5h1m1 0h1m1 0h1m1 0h1m1 0h2m2 0h1m1 0h2m3 0h2m1 0h1m1 0h2m3 0h2M2 16.5h2m2 0h1m1 0h2m3 0h2m1 0h4m1 0h4m1 0h6m2 0h5M2 17.5h1m1 0h1m4 0h4m1 0h3m2 0h3m3 0h1m3 0h5m1 0h4M2 18.5h1m5 0h1m1 0h1m1 0h1m1 0h3m1 0h2m1 0h3m1 0h3m1 0h1m2 0h2m2 0h1m1 0h1M2 19.5h1m4 0h1m3 0h2m2 0h1m2 0h1m1 0h1m1 0h1m2 0h2m1 0h2m1 0h1m1 0h1m1 0h1M2 20.5h1m2 0h1m1 0h3m1 0h1m2 0h1m1 0h2m2 0h1m1 0h1m1 0h2m1 0h1m1 0h2m3 0h1m1 0h1m1 0h1M3 21.5h1m2 0h1m3 0h1m1 0h3m9 0h1m2 0h1m2 0h2m2 0h2m2 0h1M2 22.5h3m2 0h3m1 0h3m1 0h1m1 0h4m3 0h1m3 0h2m1 0h5M4 23.5h4m3 0h3m2 0h2m2 0h6m2 0h2m1 0h1m2 0h1m1 0h1M3 24.5h1m1 0h4m1 0h1m2 0h2m2 0h4m3 0h6m3 0h1m1 0h1m2 0h1M2 25.5h3m1 0h2m3 0h2m6 0h1m2 0h3m1 0h1m5 0h6M5 26.5h1m2 0h2m3 0h2m3 0h3m2 0h1m1 0h2m2 0h1m2 0h2m3 0h2M2 27.5h6m1 0h1m3 0h1m1 0h2m1 0h2m1 0h3m1 0h1m1 0h1m1 0h3m2 0h2M2 28.5h2m2 0h3m3 0h3m3 0h2m1 0h2m6 0h4m2 0h1m1 0h2M2 29.5h1m2 0h2m4 0h3m3 0h1m2 0h1m1 0h1m1 0h3m1 0h1m2 0h2m2 0h4M2 30.5h1m1 0h3m1 0h2m2 0h1m2 0h1m6 0h1m1 0h2m1 0h1m2 0h9M10 31.5h1m2 0h1m1 0h1m1 0h1m2 0h3m1 0h1m3 0h3m3 0h1m1 0h1M2 32.5h7m1 0h1m1 0h1m3 0h3m2 0h1m1 0h3m4 0h1m1 0h1m1 0h1m3 0h1M2 33.5h1m5 0h1m1 0h1m1 0h3m3 0h3m3 0h1m2 0h4m3 0h1m2 0h1M2 34.5h1m1 0h3m1 0h1m1 0h1m1 0h3m2 0h1m5 0h2m1 0h1m1 0h7m2 0h1M2 35.5h1m1 0h3m1 0h1m1 0h5m3 0h3m4 0h1m2 0h1m2 0h2m2 0h1m2 0h1M2 36.5h1m1 0h3m1 0h1m2 0h2m1 0h1m1 0h7m2 0h1m1 0h2m1 0h2m2 0h2m2 0h1M2 37.5h1m5 0h1m2 0h1m3 0h1m2 0h5m2 0h2m1 0h1m3 0h1m1 0h5M2 38.5h7m1 0h1m1 0h2m1 0h1m1 0h1m4 0h1m3 0h1m3 0h1m1 0h2m1 0h1m2 0h1"/></svg>
+    </div>
+    <div class="cta-text">
+      <div class="scan-headline">Scan to Book</div>
+      <div class="scan-sub">Point your phone camera at the QR code to visit our booking page — choose your date and service, and we'll handle the rest.</div>
+      <div class="phone-field">
+        <span class="phone-label">Or call / text</span>
+        {{TBD per Brooks/JDM: phone number}}
+      </div>
+    </div>
+  </div>
+  </div><!-- .body-wrap -->
+  <div class="footer-band">
+    <div class="footer-item"><span>Area:</span> {{TBD per Brooks/JDM: neighborhood}}</div>
+    <div class="footer-dot">·</div>
+    <div class="footer-item"><span>Insured:</span> {{TBD per Brooks/JDM: insurance status}}</div>
+    <div class="footer-dot">·</div>
+    <div class="footer-item"><span>Insta:</span> {{TBD: @handle}}</div>
+    <div class="footer-dot">·</div>
+    <div class="footer-item"><span>FB:</span> {{TBD: page name}}</div>
+  </div>
+</div>
+</body>
+</html>
