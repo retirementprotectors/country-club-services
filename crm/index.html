@@ -1260,17 +1260,14 @@ function openHouse(id) {
 }
 
 // ========================================
-// STREET VIEW THUMBNAIL (Feature 3)
+// PROPERTY IMAGERY — Street View + Satellite (Feature 3)
 // ========================================
 function renderStreetView(h) {
   const wrap = document.getElementById('streetViewWrap');
   const placeholder = document.getElementById('streetViewPlaceholder');
 
-  // Remove any previously inserted image
-  const oldImg = wrap.querySelector('img');
-  if (oldImg) oldImg.remove();
-  const oldLabel = wrap.querySelector('.street-view-label');
-  if (oldLabel) oldLabel.remove();
+  // Remove anything previously inserted
+  wrap.querySelectorAll('img, .street-view-label, .ccs-imagery-grid').forEach(el => el.remove());
 
   const apiKey = window.CCS_CONFIG && window.CCS_CONFIG.mapsApiKey;
   const isKeyReal = apiKey && !apiKey.includes('{{TBD') && apiKey.length > 10;
@@ -1278,37 +1275,64 @@ function renderStreetView(h) {
 
   if (!isKeyReal) {
     placeholder.style.display = 'flex';
-    placeholder.innerHTML = 'Street View available once the Maps API key is set up — ask JDM to provision the browser-restricted key.';
+    placeholder.innerHTML = 'Imagery available once the Maps API key is set up — ask JDM to provision the browser-restricted key.';
     return;
   }
 
   if (!hasCoords) {
     placeholder.style.display = 'flex';
-    placeholder.innerHTML = 'No coordinates for this address yet — run the geocoding script to enable Street View.';
+    placeholder.innerHTML = 'No coordinates for this address yet — run the geocoding script to enable imagery.';
     return;
   }
 
-  // Key + coords available — render the static Street View image
   placeholder.style.display = 'none';
-  const img = document.createElement('img');
-  img.style.cssText = 'width:100%;height:180px;object-fit:cover;display:block;';
-  img.alt = 'Street View — ' + h.address;
-  // CRITICAL: set referrerPolicy BEFORE src so the full URL is sent as Referer.
-  // Browser default policy strips the path, breaking the *country-club-services/* referrer match.
-  img.referrerPolicy = 'no-referrer-when-downgrade';
-  img.src = `https://maps.googleapis.com/maps/api/streetview?size=400x250&location=${h.lat},${h.lng}&fov=80&heading=0&pitch=0&key=${apiKey}`;
-  img.onerror = function() {
+
+  // Two-up grid: Street View (front of house) + Satellite (top-down lot)
+  const grid = document.createElement('div');
+  grid.className = 'ccs-imagery-grid';
+  grid.style.cssText = 'display:grid;grid-template-columns:1fr 1fr;gap:6px;';
+
+  // --- Tile 1: Street View ---
+  const sv = document.createElement('div');
+  sv.style.cssText = 'position:relative;border-radius:8px;overflow:hidden;';
+  const svImg = document.createElement('img');
+  svImg.style.cssText = 'width:100%;height:180px;object-fit:cover;display:block;';
+  svImg.alt = 'Street View — ' + h.address;
+  // CRITICAL: set referrerPolicy BEFORE src — browser default strips the path, breaking the path-restricted Maps key match.
+  svImg.referrerPolicy = 'no-referrer-when-downgrade';
+  svImg.src = `https://maps.googleapis.com/maps/api/streetview?size=400x250&location=${h.lat},${h.lng}&fov=80&heading=0&pitch=0&key=${apiKey}`;
+  svImg.onerror = function() {
     this.style.display = 'none';
-    placeholder.style.display = 'flex';
-    placeholder.innerHTML = 'Street View image not available for this address.';
+    sv.innerHTML = '<div style="height:180px;display:flex;align-items:center;justify-content:center;background:var(--gray-50);color:var(--gray-500);font-size:.78rem;text-align:center;padding:0 .5rem">Street View not available here</div>';
   };
+  const svLbl = document.createElement('div');
+  svLbl.className = 'street-view-label';
+  svLbl.textContent = 'STREET';
+  sv.appendChild(svImg);
+  sv.appendChild(svLbl);
 
-  const label = document.createElement('div');
-  label.className = 'street-view-label';
-  label.textContent = 'STREET VIEW';
+  // --- Tile 2: Satellite (top-down "home view" — useful for yard size + lot identification) ---
+  const sat = document.createElement('div');
+  sat.style.cssText = 'position:relative;border-radius:8px;overflow:hidden;';
+  const satImg = document.createElement('img');
+  satImg.style.cssText = 'width:100%;height:180px;object-fit:cover;display:block;';
+  satImg.alt = 'Satellite — ' + h.address;
+  satImg.referrerPolicy = 'no-referrer-when-downgrade';
+  // zoom=20 = building-level; maptype=hybrid keeps street labels for orientation
+  satImg.src = `https://maps.googleapis.com/maps/api/staticmap?center=${h.lat},${h.lng}&zoom=20&size=400x250&scale=2&maptype=hybrid&markers=color:0xC8A35E%7C${h.lat},${h.lng}&key=${apiKey}`;
+  satImg.onerror = function() {
+    this.style.display = 'none';
+    sat.innerHTML = '<div style="height:180px;display:flex;align-items:center;justify-content:center;background:var(--gray-50);color:var(--gray-500);font-size:.78rem;text-align:center;padding:0 .5rem">Satellite view unavailable</div>';
+  };
+  const satLbl = document.createElement('div');
+  satLbl.className = 'street-view-label';
+  satLbl.textContent = 'HOME / LOT';
+  sat.appendChild(satImg);
+  sat.appendChild(satLbl);
 
-  wrap.insertBefore(img, placeholder);
-  wrap.appendChild(label);
+  grid.appendChild(sv);
+  grid.appendChild(sat);
+  wrap.insertBefore(grid, placeholder);
 }
 
 function setServiceChecks(containerId, values) {
