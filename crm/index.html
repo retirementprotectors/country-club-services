@@ -1300,7 +1300,10 @@ function renderStreetView(h) {
   svImg.alt = 'Street View — ' + h.address;
   // CRITICAL: set referrerPolicy BEFORE src — browser default strips the path, breaking the path-restricted Maps key match.
   svImg.referrerPolicy = 'no-referrer-when-downgrade';
-  svImg.src = `https://maps.googleapis.com/maps/api/streetview?size=400x250&location=${h.lat},${h.lng}&fov=80&heading=0&pitch=0&key=${apiKey}`;
+  // Smart heading: if pre-computed (via streetview-headings.js), aim camera AT the house
+  // from the nearest pano. Else fall back to heading=0 (along-the-road default).
+  const heading = (h.heading && /^[0-9]+$/.test(h.heading)) ? h.heading : '0';
+  svImg.src = `https://maps.googleapis.com/maps/api/streetview?size=400x250&location=${h.lat},${h.lng}&fov=80&heading=${heading}&pitch=0&key=${apiKey}`;
   svImg.onerror = function() {
     this.style.display = 'none';
     sv.innerHTML = '<div style="height:180px;display:flex;align-items:center;justify-content:center;background:var(--gray-50);color:var(--gray-500);font-size:.78rem;text-align:center;padding:0 .5rem">Street View not available here</div>';
@@ -1638,6 +1641,9 @@ function parseCSVFile(file) {
         lat: row.lat || '',
         lng: row.lng || '',
         geocode_status: row.geocode_status || '',
+        heading: row.heading || '',
+        pano_lat: row.pano_lat || '',
+        pano_lng: row.pano_lng || '',
         duplicate: !!existing,
       });
     }
@@ -1686,6 +1692,9 @@ function confirmImport() {
       lat: r.lat || '',
       lng: r.lng || '',
       geocode_status: r.geocode_status || '',
+      heading: r.heading || '',
+      pano_lat: r.pano_lat || '',
+      pano_lng: r.pano_lng || '',
     });
     added++;
   });
@@ -1973,6 +1982,9 @@ async function autoLoadNeighborhoodCSV() {
         lat: row.lat || '',
         lng: row.lng || '',
         geocode_status: row.geocode_status || '',
+        heading: row.heading || '',
+        pano_lat: row.pano_lat || '',
+        pano_lng: row.pano_lng || '',
       });
     }
     houses = newHouses;

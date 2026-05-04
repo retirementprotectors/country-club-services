@@ -10,3 +10,4 @@ data/.geocode-cache.json
 Thumbs.db
 .vscode/
 *.swp
+data/.streetview-cache.json
