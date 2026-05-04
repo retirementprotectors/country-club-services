@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Service — Country Club Services</title>
+  <meta name="description" content="Book window washing, lawn & yardwork, or car detailing with Country Club Services. Takes 90 seconds.">
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    /* Extra booking-page styles */
+    .booking-page { min-height: 70vh; }
+    .booking-header { background: var(--green); padding-block: 3.5rem 4rem; }
+    .booking-form-wrap {
+      background: var(--white); border-radius: var(--radius-lg);
+      border: 1px solid var(--border); padding: 2.5rem;
+      margin-top: -2rem; position: relative; z-index: 2;
+      box-shadow: 0 8px 32px rgba(27,67,50,0.08);
+    }
+    @media (max-width: 600px) { .booking-form-wrap { padding: 1.5rem; } }
+    .required-note { font-size: var(--xs); color: rgba(31,31,31,0.45); margin-bottom: 2rem; }
+    fieldset { border: none; padding: 0; margin: 0 0 1.5rem; }
+    legend { font-size: var(--small); font-weight: 600; color: var(--green); letter-spacing: 0.03em; margin-bottom: 0.75rem; }
+  </style>
+</head>
+<body>
+
+  <!-- ── HEADER ─────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="wordmark" aria-label="Country Club Services home">
+        <span class="wordmark-top">COUNTRY CLUB</span>
+        <span class="wordmark-rule" aria-hidden="true"></span>
+        <span class="wordmark-sub">SERVICES</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="book.html" class="nav-cta">Book Now</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ── BOOKING HEADER ──────────────────────────────────── -->
+  <div class="booking-header">
+    <div class="container">
+      <p class="section-label">Book a Service</p>
+      <div class="divider"></div>
+      <h1 style="color:var(--cream); font-size:var(--h1); max-width:14ch;">
+        Let's get you scheduled.
+      </h1>
+      <p style="color:rgba(248,244,237,0.7); margin-top:0.75rem;">
+        Takes 90 seconds. Brooks will text you within 24 hours to confirm.
+      </p>
+    </div>
+  </div>
+
+  <!-- ── BOOKING FORM ────────────────────────────────────── -->
+  <main class="section booking-page" id="main-content" aria-labelledby="form-heading">
+    <div class="container form-section">
+      <div class="booking-form-wrap">
+
+        <!-- Success state (hidden until submit) -->
+        <div class="form-success" id="form-success" role="status" aria-live="polite">
+          <div class="success-icon" aria-hidden="true">✅</div>
+          <h2 class="success-title">You're on the list!</h2>
+          <p class="success-body">
+            Brooks will text you within 24 hours to confirm your appointment.
+            If you need to reach him sooner: <strong>{{TBD: phone}}</strong>
+          </p>
+          <a href="index.html" class="btn btn-green mt-lg" style="display:inline-flex;">← Back to Home</a>
+        </div>
+
+        <!-- Booking form -->
+        <form id="booking-form" novalidate aria-labelledby="form-heading">
+          <h2 id="form-heading" class="section-heading" style="margin-bottom:0.5rem;">Booking Request</h2>
+          <p class="required-note">Fields marked <span aria-label="required">*</span> are required.</p>
+
+          <!-- Service selection -->
+          <fieldset>
+            <legend>Which service? <span aria-label="required">*</span></legend>
+            <div class="radio-group" role="group" aria-label="Select service">
+              <label class="radio-option">
+                <input type="radio" name="service" value="window-washing" required> Window Washing
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="service" value="lawn-yardwork"> Lawn &amp; Yardwork
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="service" value="car-detailing"> Car Detailing
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="service" value="multi-service"> Multiple services (note below)
+              </label>
+            </div>
+            <p id="service-error" class="form-note" style="color:#c0392b; display:none;" aria-live="polite">Please select a service.</p>
+          </fieldset>
+
+          <!-- Name -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First name <span aria-label="required">*</span></label>
+              <input type="text" id="first-name" name="firstName" autocomplete="given-name" required placeholder="Brooks">
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last name <span aria-label="optional">(optional)</span></label>
+              <input type="text" id="last-name" name="lastName" autocomplete="family-name" placeholder="Millang">
+            </div>
+          </div>
+
+          <!-- Address -->
+          <div class="form-group">
+            <label for="address">Street address <span aria-label="required">*</span></label>
+            <input type="text" id="address" name="address" autocomplete="street-address" required placeholder="123 Elm Street">
+            <p class="form-note">Your neighborhood address — so Brooks knows where to come.</p>
+          </div>
+          <div class="form-group" style="max-width:200px;">
+            <label for="zip">ZIP code <span aria-label="optional">(optional)</span></label>
+            <input type="text" id="zip" name="zip" autocomplete="postal-code" inputmode="numeric" maxlength="5" placeholder="50265">
+          </div>
+
+          <!-- Phone -->
+          <div class="form-group" style="max-width:260px;">
+            <label for="phone">Phone number <span aria-label="required">*</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required inputmode="tel" placeholder="(515) 555-0100">
+            <p class="form-note">Brooks will text this number to confirm.</p>
+          </div>
+
+          <!-- Date + time window -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="preferred-date">Preferred date <span aria-label="required">*</span></label>
+              <input type="date" id="preferred-date" name="preferredDate" required>
+            </div>
+            <div class="form-group">
+              <label for="time-window">Preferred time window</label>
+              <select id="time-window" name="timeWindow">
+                <option value="">Any time</option>
+                <option value="morning">Morning (8am – noon)</option>
+                <option value="afternoon">Afternoon (noon – 4pm)</option>
+                <option value="late-afternoon">Late afternoon (4pm – 6pm)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Notes -->
+          <div class="form-group">
+            <label for="notes">Anything else Brooks should know?</label>
+            <textarea id="notes" name="notes" placeholder="Gate code, pet info, vehicle make/model for detailing, specific areas to focus on…"></textarea>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn btn-primary" style="width:100%; font-size:1rem; padding:1rem;" id="submit-btn">
+            Send Booking Request
+          </button>
+          <p class="form-note mt-sm text-center">
+            No payment required now. Brooks will confirm and collect on the day of service.
+          </p>
+
+          <!--
+            TODO: POST to /api/leads/ccs-booking when CRM backend wires up.
+            Expected payload:
+            {
+              service: string,
+              firstName: string,
+              lastName: string | undefined,
+              address: string,
+              zip: string | undefined,
+              phone: string,
+              preferredDate: string (ISO date),
+              timeWindow: string | undefined,
+              notes: string | undefined,
+              submittedAt: string (ISO datetime),
+              source: "website"
+            }
+          -->
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- ── FOOTER ──────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div>
+        <a href="index.html" class="wordmark footer-logo" aria-label="Country Club Services">
+          <span class="wordmark-top">COUNTRY CLUB</span>
+          <span class="wordmark-rule" aria-hidden="true"></span>
+          <span class="wordmark-sub">SERVICES</span>
+        </a>
+        <p class="footer-tagline">Neighborhood-trusted. Window washing,<br>lawn &amp; yard, and car detailing.</p>
+        <p class="footer-tagline mt-sm" style="color:rgba(248,244,237,0.3);">{{TBD: insurance status}}</p>
+      </div>
+      <div>
+        <p class="footer-heading">Services</p>
+        <nav class="footer-links">
+          <a href="services/window-washing.html">Window Washing</a>
+          <a href="services/lawn-yardwork.html">Lawn &amp; Yardwork</a>
+          <a href="services/car-detailing.html">Car Detailing</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer-heading">Quick Links</p>
+        <nav class="footer-links">
+          <a href="contact.html">Contact Brooks</a>
+          <a href="index.html">Home</a>
+        </nav>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="footer-year"></span> Country Club Services.</span>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const siteNav = document.getElementById('site-nav');
+    hamburger.addEventListener('click', () => {
+      const open = siteNav.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', String(open));
+    });
+
+    // Footer year
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // Pre-fill service from URL param (e.g. book.html?service=window-washing)
+    const params = new URLSearchParams(window.location.search);
+    const preService = params.get('service');
+    if (preService) {
+      const radio = document.querySelector(`input[name="service"][value="${preService}"]`);
+      if (radio) radio.checked = true;
+    }
+
+    // Set min date for preferred-date to today
+    const dateInput = document.getElementById('preferred-date');
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.min = today;
+
+    // Form submission handler
+    const form = document.getElementById('booking-form');
+    const formSuccess = document.getElementById('form-success');
+    const serviceError = document.getElementById('service-error');
+    const submitBtn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Validate service selection
+      const selectedService = document.querySelector('input[name="service"]:checked');
+      if (!selectedService) {
+        serviceError.style.display = 'block';
+        document.querySelector('input[name="service"]').focus();
+        return;
+      }
+      serviceError.style.display = 'none';
+
+      // Validate required fields
+      const firstName = document.getElementById('first-name').value.trim();
+      const address = document.getElementById('address').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const preferredDate = document.getElementById('preferred-date').value;
+
+      if (!firstName || !address || !phone || !preferredDate) {
+        // Let native validation handle these
+        form.reportValidity();
+        return;
+      }
+
+      // Build payload
+      const payload = {
+        service: selectedService.value,
+        firstName,
+        lastName: document.getElementById('last-name').value.trim() || undefined,
+        address,
+        zip: document.getElementById('zip').value.trim() || undefined,
+        phone,
+        preferredDate,
+        timeWindow: document.getElementById('time-window').value || undefined,
+        notes: document.getElementById('notes').value.trim() || undefined,
+        submittedAt: new Date().toISOString(),
+        source: 'website'
+      };
+
+      // Save to localStorage (interim storage until backend wires up)
+      try {
+        const existing = JSON.parse(localStorage.getItem('ccs_bookings') || '[]');
+        existing.push(payload);
+        localStorage.setItem('ccs_bookings', JSON.stringify(existing));
+      } catch (_) {
+        // localStorage unavailable — continue silently
+      }
+
+      // TODO: POST to /api/leads/ccs-booking when CRM backend wires up
+      // fetch('/api/leads/ccs-booking', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(payload)
+      // });
+
+      // Show success state
+      form.style.display = 'none';
+      formSuccess.classList.add('visible');
+      formSuccess.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  </script>
+</body>
+</html>

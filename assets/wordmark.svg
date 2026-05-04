@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 80" width="520" height="80" role="img" aria-label="Country Club Services wordmark">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&amp;family=DM+Sans:wght@400;500&amp;display=swap');
+      .ccs-top { font-family: 'Playfair Display', Georgia, serif; font-size: 32px; font-weight: 600; fill: #1B4332; letter-spacing: 0.08em; }
+      .ccs-sub { font-family: 'DM Sans', Arial, sans-serif; font-size: 13px; font-weight: 500; fill: #C8A35E; letter-spacing: 0.32em; }
+      .ccs-rule { stroke: #C8A35E; stroke-width: 1; }
+    </style>
+  </defs>
+  <!-- Decorative rule left -->
+  <line class="ccs-rule" x1="10" y1="40" x2="60" y2="40"/>
+  <!-- COUNTRY CLUB -->
+  <text class="ccs-top" x="260" y="37" text-anchor="middle">COUNTRY CLUB</text>
+  <!-- Decorative rule right -->
+  <line class="ccs-rule" x1="460" y1="40" x2="510" y2="40"/>
+  <!-- SERVICES label -->
+  <text class="ccs-sub" x="260" y="62" text-anchor="middle">SERVICES</text>
+</svg>
