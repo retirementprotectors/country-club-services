@@ -1,448 +1,448 @@
 # Country Club Services — neighborhood database (Polk County Assessor public record, consolidated 2026-05-04)
 # 444 residential properties · 6 streets · status=not-contacted on all rows
 # To import: open /crm/index.html → click Import CSV → drop this file
-id,address,household_name,phone,email,status,services_interested,notes,assessed_value,parcel,source_file
-ccs-001,2270 Country Club Blvd,The Smith Family,,,not-contacted,,,382500,291/00065-351-000,results (3).xls
-ccs-002,2250 Country Club Blvd,The Sakauye Family,,,not-contacted,,,393700,291/00065-352-000,results (3).xls
-ccs-003,2230 Country Club Blvd,The Hill Family,,,not-contacted,,,422200,291/00065-353-000,results (3).xls
-ccs-004,2210 Country Club Blvd,The Smith Family,,,not-contacted,,,441900,291/00065-354-000,results (3).xls
-ccs-005,2190 Country Club Blvd,The Aluvisia Family,,,not-contacted,,,347300,291/00065-355-000,results (3).xls
-ccs-006,2170 Country Club Blvd,The Smith Family,,,not-contacted,,,463600,291/00065-356-000,results (3).xls
-ccs-007,2150 Country Club Blvd,The Mayoros Family,,,not-contacted,,,452700,291/00065-357-000,results (3).xls
-ccs-008,13805 Hawthorn Dr,The Burke Family,,,not-contacted,,,407200,291/00065-358-000,results (3).xls
-ccs-009,13800 Hawthorn Dr,The Woiwood Family,,,not-contacted,,,517600,291/00065-359-000,results (3).xls
-ccs-010,2277 Country Club Blvd,Jason & Angela Rouse Trust,,,not-contacted,,,346200,291/00065-360-000,results (3).xls
-ccs-011,2255 Country Club Blvd,The Jontz Family,,,not-contacted,,,434700,291/00065-361-000,results (3).xls
-ccs-012,2233 Country Club Blvd,The Johnson Family,,,not-contacted,,,437400,291/00065-362-000,results (3).xls
-ccs-013,2211 Country Club Blvd,The Slagter Family,,,not-contacted,,,456200,291/00065-363-000,results (3).xls
-ccs-014,2195 Country Club Blvd,The Brobst Family,,,not-contacted,,,419500,291/00065-364-000,results (3).xls
-ccs-015,2175 Country Club Blvd,The Agard Family,,,not-contacted,,,411200,291/00065-365-000,results (3).xls
-ccs-016,2155 Country Club Blvd,The Malone Family,,,not-contacted,,,420300,291/00065-366-000,results (3).xls
-ccs-017,2135 Country Club Blvd,Robert & Heather Mckinney Revocable Trust,,,not-contacted,,,433000,291/00065-367-000,results (3).xls
-ccs-018,2101 Country Club Blvd,The Betts Family,,,not-contacted,,,444600,291/00065-368-000,results (3).xls
-ccs-019,2085 Country Club Blvd,Honey Homes LLC,,,not-contacted,,,460000,291/00065-369-000,results (3).xls
-ccs-020,2077 Country Club Blvd,Sarah P Graf Revocable Trust,,,not-contacted,,,428300,291/00065-370-000,results (3).xls
-ccs-021,2055 Country Club Blvd,The Wittmer Family,,,not-contacted,,,406600,291/00065-371-000,results (3).xls
-ccs-022,2043 Country Club Blvd,The Hadenfeldt Family,,,not-contacted,,,530900,291/00065-372-000,results (3).xls
-ccs-023,2023 Country Club Blvd,The Scott Family,,,not-contacted,,,573000,291/00065-373-000,results (3).xls
-ccs-024,2011 Country Club Blvd,Bell Family Revocable Trust,,,not-contacted,,,465200,291/00065-374-000,results (3).xls
-ccs-025,2110 NW 137th St,The Perlinger Family,,,not-contacted,,,438900,291/00065-375-000,results (3).xls
-ccs-026,2094 NW 137th St,The Kein Family,,,not-contacted,,,504600,291/00065-376-000,results (3).xls
-ccs-027,2072 NW 137th St,Emily Ruth Broderick Living Trust,,,not-contacted,,,424700,291/00065-377-000,results (3).xls
-ccs-028,2056 NW 137th St,The Jensen Family,,,not-contacted,,,419500,291/00065-378-000,results (3).xls
-ccs-029,2044 NW 137th St,The Jones Family,,,not-contacted,,,494300,291/00065-379-000,results (3).xls
-ccs-030,13651 Lakeview Dr,Dale A Westdal & Anita R Westdal Revocable Trust,,,not-contacted,,,444000,291/00065-380-000,results (3).xls
-ccs-031,2049 NW 137th St,The Roberts Family,,,not-contacted,,,434000,291/00065-381-000,results (3).xls
-ccs-032,13587 Lakeview Dr,The Brown Family,,,not-contacted,,,554800,291/00065-382-000,results (3).xls
-ccs-033,2060 NW 135th St,Rita C Batra Revocable Trust,,,not-contacted,,,470200,291/00065-383-000,results (3).xls
-ccs-034,2094 NW 135th St,The Meyer Family,,,not-contacted,,,447200,291/00065-384-000,results (3).xls
-ccs-035,2102 NW 135th St,The White Family,,,not-contacted,,,460800,291/00065-385-000,results (3).xls
-ccs-036,2114 NW 135th St,The Annis Family,,,not-contacted,,,478700,291/00065-386-000,results (3).xls
-ccs-037,2132 NW 135th St,Richard And Jacquelynn Rose Joint Revocable Trust,,,not-contacted,,,438500,291/00065-387-000,results (3).xls
-ccs-038,2150 NW 135th St,Mcdonald Family Revocable Trust,,,not-contacted,,,456900,291/00065-388-000,results (3).xls
-ccs-039,2172 NW 135th St,David A Hill Jr Revocable Trust,,,not-contacted,,,485700,291/00065-389-000,results (3).xls
-ccs-040,2194 NW 135th St,The Breiner Family,,,not-contacted,,,504600,291/00065-390-000,results (3).xls
-ccs-041,2210 NW 135th St,The Mc Clain Family,,,not-contacted,,,464400,291/00065-391-000,results (3).xls
-ccs-042,13598 Summit Dr,The Burriola Family,,,not-contacted,,,434300,291/00065-392-000,results (3).xls
-ccs-043,2195 NW 136th St,The Ferguson Family,,,not-contacted,,,462900,291/00065-393-000,results (3).xls
-ccs-044,2173 NW 136th St,The Stieber Family,,,not-contacted,,,466000,291/00065-394-000,results (3).xls
-ccs-045,2151 NW 136th St,The Hawk Family,,,not-contacted,,,400500,291/00065-395-000,results (3).xls
-ccs-046,2135 NW 136th St,The Shima Family,,,not-contacted,,,482000,291/00065-396-000,results (3).xls
-ccs-047,2113 NW 136th St,The Oleson Family,,,not-contacted,,,535900,291/00065-397-000,results (3).xls
-ccs-048,2101 NW 136th St,The Crawford Family,,,not-contacted,,,478200,291/00065-398-000,results (3).xls
-ccs-049,2085 NW 136th St,The Waller Family,,,not-contacted,,,558500,291/00065-399-000,results (3).xls
-ccs-050,2063 NW 136th St,The Mantell Family,,,not-contacted,,,485800,291/00065-400-000,results (3).xls
-ccs-051,2085 NW 137th St,The Stone Family,,,not-contacted,,,426900,291/00065-401-000,results (3).xls
-ccs-052,2112 NW 136th St,The Clabaugh Family,,,not-contacted,,,458800,291/00065-402-000,results (3).xls
-ccs-053,2126 NW 136th St,The Garner Family,,,not-contacted,,,395600,291/00065-403-000,results (3).xls
-ccs-054,2140 NW 136th St,The Singh Family,,,not-contacted,,,497500,291/00065-404-000,results (3).xls
-ccs-055,2154 NW 136th St,The Boeve Family,,,not-contacted,,,461700,291/00065-405-000,results (3).xls
-ccs-056,2170 NW 136th St,The Rasmussen Family,,,not-contacted,,,467900,291/00065-406-000,results (3).xls
-ccs-057,2194 NW 136th St,The Allen Family,,,not-contacted,,,505400,291/00065-407-000,results (3).xls
-ccs-058,2216 NW 136th St,The Lin Family,,,not-contacted,,,454200,291/00065-408-000,results (3).xls
-ccs-059,2215 NW 137th St,The Tucker Family,,,not-contacted,,,468400,291/00065-409-000,results (3).xls
-ccs-060,2195 NW 137th St,Susan M Plymale Rev Trust,,,not-contacted,,,447500,291/00065-410-000,results (3).xls
-ccs-061,2173 NW 137th St,The Kuntz Family,,,not-contacted,,,493800,291/00065-411-000,results (3).xls
-ccs-062,2155 NW 137th St,The Lederhaas Family,,,not-contacted,,,487400,291/00065-412-000,results (3).xls
-ccs-063,2133 NW 137th St,The Huynh Family,,,not-contacted,,,494300,291/00065-413-000,results (3).xls
-ccs-064,2125 NW 137th St,P Richard Schloerb & Susan M Schloerb Living Trust,,,not-contacted,,,523700,291/00065-414-000,results (3).xls
-ccs-065,2113 NW 137th St,The Mc Cann Family,,,not-contacted,,,438700,291/00065-415-000,results (3).xls
-ccs-066,2132 NW 137th St,The Peterson Family,,,not-contacted,,,478300,291/00065-416-000,results (3).xls
-ccs-067,2150 NW 137th St,The Deshpande Family,,,not-contacted,,,443200,291/00065-417-000,results (3).xls
-ccs-068,2172 NW 137th St,The Brown Family,,,not-contacted,,,418600,291/00065-418-000,results (3).xls
-ccs-069,2190 NW 137th St,The Schlautman Family,,,not-contacted,,,483700,291/00065-419-000,results (3).xls
-ccs-070,2210 NW 137th St,The Gerleman Family,,,not-contacted,,,421700,291/00065-420-000,results (3).xls
-ccs-071,2244 NW 137th St,The Nicholson Family,,,not-contacted,,,969300,291/00065-421-000,results (3).xls
-ccs-072,13705 Summit Dr,The Wagner Family,,,not-contacted,,,516700,291/00065-422-000,results (3).xls
-ccs-073,13687 Summit Dr,The Witt Family,,,not-contacted,,,459900,291/00065-423-000,results (3).xls
-ccs-074,13665 Summit Dr,The Rohrs Family,,,not-contacted,,,410200,291/00065-424-000,results (3).xls
-ccs-075,13643 Summit Dr,The Duong Family,,,not-contacted,,,402500,291/00065-425-000,results (3).xls
-ccs-076,13621 Summit Dr,The Cochran Family,,,not-contacted,,,433200,291/00065-426-000,results (3).xls
-ccs-077,13597 Summit Dr,The Barth Family,,,not-contacted,,,469200,291/00065-427-000,results (3).xls
-ccs-078,13585 Summit Dr,Vikram Taware Living Trust,,,not-contacted,,,459800,291/00065-428-000,results (3).xls
-ccs-079,13563 Summit Dr,The Sinnwell Family,,,not-contacted,,,519200,291/00065-429-000,results (3).xls
-ccs-080,13543 Summit Dr,The Jacobs Family,,,not-contacted,,,453500,291/00065-430-000,results (3).xls
-ccs-081,2223 NW 135th St,The Idso Family,,,not-contacted,,,477700,291/00065-431-000,results (3).xls
-ccs-082,2201 NW 135th St,The Snitker Family,,,not-contacted,,,439700,291/00065-432-000,results (3).xls
-ccs-083,2185 NW 135th St,The Bowles Family,,,not-contacted,,,429400,291/00065-433-000,results (3).xls
-ccs-084,2163 NW 135th St,The Turner Family,,,not-contacted,,,514700,291/00065-434-000,results (3).xls
-ccs-085,2149 NW 135th St,The Kramer Family,,,not-contacted,,,479900,291/00065-435-000,results (3).xls
-ccs-086,2123 NW 135th St,The Deal Family,,,not-contacted,,,548700,291/00065-436-000,results (3).xls
-ccs-087,2111 NW 135th St,The Landess Family,,,not-contacted,,,467700,291/00065-437-000,results (3).xls
-ccs-088,2097 NW 135th St,The Millang Family,,,not-contacted,,,624400,291/00065-438-000,results (3).xls
-ccs-089,2075 NW 135th St,The Host Family,,,not-contacted,,,513500,291/00065-439-000,results (3).xls
-ccs-090,2053 NW 135th St,Asha N Madia Revocable Trust,,,not-contacted,,,620500,291/00065-440-000,results (3).xls
-ccs-091,2049 NW 135th St,The Krause Family,,,not-contacted,,,650300,291/00065-441-000,results (3).xls
-ccs-092,13552 Lakeview Dr,The Ingrisano Family,,,not-contacted,,,526000,291/00065-442-000,results (3).xls
-ccs-093,13560 Lakeview Dr,Joanna M Lowe Revocable Trust,,,not-contacted,,,488300,291/00065-443-000,results (3).xls
-ccs-094,13586 Lakeview Dr,The Chawla Family,,,not-contacted,,,552000,291/00065-444-000,results (3).xls
-ccs-095,13602 Lakeview Dr,The Cressy Family,,,not-contacted,,,508300,291/00065-445-000,results (3).xls
-ccs-096,1995 Country Club Blvd,The Mohs Family,,,not-contacted,,,582800,291/00065-446-000,results (3).xls
-ccs-097,1985 Country Club Blvd,The Seglar Family,,,not-contacted,,,437500,291/00065-447-000,results (3).xls
-ccs-098,1977 Country Club Blvd,The Rojas Family,,,not-contacted,,,507500,291/00065-448-000,results (3).xls
-ccs-099,14165 Hawthorn Dr,The Corado Family,,,not-contacted,,,449000,291/00065-480-001,results (1).xls
-ccs-100,2132 NW 141st St,The Kolks Family,,,not-contacted,,,415500,291/00065-480-002,results (1).xls
-ccs-101,2156 NW 141st St,The Schmitz Family,,,not-contacted,,,442500,291/00065-480-003,results (1).xls
-ccs-102,2170 NW 141st St,James J Detaeye Revocable Trust,,,not-contacted,,,421800,291/00065-480-004,results (1).xls
-ccs-103,2184 NW 141st St,The Perez Sanchez Family,,,not-contacted,,,349000,291/00065-480-005,results (1).xls
-ccs-104,2198 NW 141st St,The Christensen Family,,,not-contacted,,,410300,291/00065-480-006,results (1).xls
-ccs-105,2222 NW 141st St,The Wittern Iv Family,,,not-contacted,,,395500,291/00065-480-007,results (1).xls
-ccs-106,2242 NW 141st St,The Kelly Family,,,not-contacted,,,467800,291/00065-480-008,results (1).xls
-ccs-107,2262 NW 141st St,The Hanson Family,,,not-contacted,,,387100,291/00065-480-009,results (1).xls
-ccs-108,14097 Summit Dr,The Christensen Family,,,not-contacted,,,397800,291/00065-480-010,results (1).xls
-ccs-109,14073 Summit Dr,Jeffrey P Blue & Bonnie L Blue Family Revocable Trust,,,not-contacted,,,384900,291/00065-480-011,results (1).xls
-ccs-110,14049 Summit Dr,Kaizen Collective LLC,,,not-contacted,,,364300,291/00065-480-012,results (1).xls
-ccs-111,14025 Summit Dr,Roy Johnson & Peggy Palmer-Johnson Joint Revocable Trust,,,not-contacted,,,382300,291/00065-480-013,results (1).xls
-ccs-112,14001 Summit Dr,The Sager Family,,,not-contacted,,,384000,291/00065-480-014,results (1).xls
-ccs-113,13977 Summit Dr,The Huber Mackey Family,,,not-contacted,,,356600,291/00065-480-015,results (1).xls
-ccs-114,13953 Summit Dr,The Dolezal Family,,,not-contacted,,,348400,291/00065-480-016,results (1).xls
-ccs-115,13929 Summit Dr,Wb Holdings LLC,,,not-contacted,,,324000,291/00065-480-017,results (1).xls
-ccs-116,13905 Summit Dr,The Pugh Family,,,not-contacted,,,374000,291/00065-480-018,results (1).xls
-ccs-117,13899 Summit Dr,The Marturello Family,,,not-contacted,,,346300,291/00065-480-019,results (1).xls
-ccs-118,13877 Summit Dr,The Ramsey Family,,,not-contacted,,,349800,291/00065-480-020,results (1).xls
-ccs-119,13851 Summit Dr,The Westrum Family,,,not-contacted,,,360200,291/00065-480-021,results (1).xls
-ccs-120,13825 Summit Dr,The Groves Family,,,not-contacted,,,425800,291/00065-480-022,results (1).xls
-ccs-121,13801 Summit Dr,The Carter Family,,,not-contacted,,,397200,291/00065-480-023,results (1).xls
-ccs-122,2241 NW 138th St,The Stein Family,,,not-contacted,,,445300,291/00065-480-025,results (1).xls
-ccs-123,2221 NW 138th St,The Juhl Family,,,not-contacted,,,391600,291/00065-480-026,results (1).xls
-ccs-124,2201 NW 138th St,Knapp Family Revocable Trust,,,not-contacted,,,372900,291/00065-480-027,results (1).xls
-ccs-125,2171 NW 138th St,The Pruitt Family,,,not-contacted,,,383000,291/00065-480-028,results (1).xls
-ccs-126,2151 NW 138th St,Mollie Ruth O'Brien Revocable Trust,,,not-contacted,,,406500,291/00065-480-029,results (1).xls
-ccs-127,2131 NW 138th St,The Lenox Family,,,not-contacted,,,412900,291/00065-480-030,results (1).xls
-ccs-128,2111 NW 138th St,Eric Baarda Revocable Trust,,,not-contacted,,,416900,291/00065-480-031,results (1).xls
-ccs-129,2110 NW 138th St,The Kees Family,,,not-contacted,,,386600,291/00065-480-032,results (1).xls
-ccs-130,2130 NW 138th St,Darrell & Betty Vanwoert Joint Revocable Trust,,,not-contacted,,,416200,291/00065-480-033,results (1).xls
-ccs-131,2150 NW 138th St,Pivot Holdings LLC,,,not-contacted,,,320000,291/00065-480-034,results (1).xls
-ccs-132,2170 NW 138th St,The Stanfel Family,,,not-contacted,,,396600,291/00065-480-035,results (1).xls
-ccs-133,2190 NW 138th St,The Rullestad Family,,,not-contacted,,,346400,291/00065-480-036,results (1).xls
-ccs-134,2210 NW 138th St,The Johnson Family,,,not-contacted,,,422600,291/00065-480-037,results (1).xls
-ccs-135,2230 NW 138th St,The Hawn Family,,,not-contacted,,,418100,291/00065-480-038,results (1).xls
-ccs-136,2231 NW 139th St,The Griffiths Family,,,not-contacted,,,368600,291/00065-480-039,results (1).xls
-ccs-137,2211 NW 139th St,Sherri L Samuelson Property Management Trust,,,not-contacted,,,406400,291/00065-480-040,results (1).xls
-ccs-138,2201 NW 139th St,The Kuhl Family,,,not-contacted,,,429800,291/00065-480-041,results (1).xls
-ccs-139,2181 NW 139th St,The Taylor Family,,,not-contacted,,,441600,291/00065-480-042,results (1).xls
-ccs-140,2161 NW 139th St,The Nass Family,,,not-contacted,,,414000,291/00065-480-043,results (1).xls
-ccs-141,2141 NW 139th St,The Dougherty Family,,,not-contacted,,,445900,291/00065-480-044,results (1).xls
-ccs-142,2121 NW 139th St,Aabk Investments LLC,,,not-contacted,,,393900,291/00065-480-045,results (1).xls
-ccs-143,2105 NW 139th St,The Nguyen Family,,,not-contacted,,,356800,291/00065-480-046,results (1).xls
-ccs-144,13921 Hawthorn Dr,Amy C Mcdermott Trust,,,not-contacted,,,404800,291/00065-480-047,results (1).xls
-ccs-145,2110 NW 139th St,The Eggert Family,,,not-contacted,,,383200,291/00065-480-048,results (1).xls
-ccs-146,2124 NW 139th St,The Scheck Family,,,not-contacted,,,373300,291/00065-480-049,results (1).xls
-ccs-147,2138 NW 139th St,The Poets Family,,,not-contacted,,,347000,291/00065-480-050,results (1).xls
-ccs-148,2152 NW 139th St,The Davenport Family,,,not-contacted,,,344000,291/00065-480-051,results (1).xls
-ccs-149,2166 NW 139th St,The Zoss Family,,,not-contacted,,,372400,291/00065-480-052,results (1).xls
-ccs-150,2180 NW 139th St,The De Phillips Family,,,not-contacted,,,355700,291/00065-480-053,results (1).xls
-ccs-151,2212 NW 139th St,Aabk Investments LLC,,,not-contacted,,,368400,291/00065-480-054,results (1).xls
-ccs-152,2232 NW 139th St,The Khatri Family,,,not-contacted,,,370800,291/00065-480-055,results (1).xls
-ccs-153,2225 NW 140th St,Gidvani Family Revocable Trust,,,not-contacted,,,396100,291/00065-480-056,results (1).xls
-ccs-154,2205 NW 140th St,The Koenig Family,,,not-contacted,,,434300,291/00065-480-057,results (1).xls
-ccs-155,2185 NW 140th St,The Witzenburg Family,,,not-contacted,,,390100,291/00065-480-058,results (1).xls
-ccs-156,2171 NW 140th St,The Hoger Family,,,not-contacted,,,372200,291/00065-480-059,results (1).xls
-ccs-157,2157 NW 140th St,The Ritz Family,,,not-contacted,,,361400,291/00065-480-060,results (1).xls
-ccs-158,2143 NW 140th St,The Wenthe Family,,,not-contacted,,,354100,291/00065-480-061,results (1).xls
-ccs-159,2129 NW 140th St,The Trout Family,,,not-contacted,,,319000,291/00065-480-062,results (1).xls
-ccs-160,2115 NW 140th St,Andrews Trust,,,not-contacted,,,336700,291/00065-480-063,results (1).xls
-ccs-161,13981 Hawthorn Dr,The Ludwig Family,,,not-contacted,,,464200,291/00065-480-064,results (1).xls
-ccs-162,2102 NW 140th St,The Wilson Family,,,not-contacted,,,367000,291/00065-480-065,results (1).xls
-ccs-163,2122 NW 140th St,The Ambrose Family,,,not-contacted,,,381600,291/00065-480-066,results (1).xls
-ccs-164,2136 NW 140th St,The Ford Family,,,not-contacted,,,385000,291/00065-480-067,results (1).xls
-ccs-165,2150 NW 140th St,The Fortune Family,,,not-contacted,,,387500,291/00065-480-068,results (1).xls
-ccs-166,2164 NW 140th St,The Dickinson Family,,,not-contacted,,,367500,291/00065-480-069,results (1).xls
-ccs-167,2178 NW 140th St,The Mo Family,,,not-contacted,,,337500,291/00065-480-070,results (1).xls
-ccs-168,2202 NW 140th St,The Mitchell Family,,,not-contacted,,,392600,291/00065-480-071,results (1).xls
-ccs-169,2220 NW 140th St,J Veenschoten Family Trust,,,not-contacted,,,333500,291/00065-480-072,results (1).xls
-ccs-170,14098 Summit Dr,The Reinsvold Family,,,not-contacted,,,387900,291/00065-480-073,results (1).xls
-ccs-171,2199 NW 141st St,The Burmeister Family,,,not-contacted,,,370400,291/00065-480-074,results (1).xls
-ccs-172,2183 NW 141st St,The Determan Family,,,not-contacted,,,357100,291/00065-480-075,results (1).xls
-ccs-173,2163 NW 141st St,The Adamson Family,,,not-contacted,,,375300,291/00065-480-076,results (1).xls
-ccs-174,2143 NW 141st St,The Blau Family,,,not-contacted,,,389600,291/00065-480-077,results (1).xls
-ccs-175,2123 NW 141st St,The Sharp Family,,,not-contacted,,,380500,291/00065-480-078,results (1).xls
-ccs-176,14095 Hawthorn Dr,The Reeve Family,,,not-contacted,,,344200,291/00065-480-079,results (1).xls
-ccs-177,14188 Hawthorn Dr,The Shelton Family,,,not-contacted,,,572400,291/00065-480-080,results (1).xls
-ccs-178,14144 Hawthorn Dr,Mundus Family Revocable Trust,,,not-contacted,,,481400,291/00065-480-081,results (1).xls
-ccs-179,14112 Hawthorn Dr,The Rouwenhorst Family,,,not-contacted,,,481600,291/00065-480-082,results (1).xls
-ccs-180,14096 Hawthorn Dr,Peter & Betty Mond Family Revocable Trust,,,not-contacted,,,385900,291/00065-480-083,results (1).xls
-ccs-181,14064 Hawthorn Dr,The Smith Family,,,not-contacted,,,486000,291/00065-480-084,results (1).xls
-ccs-182,14032 Hawthorn Dr,The Stanley Family,,,not-contacted,,,379800,291/00065-480-085,results (1).xls
-ccs-183,14000 Hawthorn Dr,The Stoffa Family,,,not-contacted,,,486900,291/00065-480-086,results (1).xls
-ccs-184,13980 Hawthorn Dr,Makohoniuk Construction LLC,,,not-contacted,,,376300,291/00065-480-087,results (1).xls
-ccs-185,13966 Hawthorn Dr,Jeffrey Neff Miller Revocable Trust,,,not-contacted,,,527200,291/00065-480-088,results (1).xls
-ccs-186,13946 Hawthorn Dr,The Johnson Family,,,not-contacted,,,496800,291/00065-480-089,results (1).xls
-ccs-187,13922 Hawthorn Dr,The Clarkson Family,,,not-contacted,,,447900,291/00065-480-090,results (1).xls
-ccs-188,13900 Hawthorn Dr,The Daniel Family,,,not-contacted,,,462600,291/00065-480-091,results (1).xls
-ccs-189,13884 Hawthorn Dr,Michael And Rochelle Hale Joint Revocable Trust,,,not-contacted,,,545300,291/00065-480-092,results (1).xls
-ccs-190,13870 Hawthorn Dr,The Biermann Family,,,not-contacted,,,526900,291/00065-480-093,results (1).xls
-ccs-191,13856 Hawthorn Dr,The Lim Family,,,not-contacted,,,484700,291/00065-480-094,results (1).xls
-ccs-192,13842 Hawthorn Dr,The Nguyen Family,,,not-contacted,,,504700,291/00065-480-095,results (1).xls
-ccs-193,13828 Hawthorn Dr,The Embree Family,,,not-contacted,,,596800,291/00065-480-096,results (1).xls
-ccs-194,13814 Hawthorn Dr,The Kimmi Family,,,not-contacted,,,486300,291/00065-480-097,results (1).xls
-ccs-195,2261 NW 138th St,The Hassel Family,,,not-contacted,,,430200,291/00065-480-101,results (1).xls
-ccs-196,13250 Forest Cir,Roger A Fray & Susan K Fray Family Revocable Trust,,,not-contacted,,,560200,291/00065-121-000,results (5).xls
-ccs-197,13200 Forest Cir,The Ahrens Family,,,not-contacted,,,732700,291/00065-122-000,results (5).xls
-ccs-198,13180 Forest Cir,Mark J Witte Revocable Trust,,,not-contacted,,,655800,291/00065-123-000,results (5).xls
-ccs-199,13171 Forest Cir,The Hjelmaas Family,,,not-contacted,,,846600,291/00065-124-000,results (5).xls
-ccs-200,13181 Forest Cir,The Varley Family,,,not-contacted,,,764500,291/00065-125-000,results (5).xls
-ccs-201,13211 Forest Cir,David & Ellen Harvey Revocable Trust,,,not-contacted,,,547800,291/00065-126-000,results (5).xls
-ccs-202,1311 Country Club Blvd,The Holz Jr Family,,,not-contacted,,,559600,291/00065-127-000,results (5).xls
-ccs-203,13260 Elmcrest Cir,The Dorr Family,,,not-contacted,,,679300,291/00065-128-000,results (5).xls
-ccs-204,13240 Elmcrest Cir,The Lim Family,,,not-contacted,,,627800,291/00065-129-000,results (5).xls
-ccs-205,13200 Elmcrest Cir,The Iles Family,,,not-contacted,,,871900,291/00065-130-000,results (5).xls
-ccs-206,13190 Elmcrest Cir,The Moulton Family,,,not-contacted,,,704500,291/00065-131-000,results (5).xls
-ccs-207,13211 Elmcrest Cir,The Foster Family,,,not-contacted,,,757200,291/00065-132-000,results (5).xls
-ccs-208,13231 Elmcrest Cir,The Stone Family,,,not-contacted,,,626700,291/00065-133-000,results (5).xls
-ccs-209,13251 Elmcrest Cir,Gabriela Granwehr Trust,,,not-contacted,,,518300,291/00065-134-000,results (5).xls
-ccs-210,1377 Country Club Blvd,Lynn A Johnson Revocable Trust,,,not-contacted,,,635300,291/00065-135-000,results (5).xls
-ccs-211,13340 Sunset Cir,The Peterson Family,,,not-contacted,,,743100,291/00065-136-000,results (5).xls
-ccs-212,13300 Sunset Cir,The Kiley Family,,,not-contacted,,,709000,291/00065-137-000,results (5).xls
-ccs-213,13280 Sunset Cir,Ching Huei Lin Revocable Trust,,,not-contacted,,,624000,291/00065-138-000,results (5).xls
-ccs-214,13250 Sunset Cir,Lance C Drey Revocable Trust,,,not-contacted,,,595900,291/00065-139-000,results (5).xls
-ccs-215,13220 Sunset Cir,Holly M Lyons Rev Trust,,,not-contacted,,,680800,291/00065-140-000,results (5).xls
-ccs-216,13200 Sunset Cir,The Leonard Family,,,not-contacted,,,583900,291/00065-141-000,results (5).xls
-ccs-217,13190 Sunset Cir,Tanya L Comer Revocable Trust,,,not-contacted,,,626200,291/00065-142-000,results (5).xls
-ccs-218,13211 Sunset Cir,The Gotsdiner Family,,,not-contacted,,,615400,291/00065-143-000,results (5).xls
-ccs-219,13231 Sunset Cir,Robert L Bender Ii Revocable Trust,,,not-contacted,,,595700,291/00065-144-000,results (5).xls
-ccs-220,13251 Sunset Cir,The Hartkop Family,,,not-contacted,,,714700,291/00065-145-000,results (5).xls
-ccs-221,13281 Sunset Cir,The Shah Family,,,not-contacted,,,647000,291/00065-146-000,results (5).xls
-ccs-222,13311 Sunset Cir,Larry And Barbara Cox Joint Revocable Trust,,,not-contacted,,,614100,291/00065-147-000,results (5).xls
-ccs-223,13341 Sunset Cir,The Hockenberg Family,,,not-contacted,,,744300,291/00065-148-000,results (5).xls
-ccs-224,13380 Hickory Ave,The Blodi Family,,,not-contacted,,,808400,291/00065-149-000,results (5).xls
-ccs-225,13350 Hickory Ave,The Sutton Family,,,not-contacted,,,667600,291/00065-150-000,results (5).xls
-ccs-226,13310 Hickory Ave,The Hatch Family,,,not-contacted,,,666200,291/00065-151-000,results (5).xls
-ccs-227,13280 Hickory Ave,Michael T Pixley Living Trust,,,not-contacted,,,745400,291/00065-152-000,results (5).xls
-ccs-228,13260 Hickory Ave,The Sinha Family,,,not-contacted,,,783900,291/00065-153-000,results (5).xls
-ccs-229,13240 Hickory Ave,Farber Family Trust,,,not-contacted,,,715000,291/00065-154-000,results (5).xls
-ccs-230,13210 Hickory Ave,The Klein Family,,,not-contacted,,,482100,291/00065-155-000,results (5).xls
-ccs-231,13200 Hickory Ave,The Crowe Family,,,not-contacted,,,714300,291/00065-156-000,results (5).xls
-ccs-232,1611 NW 132nd St,The Neuendorf Family,,,not-contacted,,,634000,291/00065-157-000,results (5).xls
-ccs-233,1631 NW 132nd St,The Ye Family,,,not-contacted,,,740800,291/00065-158-000,results (5).xls
-ccs-234,1651 NW 132nd St,Lettween Family Trust,,,not-contacted,,,813300,291/00065-159-000,results (5).xls
-ccs-235,1671 NW 132nd St,The Schoenebaum Family,,,not-contacted,,,512500,291/00065-160-000,results (5).xls
-ccs-236,13220 Cedarwood Ave,Wr #1 Trust,,,not-contacted,,,816100,291/00065-161-000,results (5).xls
-ccs-237,13200 Cedarwood Ave,Grant S Corell Revocable Trust,,,not-contacted,,,897000,291/00065-162-000,results (5).xls
-ccs-238,13180 Cedarwood Ave,The Luginbill Family,,,not-contacted,,,733800,291/00065-163-000,results (5).xls
-ccs-239,13201 Cedarwood Ave,The Greenfield Family,,,not-contacted,,,783900,291/00065-164-000,results (5).xls
-ccs-240,13221 Cedarwood Ave,Anne T Walsh Rev Trust,,,not-contacted,,,861300,291/00065-165-000,results (5).xls
-ccs-241,13261 Cedarwood Ave,The Skinner Family,,,not-contacted,,,641300,291/00065-166-000,results (5).xls
-ccs-242,13311 Cedarwood Ave,,,,not-contacted,,,732100,291/00065-167-000,results (5).xls
-ccs-243,1701 Cedarwood Cir,Edward F Loeb Trust,,,not-contacted,,,714600,291/00065-168-000,results (5).xls
-ccs-244,1731 Cedarwood Cir,The Jolesch Family,,,not-contacted,,,843600,291/00065-169-000,results (5).xls
-ccs-245,1740 Cedarwood Cir,The Herther Family,,,not-contacted,,,826700,291/00065-170-000,results (5).xls
-ccs-246,1720 Cedarwood Cir,The Schlafmann Family,,,not-contacted,,,888300,291/00065-171-000,results (5).xls
-ccs-247,1700 Cedarwood Cir,The Peterson Family,,,not-contacted,,,992600,291/00065-172-000,results (5).xls
-ccs-248,1680 Cedarwood Cir,The Ingalls Family,,,not-contacted,,,879300,291/00065-173-000,results (5).xls
-ccs-249,13450 Cedarwood Ave,The Cunningham Family,,,not-contacted,,,809500,291/00065-174-000,results (5).xls
-ccs-250,13420 Cedarwood Ave,The Regier Family,,,not-contacted,,,664300,291/00065-175-000,results (5).xls
-ccs-251,13400 Cedarwood Ave,Patricia A Jansen Revocable Trust,,,not-contacted,,,733000,291/00065-176-000,results (5).xls
-ccs-252,13380 Cedarwood Ave,Jay & Virginia Wangerin Living Trust,,,not-contacted,,,815000,291/00065-177-000,results (5).xls
-ccs-253,13350 Cedarwood Ave,The Ehrecke Family,,,not-contacted,,,671200,291/00065-178-000,results (5).xls
-ccs-254,13320 Cedarwood Ave,The Neill Family,,,not-contacted,,,943900,291/00065-179-000,results (5).xls
-ccs-255,13300 Cedarwood Ave,The Mccormick Family,,,not-contacted,,,786500,291/00065-180-000,results (5).xls
-ccs-256,13280 Cedarwood Ave,David Patrick Senkyr Revocable Trust,,,not-contacted,,,1085000,291/00065-181-000,results (5).xls
-ccs-257,1660 NW 132nd St,Deborah C Sheehy Trust,,,not-contacted,,,674000,291/00065-182-000,results (5).xls
-ccs-258,1640 NW 132nd St,The Kramer Family,,,not-contacted,,,782200,291/00065-183-000,results (5).xls
-ccs-259,13211 Hickory Ave,The Marty Family,,,not-contacted,,,767600,291/00065-184-000,results (5).xls
-ccs-260,13261 Hickory Ave,Michael & Sharon Feeley Joint Revocable Trust,,,not-contacted,,,635900,291/00065-185-000,results (5).xls
-ccs-261,13281 Hickory Ave,The Cooley Family,,,not-contacted,,,725300,291/00065-186-000,results (5).xls
-ccs-262,13311 Hickory Ave,The Michels Family,,,not-contacted,,,590000,291/00065-187-000,results (5).xls
-ccs-263,13331 Hickory Ave,The Yaseen Family,,,not-contacted,,,754300,291/00065-188-000,results (5).xls
-ccs-264,13361 Hickory Ave,Vyas Family Revocable Trust,,,not-contacted,,,752600,291/00065-189-000,results (5).xls
-ccs-265,1555 Country Club Blvd,The Ventling Family,,,not-contacted,,,854500,291/00065-190-000,results (5).xls
-ccs-266,1620 Country Club Blvd,The Anderson Family,,,not-contacted,,,857000,291/00065-191-000,results (5).xls
-ccs-267,1600 Country Club Blvd,The Dervesh Family,,,not-contacted,,,917100,291/00065-192-000,results (5).xls
-ccs-268,1580 Country Club Blvd,The Thaden Family,,,not-contacted,,,734400,291/00065-193-000,results (5).xls
-ccs-269,1560 Country Club Blvd,The Weissenburger Family,,,not-contacted,,,732100,291/00065-194-000,results (5).xls
-ccs-270,1540 Country Club Blvd,The Dobesh Family,,,not-contacted,,,733100,291/00065-195-000,results (5).xls
-ccs-271,1520 Country Club Blvd,The Glienke Family,,,not-contacted,,,1108900,291/00065-196-001,results (5).xls
-ccs-272,1500 Country Club Blvd,Matthew B Brown Revocable Trust,,,not-contacted,,,1607300,291/00065-197-001,results (5).xls
-ccs-273,1480 Country Club Blvd,R Todd Miller Revocable Trust,,,not-contacted,,,818300,291/00065-198-000,results (5).xls
-ccs-274,1460 Country Club Blvd,Hagenberg Family Living Trust,,,not-contacted,,,753400,291/00065-199-000,results (5).xls
-ccs-275,1440 Country Club Blvd,The Mease Family,,,not-contacted,,,839700,291/00065-200-000,results (5).xls
-ccs-276,1420 Country Club Blvd,The Shivapour Family,,,not-contacted,,,1080800,291/00065-201-000,results (5).xls
-ccs-277,1400 Country Club Blvd,Shelley L Goodell Revocable Trust,,,not-contacted,,,900400,291/00065-202-000,results (5).xls
-ccs-278,1380 Country Club Blvd,The Olson Family,,,not-contacted,,,632700,291/00065-203-000,results (5).xls
-ccs-279,1360 Country Club Blvd,The Anderson Family,,,not-contacted,,,613300,291/00065-204-000,results (5).xls
-ccs-280,1340 Country Club Blvd,Gwen N Conte Living Trust,,,not-contacted,,,718500,291/00065-205-000,results (5).xls
-ccs-281,1320 Country Club Blvd,The Jeun Family,,,not-contacted,,,720000,291/00065-206-000,results (5).xls
-ccs-282,1300 Country Club Blvd,The Erickson Family,,,not-contacted,,,664300,291/00065-207-000,results (5).xls
-ccs-283,1280 Country Club Blvd,The Scallon Family,,,not-contacted,,,576200,291/00065-208-000,results (5).xls
-ccs-284,1250 Country Club Blvd,The Johnson Family,,,not-contacted,,,547800,291/00065-209-000,results (5).xls
-ccs-285,1220 Country Club Blvd,Kristen L Rappe Revocable Trust,,,not-contacted,,,523500,291/00065-210-000,results (5).xls
-ccs-286,14162 Lakeview Dr,The Sun Family,,,not-contacted,,,773600,291/00065-250-001,results (4).xls
-ccs-287,14140 Lakeview Dr,The Diehl Family,,,not-contacted,,,751300,291/00065-250-002,results (4).xls
-ccs-288,14112 Lakeview Dr,The Reimer Family,,,not-contacted,,,799700,291/00065-250-003,results (4).xls
-ccs-289,14090 Lakeview Dr,The Capobianco Family,,,not-contacted,,,930700,291/00065-250-004,results (4).xls
-ccs-290,14072 Lakeview Dr,Magdi & Nawal Ghali Revocable Trust,,,not-contacted,,,963700,291/00065-250-005,results (4).xls
-ccs-291,14050 Lakeview Dr,Saroj S Patel Trust,,,not-contacted,,,868300,291/00065-250-006,results (4).xls
-ccs-292,14032 Lakeview Dr,The Longnecker Family,,,not-contacted,,,826200,291/00065-250-007,results (4).xls
-ccs-293,14000 Lakeview Dr,The Hermann Family,,,not-contacted,,,885700,291/00065-250-008,results (4).xls
-ccs-294,13982 Lakeview Dr,Beverly Blair Albright-Leighton Trust,,,not-contacted,,,796700,291/00065-250-009,results (4).xls
-ccs-295,13950 Lakeview Dr,Craig J Rowles Revocable Trust,,,not-contacted,,,1150500,291/00065-250-010,results (4).xls
-ccs-296,13890 Lake Shore Dr,Paul A Drey Revocable Trust,,,not-contacted,,,1143600,291/00065-250-011,results (4).xls
-ccs-297,13872 Lake Shore Dr,The Mc Gargill Family,,,not-contacted,,,1012500,291/00065-250-012,results (4).xls
-ccs-298,13850 Lake Shore Dr,Barbara Anne Beatty Revocable Trust,,,not-contacted,,,968600,291/00065-250-013,results (4).xls
-ccs-299,13832 Lake Shore Dr,Kevin J Pothaven Revocable Trust,,,not-contacted,,,1317600,291/00065-250-014,results (4).xls
-ccs-300,13800 Lake Shore Dr,Kathleen A Patel Trust,,,not-contacted,,,917700,291/00065-250-015,results (4).xls
-ccs-301,13782 Lake Shore Dr,The Patel Family,,,not-contacted,,,823600,291/00065-250-016,results (4).xls
-ccs-302,13750 Lake Shore Dr,The Westberg Family,,,not-contacted,,,871800,291/00065-250-017,results (4).xls
-ccs-303,13732 Lake Shore Dr,The Manning Family,,,not-contacted,,,166300,291/00065-250-018,results (4).xls
-ccs-304,13700 Lake Shore Dr,Julie Ann Zierke-Clark Living Trust,,,not-contacted,,,2074000,291/00065-250-019,results (4).xls
-ccs-305,13682 Lake Shore Dr,Fawad Zafar 2022 Revocable Trust,,,not-contacted,,,1354800,291/00065-250-020,results (4).xls
-ccs-306,13650 Lake Shore Dr,Madhan Rengarajan Revocable Trust,,,not-contacted,,,918600,291/00065-250-021,results (4).xls
-ccs-307,13632 Lake Shore Dr,Gopika Myneni Trust,,,not-contacted,,,1105500,291/00065-250-022,results (4).xls
-ccs-308,13610 Lake Shore Dr,The Boss Family,,,not-contacted,,,910800,291/00065-250-023,results (4).xls
-ccs-309,13582 Lake Shore Dr,The Miller Family,,,not-contacted,,,762700,291/00065-250-024,results (4).xls
-ccs-310,13560 Lake Shore Dr,The Hovick Family,,,not-contacted,,,698000,291/00065-250-025,results (4).xls
-ccs-311,13601 Lake Shore Dr,Wade R Hauser Iii Trust,,,not-contacted,,,758800,291/00065-250-026,results (4).xls
-ccs-312,13625 Lake Shore Dr,The Blake Family,,,not-contacted,,,713600,291/00065-250-027,results (4).xls
-ccs-313,13649 Lake Shore Dr,The Hagan Family,,,not-contacted,,,726200,291/00065-250-028,results (4).xls
-ccs-314,13675 Lake Shore Dr,Nancy J Ball Revocable Trust,,,not-contacted,,,752800,291/00065-250-029,results (4).xls
-ccs-315,13703 Lake Shore Dr,Marcela Delgado Sanchez Revocable Trust,,,not-contacted,,,584300,291/00065-250-030,results (4).xls
-ccs-316,13721 Lake Shore Dr,The Vallier Family,,,not-contacted,,,803400,291/00065-250-031,results (4).xls
-ccs-317,13745 Lake Shore Dr,The Manning Family,,,not-contacted,,,606000,291/00065-250-032,results (4).xls
-ccs-318,13767 Lake Shore Dr,The Drake Family,,,not-contacted,,,676100,291/00065-250-033,results (4).xls
-ccs-319,13795 Lake Shore Dr,The Mccombs Family,,,not-contacted,,,592700,291/00065-250-034,results (4).xls
-ccs-320,13823 Lake Shore Dr,Ajit Kumar & Shyamli Kumar Revocable Trust,,,not-contacted,,,703700,291/00065-250-035,results (4).xls
-ccs-321,13855 Lake Shore Dr,The Schoen Family,,,not-contacted,,,810300,291/00065-250-036,results (4).xls
-ccs-322,13880 Lakeview Dr,The Tayal Family,,,not-contacted,,,780600,291/00065-250-037,results (4).xls
-ccs-323,13852 Lakeview Dr,The Rutledge Family,,,not-contacted,,,857600,291/00065-250-038,results (4).xls
-ccs-324,13802 Lakeview Dr,The Magee Family,,,not-contacted,,,742700,291/00065-250-040,results (4).xls
-ccs-325,13790 Lakeview Dr,The Baum Family,,,not-contacted,,,623700,291/00065-250-041,results (4).xls
-ccs-326,13762 Lakeview Dr,The Bogenrief Family,,,not-contacted,,,724500,291/00065-250-042,results (4).xls
-ccs-327,13730 Lakeview Dr,Jonathan H Glaser Revocable Trust,,,not-contacted,,,678600,291/00065-250-043,results (4).xls
-ccs-328,13712 Lakeview Dr,Linda L Murphy Trust,,,not-contacted,,,654400,291/00065-250-044,results (4).xls
-ccs-329,13680 Lakeview Dr,Wirta Family Trust,,,not-contacted,,,627300,291/00065-250-045,results (4).xls
-ccs-330,13662 Lakeview Dr,The Konrad Family,,,not-contacted,,,748100,291/00065-250-046,results (4).xls
-ccs-331,13711 Lakeview Dr,The Parrino Family,,,not-contacted,,,613700,291/00065-250-047,results (4).xls
-ccs-332,13733 Lakeview Dr,Dl Swanson Family Living Trust,,,not-contacted,,,711300,291/00065-250-048,results (4).xls
-ccs-333,13755 Lakeview Dr,Carrie D Galles Revocable Trust,,,not-contacted,,,718500,291/00065-250-049,results (4).xls
-ccs-334,13787 Lakeview Dr,Hein Family Revocable Trust,,,not-contacted,,,677900,291/00065-250-050,results (4).xls
-ccs-335,13801 Lakeview Dr,The Fitzgerald Family,,,not-contacted,,,604600,291/00065-250-051,results (4).xls
-ccs-336,13823 Lakeview Dr,Brayton Family Revocable Trust,,,not-contacted,,,678200,291/00065-250-052,results (4).xls
-ccs-337,13851 Lakeview Dr,The Nelson Family,,,not-contacted,,,621500,291/00065-250-053,results (4).xls
-ccs-338,13953 Lake Shore Dr,The Comes Family,,,not-contacted,,,784800,291/00065-250-056,results (4).xls
-ccs-339,14005 Lake Shore Dr,The Maahs Family,,,not-contacted,,,562600,291/00065-250-057,results (4).xls
-ccs-340,14027 Lake Shore Dr,The Whitecotton Family,,,not-contacted,,,618100,291/00065-250-058,results (4).xls
-ccs-341,14049 Lake Shore Dr,The Pratt Family,,,not-contacted,,,660900,291/00065-250-059,results (4).xls
-ccs-342,14071 Lake Shore Dr,Colleen M Biegger Revocable Trust,,,not-contacted,,,618100,291/00065-250-060,results (4).xls
-ccs-343,14103 Lake Shore Dr,The Johnson Family,,,not-contacted,,,750000,291/00065-250-061,results (4).xls
-ccs-344,14135 Lake Shore Dr,The Gallo Family,,,not-contacted,,,627700,291/00065-250-062,results (4).xls
-ccs-345,14157 Lake Shore Dr,Jason B Wittmer Revocable Trust,,,not-contacted,,,666400,291/00065-250-063,results (4).xls
-ccs-346,14179 Lake Shore Dr,The Vroman Family,,,not-contacted,,,725600,291/00065-250-064,results (4).xls
-ccs-347,14170 Lake Shore Dr,Jayne E Loos Revocable Trust,,,not-contacted,,,791600,291/00065-250-065,results (4).xls
-ccs-348,14152 Lake Shore Dr,The Maigaard Family,,,not-contacted,,,772900,291/00065-250-066,results (4).xls
-ccs-349,14130 Lake Shore Dr,The Wilsbacher Family,,,not-contacted,,,766600,291/00065-250-067,results (4).xls
-ccs-350,14102 Lake Shore Dr,The Montag Family,,,not-contacted,,,568900,291/00065-250-068,results (4).xls
-ccs-351,14070 Lake Shore Dr,The Wegman Family,,,not-contacted,,,689200,291/00065-250-069,results (4).xls
-ccs-352,14052 Lake Shore Dr,The Robinson Family,,,not-contacted,,,528800,291/00065-250-070,results (4).xls
-ccs-353,14030 Lake Shore Dr,Molly C Ryan Revocable Trust,,,not-contacted,,,659700,291/00065-250-071,results (4).xls
-ccs-354,14012 Lake Shore Dr,Rinderknecht Family Trust,,,not-contacted,,,650900,291/00065-250-072,results (4).xls
-ccs-355,13990 Lake Shore Dr,Curtis & Nancy Hoegh Revocable Trust,,,not-contacted,,,715600,291/00065-250-073,results (4).xls
-ccs-356,13972 Lake Shore Dr,Eva Marie Evans Revocable Trust,,,not-contacted,,,756900,291/00065-250-074,results (4).xls
-ccs-357,13949 Lakeview Dr,Diane K Skinner Revocable Trust,,,not-contacted,,,665600,291/00065-250-075,results (4).xls
-ccs-358,13975 Lakeview Dr,The Rowan Family,,,not-contacted,,,543800,291/00065-250-076,results (4).xls
-ccs-359,14001 Lakeview Dr,The Rupiper Family,,,not-contacted,,,577400,291/00065-250-077,results (4).xls
-ccs-360,14043 Lakeview Dr,The Freiburger Family,,,not-contacted,,,664700,291/00065-250-078,results (4).xls
-ccs-361,14055 Lakeview Dr,The Abbott Family,,,not-contacted,,,571600,291/00065-250-079,results (4).xls
-ccs-362,14077 Lakeview Dr,The Schlapkohl Family,,,not-contacted,,,733200,291/00065-250-080,results (4).xls
-ccs-363,14099 Lakeview Dr,Cynthia A C Keller Revocable Trust,,,not-contacted,,,777700,291/00065-250-081,results (4).xls
-ccs-364,14121 Lakeview Dr,The Ducharme Family,,,not-contacted,,,976300,291/00065-250-082,results (4).xls
-ccs-365,14143 Lakeview Dr,The Funk Family,,,not-contacted,,,769700,291/00065-250-083,results (4).xls
-ccs-366,14165 Lakeview Dr,The Parks Family,,,not-contacted,,,642500,291/00065-250-084,results (4).xls
-ccs-367,1953 Country Club Blvd,Bill R Jr & Diane Louise Breckenridge Joint Liv Tr,,,not-contacted,,,680700,291/00065-250-085,results (4).xls
-ccs-368,13533 Lake Shore Dr,The Angle Family,,,not-contacted,,,639300,291/00065-250-086,results (4).xls
-ccs-369,13511 Lake Shore Dr,The Bratvold Family,,,not-contacted,,,489100,291/00065-250-087,results (4).xls
-ccs-370,1875 Country Club Blvd,Steven A Keller Revocable Trust,,,not-contacted,,,988700,291/00065-250-088,results (4).xls
-ccs-371,13921 Lake Shore Dr,Robert D Shaw Revocable Trust,,,not-contacted,,,969100,291/00065-250-091,results (4).xls
-ccs-372,13830 Lakeview Dr,The Stier Family,,,not-contacted,,,918200,291/00065-250-092,results (4).xls
-ccs-373,14167 South Shore Dr,The Schemmel Family,,,not-contacted,,,538100,291/00065-481-001,results.xls
-ccs-374,14137 South Shore Dr,The Link Jr Family,,,not-contacted,,,773300,291/00065-481-002,results.xls
-ccs-375,14107 South Shore Dr,Frank J & Mary D Demarco Revocable Trust,,,not-contacted,,,841300,291/00065-481-003,results.xls
-ccs-376,14097 South Shore Dr,The Keller Family,,,not-contacted,,,942900,291/00065-481-004,results.xls
-ccs-377,14067 South Shore Dr,The Judkins Josten Family,,,not-contacted,,,715100,291/00065-481-005,results.xls
-ccs-378,14037 South Shore Dr,The Kumar Family,,,not-contacted,,,976600,291/00065-481-006,results.xls
-ccs-379,14007 South Shore Dr,Holly B Healey Revocable Trust,,,not-contacted,,,788200,291/00065-481-007,results.xls
-ccs-380,13981 South Shore Dr,The Elmore Family,,,not-contacted,,,845900,291/00065-481-008,results.xls
-ccs-381,13971 South Shore Dr,Raymond H Cole Revocable Trust,,,not-contacted,,,903600,291/00065-481-009,results.xls
-ccs-382,13961 South Shore Dr,The Prasad Family,,,not-contacted,,,856500,291/00065-481-010,results.xls
-ccs-383,13951 South Shore Dr,Kay D Revocable Trust,,,not-contacted,,,1275700,291/00065-481-011,results.xls
-ccs-384,13941 South Shore Dr,Mark H Iles Trust,,,not-contacted,,,1497600,291/00065-481-012,results.xls
-ccs-385,13931 South Shore Dr,The Keshwani Family,,,not-contacted,,,801000,291/00065-481-013,results.xls
-ccs-386,13921 South Shore Dr,Richard D Mauk Revocable Trust,,,not-contacted,,,905500,291/00065-481-014,results.xls
-ccs-387,13911 South Shore Dr,The Kiel Family,,,not-contacted,,,923200,291/00065-481-015,results.xls
-ccs-388,13901 South Shore Dr,The Martin Family,,,not-contacted,,,845900,291/00065-481-016,results.xls
-ccs-389,13932 Lake Pointe Dr,The Durick Family,,,not-contacted,,,939500,291/00065-481-017,results.xls
-ccs-390,14000 Willow Dr,The Bump Family,,,not-contacted,,,787600,291/00065-481-018,results.xls
-ccs-391,14002 Willow Dr,The Singh Family,,,not-contacted,,,743900,291/00065-481-019,results.xls
-ccs-392,14032 Willow Dr,Robert A Eilertson Trust,,,not-contacted,,,665400,291/00065-481-020,results.xls
-ccs-393,14062 Willow Dr,Jean Lw Fox Revocable Trust,,,not-contacted,,,765700,291/00065-481-021,results.xls
-ccs-394,14092 Willow Dr,The Colosimo Family,,,not-contacted,,,721900,291/00065-481-022,results.xls
-ccs-395,14102 Willow Dr,The Hockett Clark Family,,,not-contacted,,,666200,291/00065-481-023,results.xls
-ccs-396,14132 Willow Dr,The Leuschen Family,,,not-contacted,,,757000,291/00065-481-024,results.xls
-ccs-397,14162 Willow Dr,The Carmody Family,,,not-contacted,,,623300,291/00065-481-025,results.xls
-ccs-398,14161 Willow Dr,The Walterman Family,,,not-contacted,,,653600,291/00065-481-026,results.xls
-ccs-399,14131 Willow Dr,The Percival Family,,,not-contacted,,,640000,291/00065-481-027,results.xls
-ccs-400,14101 Willow Dr,The Bertroche Jr Family,,,not-contacted,,,661800,291/00065-481-028,results.xls
-ccs-401,14091 Willow Dr,The Bogusz Family,,,not-contacted,,,880900,291/00065-481-029,results.xls
-ccs-402,14061 Willow Dr,The Schumann Family,,,not-contacted,,,572800,291/00065-481-030,results.xls
-ccs-403,14031 Willow Dr,The Matta Family,,,not-contacted,,,994800,291/00065-481-031,results.xls
-ccs-404,14001 Willow Dr,The Boffeli Family,,,not-contacted,,,601800,291/00065-481-032,results.xls
-ccs-405,14032 Lake Pointe Dr,The Deay Family,,,not-contacted,,,734300,291/00065-481-033,results.xls
-ccs-406,14062 Lake Pointe Dr,The Harshbarger Family,,,not-contacted,,,593300,291/00065-481-034,results.xls
-ccs-407,14092 Lake Pointe Dr,The Connolly Family,,,not-contacted,,,632300,291/00065-481-035,results.xls
-ccs-408,14102 Lake Pointe Dr,Pleasant Lake Trust,,,not-contacted,,,632200,291/00065-481-036,results.xls
-ccs-409,14132 Lake Pointe Dr,Laraine Elizabeth Davis Revocable Trust,,,not-contacted,,,588900,291/00065-481-037,results.xls
-ccs-410,14162 Lake Pointe Dr,Cheryl L Harding Revocable Trust,,,not-contacted,,,679400,291/00065-481-038,results.xls
-ccs-411,14161 Lake Pointe Dr,The Hakeman Family,,,not-contacted,,,782700,291/00065-481-039,results.xls
-ccs-412,14131 Lake Pointe Dr,The Becker Family,,,not-contacted,,,686400,291/00065-481-040,results.xls
-ccs-413,14101 Lake Pointe Dr,The Goldie Family,,,not-contacted,,,1003100,291/00065-481-041,results.xls
-ccs-414,14091 Lake Pointe Dr,Ann M Jury Trust,,,not-contacted,,,526700,291/00065-481-042,results.xls
-ccs-415,14061 Lake Pointe Dr,John P Garbe Revocable Trust,,,not-contacted,,,668600,291/00065-481-043,results.xls
-ccs-416,14031 Lake Pointe Dr,The Nadel Family,,,not-contacted,,,654300,291/00065-481-044,results.xls
-ccs-417,14001 Lake Pointe Dr,Kyle & Heidi Hickman Revocable Trust,,,not-contacted,,,682200,291/00065-481-045,results.xls
-ccs-418,13906 South Shore Dr,The Fleming Family,,,not-contacted,,,582900,291/00065-481-046,results.xls
-ccs-419,13936 South Shore Dr,Tjtk Estates LLC,,,not-contacted,,,860800,291/00065-481-047,results.xls
-ccs-420,13966 South Shore Dr,The Njoroge Family,,,not-contacted,,,732200,291/00065-481-048,results.xls
-ccs-421,13996 South Shore Dr,The Sipe Family,,,not-contacted,,,710200,291/00065-481-049,results.xls
-ccs-422,14006 South Shore Dr,The Menke Family,,,not-contacted,,,771900,291/00065-481-050,results.xls
-ccs-423,14036 South Shore Dr,Jms Revocable Trust,,,not-contacted,,,717100,291/00065-481-051,results.xls
-ccs-424,14066 South Shore Dr,The Lehn Family,,,not-contacted,,,758300,291/00065-481-052,results.xls
-ccs-425,14096 South Shore Dr,The Adams Family,,,not-contacted,,,615700,291/00065-481-053,results.xls
-ccs-426,14106 South Shore Dr,The Blanchette Family,,,not-contacted,,,681900,291/00065-481-054,results.xls
-ccs-427,14136 South Shore Dr,The Hayes Family,,,not-contacted,,,663300,291/00065-481-055,results.xls
-ccs-428,14166 South Shore Dr,The Fox Family,,,not-contacted,,,647400,291/00065-481-056,results.xls
-ccs-429,13775 Rosewood Dr,The Howard Family,,,not-contacted,,,586200,291/00065-461-000,results (2).xls
-ccs-430,13801 Rosewood Dr,The Lynch Family,,,not-contacted,,,557100,291/00065-462-000,results (2).xls
-ccs-431,13815 Rosewood Dr,The Micka Family,,,not-contacted,,,624600,291/00065-463-000,results (2).xls
-ccs-432,13831 Rosewood Dr,The Collins Family,,,not-contacted,,,639800,291/00065-464-000,results (2).xls
-ccs-433,13847 Rosewood Dr,Matthew & Lynn Johnson Living Trust,,,not-contacted,,,653600,291/00065-465-000,results (2).xls
-ccs-434,13863 Rosewood Dr,The Ward Family,,,not-contacted,,,605400,291/00065-466-000,results (2).xls
-ccs-435,13915 Rosewood Dr,The Bailey Family,,,not-contacted,,,658100,291/00065-467-000,results (2).xls
-ccs-436,13935 Rosewood Dr,Cheryl L Rigler Revocable Trust,,,not-contacted,,,811100,291/00065-468-000,results (2).xls
-ccs-437,13922 Rosewood Dr,Timothy P Derouin Revocable Trust,,,not-contacted,,,710900,291/00065-469-000,results (2).xls
-ccs-438,13864 Rosewood Dr,The Lessman Family,,,not-contacted,,,615600,291/00065-470-000,results (2).xls
-ccs-439,13848 Rosewood Dr,The Evans Family,,,not-contacted,,,715000,291/00065-471-000,results (2).xls
-ccs-440,13832 Rosewood Dr,The Novotny Family,,,not-contacted,,,714800,291/00065-472-000,results (2).xls
-ccs-441,13816 Rosewood Dr,Mary M Kleinschmit Revocable Trust,,,not-contacted,,,718600,291/00065-473-000,results (2).xls
-ccs-442,13800 Rosewood Dr,Maxwell S Cosmic Trust,,,not-contacted,,,696400,291/00065-474-000,results (2).xls
-ccs-443,13780 Rosewood Dr,The Lensing Family,,,not-contacted,,,664900,291/00065-475-000,results (2).xls
-ccs-444,13760 Rosewood Dr,The Macri Iii Family,,,not-contacted,,,586900,291/00065-476-000,results (2).xls
+id,address,household_name,phone,email,status,services_interested,notes,assessed_value,parcel,source_file,lat,lng,geocode_status
+ccs-001,2270 Country Club Blvd,The Smith Family,,,not-contacted,,,382500,291/00065-351-000,results (3).xls,41.6144443,-93.8084619,ok
+ccs-002,2250 Country Club Blvd,The Sakauye Family,,,not-contacted,,,393700,291/00065-352-000,results (3).xls,41.6142260,-93.8084498,ok
+ccs-003,2230 Country Club Blvd,The Hill Family,,,not-contacted,,,422200,291/00065-353-000,results (3).xls,41.6140020,-93.8084430,ok
+ccs-004,2210 Country Club Blvd,The Smith Family,,,not-contacted,,,441900,291/00065-354-000,results (3).xls,41.6137579,-93.8084421,ok
+ccs-005,2190 Country Club Blvd,The Aluvisia Family,,,not-contacted,,,347300,291/00065-355-000,results (3).xls,41.6135171,-93.8084932,ok
+ccs-006,2170 Country Club Blvd,The Smith Family,,,not-contacted,,,463600,291/00065-356-000,results (3).xls,41.6132966,-93.8084430,ok
+ccs-007,2150 Country Club Blvd,The Mayoros Family,,,not-contacted,,,452700,291/00065-357-000,results (3).xls,41.6130832,-93.8084675,ok
+ccs-008,13805 Hawthorn Dr,The Burke Family,,,not-contacted,,,407200,291/00065-358-000,results (3).xls,41.6128392,-93.8084855,ok
+ccs-009,13800 Hawthorn Dr,The Woiwood Family,,,not-contacted,,,517600,291/00065-359-000,results (3).xls,41.6123545,-93.8084423,ok
+ccs-010,2277 Country Club Blvd,Jason & Angela Rouse Trust,,,not-contacted,,,346200,291/00065-360-000,results (3).xls,41.6144437,-93.8077973,ok
+ccs-011,2255 Country Club Blvd,The Jontz Family,,,not-contacted,,,434700,291/00065-361-000,results (3).xls,41.6142731,-93.8078015,ok
+ccs-012,2233 Country Club Blvd,The Johnson Family,,,not-contacted,,,437400,291/00065-362-000,results (3).xls,41.6139976,-93.8078305,ok
+ccs-013,2211 Country Club Blvd,The Slagter Family,,,not-contacted,,,456200,291/00065-363-000,results (3).xls,41.6137577,-93.8078260,ok
+ccs-014,2195 Country Club Blvd,The Brobst Family,,,not-contacted,,,419500,291/00065-364-000,results (3).xls,41.6135429,-93.8078169,ok
+ccs-015,2175 Country Club Blvd,The Agard Family,,,not-contacted,,,411200,291/00065-365-000,results (3).xls,41.6133336,-93.8078048,ok
+ccs-016,2155 Country Club Blvd,The Malone Family,,,not-contacted,,,420300,291/00065-366-000,results (3).xls,41.6131119,-93.8078315,ok
+ccs-017,2135 Country Club Blvd,Robert & Heather Mckinney Revocable Trust,,,not-contacted,,,433000,291/00065-367-000,results (3).xls,41.6128894,-93.8078152,ok
+ccs-018,2101 Country Club Blvd,The Betts Family,,,not-contacted,,,444600,291/00065-368-000,results (3).xls,41.6123581,-93.8077231,ok
+ccs-019,2085 Country Club Blvd,Honey Homes LLC,,,not-contacted,,,460000,291/00065-369-000,results (3).xls,41.6121141,-93.8076540,ok
+ccs-020,2077 Country Club Blvd,Sarah P Graf Revocable Trust,,,not-contacted,,,428300,291/00065-370-000,results (3).xls,41.6118940,-93.8075222,ok
+ccs-021,2055 Country Club Blvd,The Wittmer Family,,,not-contacted,,,406600,291/00065-371-000,results (3).xls,41.6116941,-93.8073258,ok
+ccs-022,2043 Country Club Blvd,The Hadenfeldt Family,,,not-contacted,,,530900,291/00065-372-000,results (3).xls,41.6115024,-93.8071157,ok
+ccs-023,2023 Country Club Blvd,The Scott Family,,,not-contacted,,,573000,291/00065-373-000,results (3).xls,41.6113430,-93.8068553,ok
+ccs-024,2011 Country Club Blvd,Bell Family Revocable Trust,,,not-contacted,,,465200,291/00065-374-000,results (3).xls,41.6111894,-93.8065767,ok
+ccs-025,2110 NW 137th St,The Perlinger Family,,,not-contacted,,,438900,291/00065-375-000,results (3).xls,41.6123595,-93.8072510,ok
+ccs-026,2094 NW 137th St,The Kein Family,,,not-contacted,,,504600,291/00065-376-000,results (3).xls,41.6121312,-93.8071090,ok
+ccs-027,2072 NW 137th St,Emily Ruth Broderick Living Trust,,,not-contacted,,,424700,291/00065-377-000,results (3).xls,41.6119356,-93.8068831,ok
+ccs-028,2056 NW 137th St,The Jensen Family,,,not-contacted,,,419500,291/00065-378-000,results (3).xls,41.6117823,-93.8066459,ok
+ccs-029,2044 NW 137th St,The Jones Family,,,not-contacted,,,494300,291/00065-379-000,results (3).xls,41.6116237,-93.8064254,ok
+ccs-030,13651 Lakeview Dr,Dale A Westdal & Anita R Westdal Revocable Trust,,,not-contacted,,,444000,291/00065-380-000,results (3).xls,41.6114515,-93.8061574,ok
+ccs-031,2049 NW 137th St,The Roberts Family,,,not-contacted,,,434000,291/00065-381-000,results (3).xls,41.6116502,-93.8055670,ok
+ccs-032,13587 Lakeview Dr,The Brown Family,,,not-contacted,,,554800,291/00065-382-000,results (3).xls,41.6117292,-93.8051866,ok
+ccs-033,2060 NW 135th St,Rita C Batra Revocable Trust,,,not-contacted,,,470200,291/00065-383-000,results (3).xls,41.6119795,-93.8050244,ok
+ccs-034,2094 NW 135th St,The Meyer Family,,,not-contacted,,,447200,291/00065-384-000,results (3).xls,41.6122257,-93.8050160,ok
+ccs-035,2102 NW 135th St,The White Family,,,not-contacted,,,460800,291/00065-385-000,results (3).xls,41.6124468,-93.8050355,ok
+ccs-036,2114 NW 135th St,The Annis Family,,,not-contacted,,,478700,291/00065-386-000,results (3).xls,41.6126626,-93.8050475,ok
+ccs-037,2132 NW 135th St,Richard And Jacquelynn Rose Joint Revocable Trust,,,not-contacted,,,438500,291/00065-387-000,results (3).xls,41.6128742,-93.8050135,ok
+ccs-038,2150 NW 135th St,Mcdonald Family Revocable Trust,,,not-contacted,,,456900,291/00065-388-000,results (3).xls,41.6131018,-93.8050402,ok
+ccs-039,2172 NW 135th St,David A Hill Jr Revocable Trust,,,not-contacted,,,485700,291/00065-389-000,results (3).xls,41.6133195,-93.8050306,ok
+ccs-040,2194 NW 135th St,The Breiner Family,,,not-contacted,,,504600,291/00065-390-000,results (3).xls,41.6135413,-93.8050315,ok
+ccs-041,2210 NW 135th St,The Mc Clain Family,,,not-contacted,,,464400,291/00065-391-000,results (3).xls,41.6137500,-93.8050551,ok
+ccs-042,13598 Summit Dr,The Burriola Family,,,not-contacted,,,434300,291/00065-392-000,results (3).xls,41.6137962,-93.8055088,ok
+ccs-043,2195 NW 136th St,The Ferguson Family,,,not-contacted,,,462900,291/00065-393-000,results (3).xls,41.6135328,-93.8055071,ok
+ccs-044,2173 NW 136th St,The Stieber Family,,,not-contacted,,,466000,291/00065-394-000,results (3).xls,41.6133249,-93.8055360,ok
+ccs-045,2151 NW 136th St,The Hawk Family,,,not-contacted,,,400500,291/00065-395-000,results (3).xls,41.6130986,-93.8055179,ok
+ccs-046,2135 NW 136th St,The Shima Family,,,not-contacted,,,482000,291/00065-396-000,results (3).xls,41.6128869,-93.8054968,ok
+ccs-047,2113 NW 136th St,The Oleson Family,,,not-contacted,,,535900,291/00065-397-000,results (3).xls,41.6126404,-93.8055112,ok
+ccs-048,2101 NW 136th St,The Crawford Family,,,not-contacted,,,478200,291/00065-398-000,results (3).xls,41.6123767,-93.8055270,ok
+ccs-049,2085 NW 136th St,The Waller Family,,,not-contacted,,,558500,291/00065-399-000,results (3).xls,41.6121532,-93.8056312,ok
+ccs-050,2063 NW 136th St,The Mantell Family,,,not-contacted,,,485800,291/00065-400-000,results (3).xls,41.6119366,-93.8058096,ok
+ccs-051,2085 NW 137th St,The Stone Family,,,not-contacted,,,426900,291/00065-401-000,results (3).xls,41.6122339,-93.8063574,ok
+ccs-052,2112 NW 136th St,The Clabaugh Family,,,not-contacted,,,458800,291/00065-402-000,results (3).xls,41.6124925,-93.8061472,ok
+ccs-053,2126 NW 136th St,The Garner Family,,,not-contacted,,,395600,291/00065-403-000,results (3).xls,41.6127153,-93.8061535,ok
+ccs-054,2140 NW 136th St,The Singh Family,,,not-contacted,,,497500,291/00065-404-000,results (3).xls,41.6129434,-93.8061627,ok
+ccs-055,2154 NW 136th St,The Boeve Family,,,not-contacted,,,461700,291/00065-405-000,results (3).xls,41.6131554,-93.8061572,ok
+ccs-056,2170 NW 136th St,The Rasmussen Family,,,not-contacted,,,467900,291/00065-406-000,results (3).xls,41.6133663,-93.8061615,ok
+ccs-057,2194 NW 136th St,The Allen Family,,,not-contacted,,,505400,291/00065-407-000,results (3).xls,41.6135942,-93.8061730,ok
+ccs-058,2216 NW 136th St,The Lin Family,,,not-contacted,,,454200,291/00065-408-000,results (3).xls,41.6138157,-93.8061533,ok
+ccs-059,2215 NW 137th St,The Tucker Family,,,not-contacted,,,468400,291/00065-409-000,results (3).xls,41.6137610,-93.8066222,ok
+ccs-060,2195 NW 137th St,Susan M Plymale Rev Trust,,,not-contacted,,,447500,291/00065-410-000,results (3).xls,41.6135415,-93.8066427,ok
+ccs-061,2173 NW 137th St,The Kuntz Family,,,not-contacted,,,493800,291/00065-411-000,results (3).xls,41.6133213,-93.8066433,ok
+ccs-062,2155 NW 137th St,The Lederhaas Family,,,not-contacted,,,487400,291/00065-412-000,results (3).xls,41.6131011,-93.8066368,ok
+ccs-063,2133 NW 137th St,The Huynh Family,,,not-contacted,,,494300,291/00065-413-000,results (3).xls,41.6128806,-93.8066512,ok
+ccs-064,2125 NW 137th St,P Richard Schloerb & Susan M Schloerb Living Trust,,,not-contacted,,,523700,291/00065-414-000,results (3).xls,41.6126589,-93.8066453,ok
+ccs-065,2113 NW 137th St,The Mc Cann Family,,,not-contacted,,,438700,291/00065-415-000,results (3).xls,41.6124311,-93.8066015,ok
+ccs-066,2132 NW 137th St,The Peterson Family,,,not-contacted,,,478300,291/00065-416-000,results (3).xls,41.6128974,-93.8073275,ok
+ccs-067,2150 NW 137th St,The Deshpande Family,,,not-contacted,,,443200,291/00065-417-000,results (3).xls,41.6131085,-93.8072975,ok
+ccs-068,2172 NW 137th St,The Brown Family,,,not-contacted,,,418600,291/00065-418-000,results (3).xls,41.6133269,-93.8072747,ok
+ccs-069,2190 NW 137th St,The Schlautman Family,,,not-contacted,,,483700,291/00065-419-000,results (3).xls,41.6135524,-93.8072938,ok
+ccs-070,2210 NW 137th St,The Gerleman Family,,,not-contacted,,,421700,291/00065-420-000,results (3).xls,41.6137670,-93.8072810,ok
+ccs-071,2244 NW 137th St,The Nicholson Family,,,not-contacted,,,969300,291/00065-421-000,results (3).xls,41.6140259,-93.8072014,ok
+ccs-072,13705 Summit Dr,The Wagner Family,,,not-contacted,,,516700,291/00065-422-000,results (3).xls,41.6142211,-93.8069701,ok
+ccs-073,13687 Summit Dr,The Witt Family,,,not-contacted,,,459900,291/00065-423-000,results (3).xls,41.6142888,-93.8066632,ok
+ccs-074,13665 Summit Dr,The Rohrs Family,,,not-contacted,,,410200,291/00065-424-000,results (3).xls,41.6142986,-93.8063465,ok
+ccs-075,13643 Summit Dr,The Duong Family,,,not-contacted,,,402500,291/00065-425-000,results (3).xls,41.6143086,-93.8059974,ok
+ccs-076,13621 Summit Dr,The Cochran Family,,,not-contacted,,,433200,291/00065-426-000,results (3).xls,41.6143130,-93.8057625,ok
+ccs-077,13597 Summit Dr,The Barth Family,,,not-contacted,,,469200,291/00065-427-000,results (3).xls,41.6143070,-93.8054695,ok
+ccs-078,13585 Summit Dr,Vikram Taware Living Trust,,,not-contacted,,,459800,291/00065-428-000,results (3).xls,41.6142947,-93.8051714,ok
+ccs-079,13563 Summit Dr,The Sinnwell Family,,,not-contacted,,,519200,291/00065-429-000,results (3).xls,41.6142591,-93.8048551,ok
+ccs-080,13543 Summit Dr,The Jacobs Family,,,not-contacted,,,453500,291/00065-430-000,results (3).xls,41.6141266,-93.8045569,ok
+ccs-081,2223 NW 135th St,The Idso Family,,,not-contacted,,,477700,291/00065-431-000,results (3).xls,41.6139011,-93.8044413,ok
+ccs-082,2201 NW 135th St,The Snitker Family,,,not-contacted,,,439700,291/00065-432-000,results (3).xls,41.6136754,-93.8043991,ok
+ccs-083,2185 NW 135th St,The Bowles Family,,,not-contacted,,,429400,291/00065-433-000,results (3).xls,41.6134525,-93.8044038,ok
+ccs-084,2163 NW 135th St,The Turner Family,,,not-contacted,,,514700,291/00065-434-000,results (3).xls,41.6132262,-93.8043789,ok
+ccs-085,2149 NW 135th St,The Kramer Family,,,not-contacted,,,479900,291/00065-435-000,results (3).xls,41.6129627,-93.8043722,ok
+ccs-086,2123 NW 135th St,The Deal Family,,,not-contacted,,,548700,291/00065-436-000,results (3).xls,41.6127533,-93.8043854,ok
+ccs-087,2111 NW 135th St,The Landess Family,,,not-contacted,,,467700,291/00065-437-000,results (3).xls,41.6125151,-93.8043837,ok
+ccs-088,2097 NW 135th St,The Millang Family,,,not-contacted,,,624400,291/00065-438-000,results (3).xls,41.6122757,-93.8043742,ok
+ccs-089,2075 NW 135th St,The Host Family,,,not-contacted,,,513500,291/00065-439-000,results (3).xls,41.6120517,-93.8043743,ok
+ccs-090,2053 NW 135th St,Asha N Madia Revocable Trust,,,not-contacted,,,620500,291/00065-440-000,results (3).xls,41.6118141,-93.8043388,ok
+ccs-091,2049 NW 135th St,The Krause Family,,,not-contacted,,,650300,291/00065-441-000,results (3).xls,41.6115859,-93.8044171,ok
+ccs-092,13552 Lakeview Dr,The Ingrisano Family,,,not-contacted,,,526000,291/00065-442-000,results (3).xls,41.6113717,-93.8046258,ok
+ccs-093,13560 Lakeview Dr,Joanna M Lowe Revocable Trust,,,not-contacted,,,488300,291/00065-443-000,results (3).xls,41.6112857,-93.8049031,ok
+ccs-094,13586 Lakeview Dr,The Chawla Family,,,not-contacted,,,552000,291/00065-444-000,results (3).xls,41.6111829,-93.8052032,ok
+ccs-095,13602 Lakeview Dr,The Cressy Family,,,not-contacted,,,508300,291/00065-445-000,results (3).xls,41.6110963,-93.8055102,ok
+ccs-096,1995 Country Club Blvd,The Mohs Family,,,not-contacted,,,582800,291/00065-446-000,results (3).xls,41.6108726,-93.8059969,ok
+ccs-097,1985 Country Club Blvd,The Seglar Family,,,not-contacted,,,437500,291/00065-447-000,results (3).xls,41.6107245,-93.8057517,ok
+ccs-098,1977 Country Club Blvd,The Rojas Family,,,not-contacted,,,507500,291/00065-448-000,results (3).xls,41.6106014,-93.8055104,ok
+ccs-099,14165 Hawthorn Dr,The Corado Family,,,not-contacted,,,449000,291/00065-480-001,results (1).xls,41.6125650,-93.8136582,ok
+ccs-100,2132 NW 141st St,The Kolks Family,,,not-contacted,,,415500,291/00065-480-002,results (1).xls,41.6127553,-93.8134370,ok
+ccs-101,2156 NW 141st St,The Schmitz Family,,,not-contacted,,,442500,291/00065-480-003,results (1).xls,41.6129545,-93.8134424,ok
+ccs-102,2170 NW 141st St,James J Detaeye Revocable Trust,,,not-contacted,,,421800,291/00065-480-004,results (1).xls,41.6131583,-93.8134565,ok
+ccs-103,2184 NW 141st St,The Perez Sanchez Family,,,not-contacted,,,349000,291/00065-480-005,results (1).xls,41.6133455,-93.8134205,ok
+ccs-104,2198 NW 141st St,The Christensen Family,,,not-contacted,,,410300,291/00065-480-006,results (1).xls,41.6135365,-93.8134150,ok
+ccs-105,2222 NW 141st St,The Wittern Iv Family,,,not-contacted,,,395500,291/00065-480-007,results (1).xls,41.6137484,-93.8133796,ok
+ccs-106,2242 NW 141st St,The Kelly Family,,,not-contacted,,,467800,291/00065-480-008,results (1).xls,41.6139752,-93.8133189,ok
+ccs-107,2262 NW 141st St,The Hanson Family,,,not-contacted,,,387100,291/00065-480-009,results (1).xls,41.6141022,-93.8130952,ok
+ccs-108,14097 Summit Dr,The Christensen Family,,,not-contacted,,,397800,291/00065-480-010,results (1).xls,41.6142232,-93.8128793,ok
+ccs-109,14073 Summit Dr,Jeffrey P Blue & Bonnie L Blue Family Revocable Trust,,,not-contacted,,,384900,291/00065-480-011,results (1).xls,41.6143045,-93.8126327,ok
+ccs-110,14049 Summit Dr,Kaizen Collective LLC,,,not-contacted,,,364300,291/00065-480-012,results (1).xls,41.6143328,-93.8123563,ok
+ccs-111,14025 Summit Dr,Roy Johnson & Peggy Palmer-Johnson Joint Revocable Trust,,,not-contacted,,,382300,291/00065-480-013,results (1).xls,41.6143354,-93.8120907,ok
+ccs-112,14001 Summit Dr,The Sager Family,,,not-contacted,,,384000,291/00065-480-014,results (1).xls,41.6143478,-93.8118346,ok
+ccs-113,13977 Summit Dr,The Huber Mackey Family,,,not-contacted,,,356600,291/00065-480-015,results (1).xls,41.6143466,-93.8115706,ok
+ccs-114,13953 Summit Dr,The Dolezal Family,,,not-contacted,,,348400,291/00065-480-016,results (1).xls,41.6143449,-93.8113197,ok
+ccs-115,13929 Summit Dr,Wb Holdings LLC,,,not-contacted,,,324000,291/00065-480-017,results (1).xls,41.6143481,-93.8110621,ok
+ccs-116,13905 Summit Dr,The Pugh Family,,,not-contacted,,,374000,291/00065-480-018,results (1).xls,41.6143429,-93.8108060,ok
+ccs-117,13899 Summit Dr,The Marturello Family,,,not-contacted,,,346300,291/00065-480-019,results (1).xls,41.6143425,-93.8105531,ok
+ccs-118,13877 Summit Dr,The Ramsey Family,,,not-contacted,,,349800,291/00065-480-020,results (1).xls,41.6143438,-93.8102943,ok
+ccs-119,13851 Summit Dr,The Westrum Family,,,not-contacted,,,360200,291/00065-480-021,results (1).xls,41.6143309,-93.8100522,ok
+ccs-120,13825 Summit Dr,The Groves Family,,,not-contacted,,,425800,291/00065-480-022,results (1).xls,41.6143405,-93.8097817,ok
+ccs-121,13801 Summit Dr,The Carter Family,,,not-contacted,,,397200,291/00065-480-023,results (1).xls,41.6142989,-93.8094966,ok
+ccs-122,2241 NW 138th St,The Stein Family,,,not-contacted,,,445300,291/00065-480-025,results (1).xls,41.6139875,-93.8091169,ok
+ccs-123,2221 NW 138th St,The Juhl Family,,,not-contacted,,,391600,291/00065-480-026,results (1).xls,41.6137673,-93.8090752,ok
+ccs-124,2201 NW 138th St,Knapp Family Revocable Trust,,,not-contacted,,,372900,291/00065-480-027,results (1).xls,41.6135784,-93.8090785,ok
+ccs-125,2171 NW 138th St,The Pruitt Family,,,not-contacted,,,383000,291/00065-480-028,results (1).xls,41.6133766,-93.8090571,ok
+ccs-126,2151 NW 138th St,Mollie Ruth O'Brien Revocable Trust,,,not-contacted,,,406500,291/00065-480-029,results (1).xls,41.6131862,-93.8090669,ok
+ccs-127,2131 NW 138th St,The Lenox Family,,,not-contacted,,,412900,291/00065-480-030,results (1).xls,41.6129920,-93.8090558,ok
+ccs-128,2111 NW 138th St,Eric Baarda Revocable Trust,,,not-contacted,,,416900,291/00065-480-031,results (1).xls,41.6128019,-93.8089959,ok
+ccs-129,2110 NW 138th St,The Kees Family,,,not-contacted,,,386600,291/00065-480-032,results (1).xls,41.6126472,-93.8096099,ok
+ccs-130,2130 NW 138th St,Darrell & Betty Vanwoert Joint Revocable Trust,,,not-contacted,,,416200,291/00065-480-033,results (1).xls,41.6128319,-93.8096596,ok
+ccs-131,2150 NW 138th St,Pivot Holdings LLC,,,not-contacted,,,320000,291/00065-480-034,results (1).xls,41.6130408,-93.8097038,ok
+ccs-132,2170 NW 138th St,The Stanfel Family,,,not-contacted,,,396600,291/00065-480-035,results (1).xls,41.6132212,-93.8096870,ok
+ccs-133,2190 NW 138th St,The Rullestad Family,,,not-contacted,,,346400,291/00065-480-036,results (1).xls,41.6134265,-93.8096913,ok
+ccs-134,2210 NW 138th St,The Johnson Family,,,not-contacted,,,422600,291/00065-480-037,results (1).xls,41.6136103,-93.8096918,ok
+ccs-135,2230 NW 138th St,The Hawn Family,,,not-contacted,,,418100,291/00065-480-038,results (1).xls,41.6138093,-93.8097567,ok
+ccs-136,2231 NW 139th St,The Griffiths Family,,,not-contacted,,,368600,291/00065-480-039,results (1).xls,41.6138737,-93.8103224,ok
+ccs-137,2211 NW 139th St,Sherri L Samuelson Property Management Trust,,,not-contacted,,,406400,291/00065-480-040,results (1).xls,41.6136778,-93.8103060,ok
+ccs-138,2201 NW 139th St,The Kuhl Family,,,not-contacted,,,429800,291/00065-480-041,results (1).xls,41.6134797,-93.8103153,ok
+ccs-139,2181 NW 139th St,The Taylor Family,,,not-contacted,,,441600,291/00065-480-042,results (1).xls,41.6133064,-93.8103215,ok
+ccs-140,2161 NW 139th St,The Nass Family,,,not-contacted,,,414000,291/00065-480-043,results (1).xls,41.6130996,-93.8103088,ok
+ccs-141,2141 NW 139th St,The Dougherty Family,,,not-contacted,,,445900,291/00065-480-044,results (1).xls,41.6129064,-93.8103220,ok
+ccs-142,2121 NW 139th St,Aabk Investments LLC,,,not-contacted,,,393900,291/00065-480-045,results (1).xls,41.6127010,-93.8102920,ok
+ccs-143,2105 NW 139th St,The Nguyen Family,,,not-contacted,,,356800,291/00065-480-046,results (1).xls,41.6124839,-93.8102288,ok
+ccs-144,13921 Hawthorn Dr,Amy C Mcdermott Trust,,,not-contacted,,,404800,291/00065-480-047,results (1).xls,41.6122565,-93.8108621,ok
+ccs-145,2110 NW 139th St,The Eggert Family,,,not-contacted,,,383200,291/00065-480-048,results (1).xls,41.6125083,-93.8108940,ok
+ccs-146,2124 NW 139th St,The Scheck Family,,,not-contacted,,,373300,291/00065-480-049,results (1).xls,41.6127255,-93.8109433,ok
+ccs-147,2138 NW 139th St,The Poets Family,,,not-contacted,,,347000,291/00065-480-050,results (1).xls,41.6129208,-93.8109312,ok
+ccs-148,2152 NW 139th St,The Davenport Family,,,not-contacted,,,344000,291/00065-480-051,results (1).xls,41.6131045,-93.8109300,ok
+ccs-149,2166 NW 139th St,The Zoss Family,,,not-contacted,,,372400,291/00065-480-052,results (1).xls,41.6132947,-93.8109310,ok
+ccs-150,2180 NW 139th St,The De Phillips Family,,,not-contacted,,,355700,291/00065-480-053,results (1).xls,41.6134813,-93.8109354,ok
+ccs-151,2212 NW 139th St,Aabk Investments LLC,,,not-contacted,,,368400,291/00065-480-054,results (1).xls,41.6136755,-93.8109323,ok
+ccs-152,2232 NW 139th St,The Khatri Family,,,not-contacted,,,370800,291/00065-480-055,results (1).xls,41.6138605,-93.8109575,ok
+ccs-153,2225 NW 140th St,Gidvani Family Revocable Trust,,,not-contacted,,,396100,291/00065-480-056,results (1).xls,41.6138656,-93.8115395,ok
+ccs-154,2205 NW 140th St,The Koenig Family,,,not-contacted,,,434300,291/00065-480-057,results (1).xls,41.6136877,-93.8115388,ok
+ccs-155,2185 NW 140th St,The Witzenburg Family,,,not-contacted,,,390100,291/00065-480-058,results (1).xls,41.6134930,-93.8115634,ok
+ccs-156,2171 NW 140th St,The Hoger Family,,,not-contacted,,,372200,291/00065-480-059,results (1).xls,41.6133056,-93.8115586,ok
+ccs-157,2157 NW 140th St,The Ritz Family,,,not-contacted,,,361400,291/00065-480-060,results (1).xls,41.6131101,-93.8115554,ok
+ccs-158,2143 NW 140th St,The Wenthe Family,,,not-contacted,,,354100,291/00065-480-061,results (1).xls,41.6129128,-93.8115449,ok
+ccs-159,2129 NW 140th St,The Trout Family,,,not-contacted,,,319000,291/00065-480-062,results (1).xls,41.6127205,-93.8115606,ok
+ccs-160,2115 NW 140th St,Andrews Trust,,,not-contacted,,,336700,291/00065-480-063,results (1).xls,41.6125060,-93.8115809,ok
+ccs-161,13981 Hawthorn Dr,The Ludwig Family,,,not-contacted,,,464200,291/00065-480-064,results (1).xls,41.6122660,-93.8115647,ok
+ccs-162,2102 NW 140th St,The Wilson Family,,,not-contacted,,,367000,291/00065-480-065,results (1).xls,41.6124078,-93.8122416,ok
+ccs-163,2122 NW 140th St,The Ambrose Family,,,not-contacted,,,381600,291/00065-480-066,results (1).xls,41.6126094,-93.8121810,ok
+ccs-164,2136 NW 140th St,The Ford Family,,,not-contacted,,,385000,291/00065-480-067,results (1).xls,41.6128122,-93.8121820,ok
+ccs-165,2150 NW 140th St,The Fortune Family,,,not-contacted,,,387500,291/00065-480-068,results (1).xls,41.6130139,-93.8121731,ok
+ccs-166,2164 NW 140th St,The Dickinson Family,,,not-contacted,,,367500,291/00065-480-069,results (1).xls,41.6132007,-93.8121681,ok
+ccs-167,2178 NW 140th St,The Mo Family,,,not-contacted,,,337500,291/00065-480-070,results (1).xls,41.6133983,-93.8121762,ok
+ccs-168,2202 NW 140th St,The Mitchell Family,,,not-contacted,,,392600,291/00065-480-071,results (1).xls,41.6135819,-93.8121746,ok
+ccs-169,2220 NW 140th St,J Veenschoten Family Trust,,,not-contacted,,,333500,291/00065-480-072,results (1).xls,41.6138379,-93.8121575,ok
+ccs-170,14098 Summit Dr,The Reinsvold Family,,,not-contacted,,,387900,291/00065-480-073,results (1).xls,41.6137642,-93.8126224,ok
+ccs-171,2199 NW 141st St,The Burmeister Family,,,not-contacted,,,370400,291/00065-480-074,results (1).xls,41.6135111,-93.8127552,ok
+ccs-172,2183 NW 141st St,The Determan Family,,,not-contacted,,,357100,291/00065-480-075,results (1).xls,41.6133060,-93.8127897,ok
+ccs-173,2163 NW 141st St,The Adamson Family,,,not-contacted,,,375300,291/00065-480-076,results (1).xls,41.6131065,-93.8127917,ok
+ccs-174,2143 NW 141st St,The Blau Family,,,not-contacted,,,389600,291/00065-480-077,results (1).xls,41.6129102,-93.8128027,ok
+ccs-175,2123 NW 141st St,The Sharp Family,,,not-contacted,,,380500,291/00065-480-078,results (1).xls,41.6127191,-93.8127973,ok
+ccs-176,14095 Hawthorn Dr,The Reeve Family,,,not-contacted,,,344200,291/00065-480-079,results (1).xls,41.6125132,-93.8127449,ok
+ccs-177,14188 Hawthorn Dr,The Shelton Family,,,not-contacted,,,572400,291/00065-480-080,results (1).xls,41.6120754,-93.8138468,ok
+ccs-178,14144 Hawthorn Dr,Mundus Family Revocable Trust,,,not-contacted,,,481400,291/00065-480-081,results (1).xls,41.6120619,-93.8135346,ok
+ccs-179,14112 Hawthorn Dr,The Rouwenhorst Family,,,not-contacted,,,481600,291/00065-480-082,results (1).xls,41.6120722,-93.8132289,ok
+ccs-180,14096 Hawthorn Dr,Peter & Betty Mond Family Revocable Trust,,,not-contacted,,,385900,291/00065-480-083,results (1).xls,41.6120469,-93.8129127,ok
+ccs-181,14064 Hawthorn Dr,The Smith Family,,,not-contacted,,,486000,291/00065-480-084,results (1).xls,41.6119819,-93.8125904,ok
+ccs-182,14032 Hawthorn Dr,The Stanley Family,,,not-contacted,,,379800,291/00065-480-085,results (1).xls,41.6119212,-93.8123045,ok
+ccs-183,14000 Hawthorn Dr,The Stoffa Family,,,not-contacted,,,486900,291/00065-480-086,results (1).xls,41.6118504,-93.8120027,ok
+ccs-184,13980 Hawthorn Dr,Makohoniuk Construction LLC,,,not-contacted,,,376300,291/00065-480-087,results (1).xls,41.6118017,-93.8116904,ok
+ccs-185,13966 Hawthorn Dr,Jeffrey Neff Miller Revocable Trust,,,not-contacted,,,527200,291/00065-480-088,results (1).xls,41.6117408,-93.8113831,ok
+ccs-186,13946 Hawthorn Dr,The Johnson Family,,,not-contacted,,,496800,291/00065-480-089,results (1).xls,41.6117448,-93.8110552,ok
+ccs-187,13922 Hawthorn Dr,The Clarkson Family,,,not-contacted,,,447900,291/00065-480-090,results (1).xls,41.6117893,-93.8107548,ok
+ccs-188,13900 Hawthorn Dr,The Daniel Family,,,not-contacted,,,462600,291/00065-480-091,results (1).xls,41.6118725,-93.8104487,ok
+ccs-189,13884 Hawthorn Dr,Michael And Rochelle Hale Joint Revocable Trust,,,not-contacted,,,545300,291/00065-480-092,results (1).xls,41.6119556,-93.8101568,ok
+ccs-190,13870 Hawthorn Dr,The Biermann Family,,,not-contacted,,,526900,291/00065-480-093,results (1).xls,41.6120445,-93.8098720,ok
+ccs-191,13856 Hawthorn Dr,The Lim Family,,,not-contacted,,,484700,291/00065-480-094,results (1).xls,41.6121204,-93.8095857,ok
+ccs-192,13842 Hawthorn Dr,The Nguyen Family,,,not-contacted,,,504700,291/00065-480-095,results (1).xls,41.6122052,-93.8092993,ok
+ccs-193,13828 Hawthorn Dr,The Embree Family,,,not-contacted,,,596800,291/00065-480-096,results (1).xls,41.6122515,-93.8090812,ok
+ccs-194,13814 Hawthorn Dr,The Kimmi Family,,,not-contacted,,,486300,291/00065-480-097,results (1).xls,41.6123241,-93.8087453,ok
+ccs-195,2261 NW 138th St,The Hassel Family,,,not-contacted,,,430200,291/00065-480-101,results (1).xls,41.6141656,-93.8092631,ok
+ccs-196,13250 Forest Cir,Roger A Fray & Susan K Fray Family Revocable Trust,,,not-contacted,,,560200,291/00065-121-000,results (5).xls,41.6010929,-93.8004447,ok
+ccs-197,13200 Forest Cir,The Ahrens Family,,,not-contacted,,,732700,291/00065-122-000,results (5).xls,41.6010748,-93.8001012,ok
+ccs-198,13180 Forest Cir,Mark J Witte Revocable Trust,,,not-contacted,,,655800,291/00065-123-000,results (5).xls,41.6011336,-93.7997216,ok
+ccs-199,13171 Forest Cir,The Hjelmaas Family,,,not-contacted,,,846600,291/00065-124-000,results (5).xls,41.6014086,-93.7995047,ok
+ccs-200,13181 Forest Cir,The Varley Family,,,not-contacted,,,764500,291/00065-125-000,results (5).xls,41.6017579,-93.7997515,ok
+ccs-201,13211 Forest Cir,David & Ellen Harvey Revocable Trust,,,not-contacted,,,547800,291/00065-126-000,results (5).xls,41.6017064,-93.8001308,ok
+ccs-202,1311 Country Club Blvd,The Holz Jr Family,,,not-contacted,,,559600,291/00065-127-000,results (5).xls,41.6017489,-93.8005308,ok
+ccs-203,13260 Elmcrest Cir,The Dorr Family,,,not-contacted,,,679300,291/00065-128-000,results (5).xls,41.6024346,-93.8005451,ok
+ccs-204,13240 Elmcrest Cir,The Lim Family,,,not-contacted,,,627800,291/00065-129-000,results (5).xls,41.6024012,-93.8001867,ok
+ccs-205,13200 Elmcrest Cir,The Iles Family,,,not-contacted,,,871900,291/00065-130-000,results (5).xls,41.6023976,-93.7997887,ok
+ccs-206,13190 Elmcrest Cir,The Moulton Family,,,not-contacted,,,704500,291/00065-131-000,results (5).xls,41.6027268,-93.7994913,ok
+ccs-207,13211 Elmcrest Cir,The Foster Family,,,not-contacted,,,757200,291/00065-132-000,results (5).xls,41.6030031,-93.7997112,ok
+ccs-208,13231 Elmcrest Cir,The Stone Family,,,not-contacted,,,626700,291/00065-133-000,results (5).xls,41.6030710,-93.8000825,ok
+ccs-209,13251 Elmcrest Cir,Gabriela Granwehr Trust,,,not-contacted,,,518300,291/00065-134-000,results (5).xls,41.6030256,-93.8004711,ok
+ccs-210,1377 Country Club Blvd,Lynn A Johnson Revocable Trust,,,not-contacted,,,635300,291/00065-135-000,results (5).xls,41.6030018,-93.8008955,ok
+ccs-211,13340 Sunset Cir,The Peterson Family,,,not-contacted,,,743100,291/00065-136-000,results (5).xls,41.6035329,-93.8013393,ok
+ccs-212,13300 Sunset Cir,The Kiley Family,,,not-contacted,,,709000,291/00065-137-000,results (5).xls,41.6036557,-93.8010406,ok
+ccs-213,13280 Sunset Cir,Ching Huei Lin Revocable Trust,,,not-contacted,,,624000,291/00065-138-000,results (5).xls,41.6036668,-93.8006949,ok
+ccs-214,13250 Sunset Cir,Lance C Drey Revocable Trust,,,not-contacted,,,595900,291/00065-139-000,results (5).xls,41.6037345,-93.8003231,ok
+ccs-215,13220 Sunset Cir,Holly M Lyons Rev Trust,,,not-contacted,,,680800,291/00065-140-000,results (5).xls,41.6037444,-93.7999280,ok
+ccs-216,13200 Sunset Cir,The Leonard Family,,,not-contacted,,,583900,291/00065-141-000,results (5).xls,41.6038534,-93.7995637,ok
+ccs-217,13190 Sunset Cir,Tanya L Comer Revocable Trust,,,not-contacted,,,626200,291/00065-142-000,results (5).xls,41.6041605,-93.7994954,ok
+ccs-218,13211 Sunset Cir,The Gotsdiner Family,,,not-contacted,,,615400,291/00065-143-000,results (5).xls,41.6043868,-93.7998752,ok
+ccs-219,13231 Sunset Cir,Robert L Bender Ii Revocable Trust,,,not-contacted,,,595700,291/00065-144-000,results (5).xls,41.6042940,-93.8002139,ok
+ccs-220,13251 Sunset Cir,The Hartkop Family,,,not-contacted,,,714700,291/00065-145-000,results (5).xls,41.6042524,-93.8005364,ok
+ccs-221,13281 Sunset Cir,The Shah Family,,,not-contacted,,,647000,291/00065-146-000,results (5).xls,41.6041894,-93.8009415,ok
+ccs-222,13311 Sunset Cir,Larry And Barbara Cox Joint Revocable Trust,,,not-contacted,,,614100,291/00065-147-000,results (5).xls,41.6041493,-93.8012864,ok
+ccs-223,13341 Sunset Cir,The Hockenberg Family,,,not-contacted,,,744300,291/00065-148-000,results (5).xls,41.6040925,-93.8016718,ok
+ccs-224,13380 Hickory Ave,The Blodi Family,,,not-contacted,,,808400,291/00065-149-000,results (5).xls,41.6047720,-93.8019726,ok
+ccs-225,13350 Hickory Ave,The Sutton Family,,,not-contacted,,,667600,291/00065-150-000,results (5).xls,41.6048955,-93.8016644,ok
+ccs-226,13310 Hickory Ave,The Hatch Family,,,not-contacted,,,666200,291/00065-151-000,results (5).xls,41.6049516,-93.8013219,ok
+ccs-227,13280 Hickory Ave,Michael T Pixley Living Trust,,,not-contacted,,,745400,291/00065-152-000,results (5).xls,41.6049979,-93.8009551,ok
+ccs-228,13260 Hickory Ave,The Sinha Family,,,not-contacted,,,783900,291/00065-153-000,results (5).xls,41.6050162,-93.8005764,ok
+ccs-229,13240 Hickory Ave,Farber Family Trust,,,not-contacted,,,715000,291/00065-154-000,results (5).xls,41.6050579,-93.8001784,ok
+ccs-230,13210 Hickory Ave,The Klein Family,,,not-contacted,,,482100,291/00065-155-000,results (5).xls,41.6052406,-93.7998688,ok
+ccs-231,13200 Hickory Ave,The Crowe Family,,,not-contacted,,,714300,291/00065-156-000,results (5).xls,41.6054894,-93.7996455,ok
+ccs-232,1611 NW 132nd St,The Neuendorf Family,,,not-contacted,,,634000,291/00065-157-000,results (5).xls,41.6057925,-93.7996044,ok
+ccs-233,1631 NW 132nd St,The Ye Family,,,not-contacted,,,740800,291/00065-158-000,results (5).xls,41.6060738,-93.7995682,ok
+ccs-234,1651 NW 132nd St,Lettween Family Trust,,,not-contacted,,,813300,291/00065-159-000,results (5).xls,41.6063365,-93.7995731,ok
+ccs-235,1671 NW 132nd St,The Schoenebaum Family,,,not-contacted,,,512500,291/00065-160-000,results (5).xls,41.6066261,-93.7996401,ok
+ccs-236,13220 Cedarwood Ave,Wr #1 Trust,,,not-contacted,,,816100,291/00065-161-000,results (5).xls,41.6070649,-93.7999186,ok
+ccs-237,13200 Cedarwood Ave,Grant S Corell Revocable Trust,,,not-contacted,,,897000,291/00065-162-000,results (5).xls,41.6072502,-93.7996531,ok
+ccs-238,13180 Cedarwood Ave,The Luginbill Family,,,not-contacted,,,733800,291/00065-163-000,results (5).xls,41.6075603,-93.7993700,ok
+ccs-239,13201 Cedarwood Ave,The Greenfield Family,,,not-contacted,,,783900,291/00065-164-000,results (5).xls,41.6075947,-93.8002426,ok
+ccs-240,13221 Cedarwood Ave,Anne T Walsh Rev Trust,,,not-contacted,,,861300,291/00065-165-000,results (5).xls,41.6073699,-93.8005300,ok
+ccs-241,13261 Cedarwood Ave,The Skinner Family,,,not-contacted,,,641300,291/00065-166-000,results (5).xls,41.6071710,-93.8008361,ok
+ccs-242,13311 Cedarwood Ave,,,,not-contacted,,,732100,291/00065-167-000,results (5).xls,41.6068634,-93.8014433,ok
+ccs-243,1701 Cedarwood Cir,Edward F Loeb Trust,,,not-contacted,,,714600,291/00065-168-000,results (5).xls,41.6071679,-93.8014642,ok
+ccs-244,1731 Cedarwood Cir,The Jolesch Family,,,not-contacted,,,843600,291/00065-169-000,results (5).xls,41.6074527,-93.8016860,ok
+ccs-245,1740 Cedarwood Cir,The Herther Family,,,not-contacted,,,826700,291/00065-170-000,results (5).xls,41.6074741,-93.8021022,ok
+ccs-246,1720 Cedarwood Cir,The Schlafmann Family,,,not-contacted,,,888300,291/00065-171-000,results (5).xls,41.6072236,-93.8024161,ok
+ccs-247,1700 Cedarwood Cir,The Peterson Family,,,not-contacted,,,992600,291/00065-172-000,results (5).xls,41.6069379,-93.8024524,ok
+ccs-248,1680 Cedarwood Cir,The Ingalls Family,,,not-contacted,,,879300,291/00065-173-000,results (5).xls,41.6067293,-93.8021685,ok
+ccs-249,13450 Cedarwood Ave,The Cunningham Family,,,not-contacted,,,809500,291/00065-174-000,results (5).xls,41.6058228,-93.8031072,ok
+ccs-250,13420 Cedarwood Ave,The Regier Family,,,not-contacted,,,664300,291/00065-175-000,results (5).xls,41.6059591,-93.8028198,ok
+ccs-251,13400 Cedarwood Ave,Patricia A Jansen Revocable Trust,,,not-contacted,,,733000,291/00065-176-000,results (5).xls,41.6060471,-93.8024422,ok
+ccs-252,13380 Cedarwood Ave,Jay & Virginia Wangerin Living Trust,,,not-contacted,,,815000,291/00065-177-000,results (5).xls,41.6061447,-93.8021079,ok
+ccs-253,13350 Cedarwood Ave,The Ehrecke Family,,,not-contacted,,,671200,291/00065-178-000,results (5).xls,41.6061866,-93.8018029,ok
+ccs-254,13320 Cedarwood Ave,The Neill Family,,,not-contacted,,,943900,291/00065-179-000,results (5).xls,41.6062886,-93.8013947,ok
+ccs-255,13300 Cedarwood Ave,The Mccormick Family,,,not-contacted,,,786500,291/00065-180-000,results (5).xls,41.6063942,-93.8010608,ok
+ccs-256,13280 Cedarwood Ave,David Patrick Senkyr Revocable Trust,,,not-contacted,,,1085000,291/00065-181-000,results (5).xls,41.6066642,-93.8005382,ok
+ccs-257,1660 NW 132nd St,Deborah C Sheehy Trust,,,not-contacted,,,674000,291/00065-182-000,results (5).xls,41.6063984,-93.8003269,ok
+ccs-258,1640 NW 132nd St,The Kramer Family,,,not-contacted,,,782200,291/00065-183-000,results (5).xls,41.6060903,-93.8003084,ok
+ccs-259,13211 Hickory Ave,The Marty Family,,,not-contacted,,,767600,291/00065-184-000,results (5).xls,41.6056743,-93.8003198,ok
+ccs-260,13261 Hickory Ave,Michael & Sharon Feeley Joint Revocable Trust,,,not-contacted,,,635900,291/00065-185-000,results (5).xls,41.6055278,-93.8006365,ok
+ccs-261,13281 Hickory Ave,The Cooley Family,,,not-contacted,,,725300,291/00065-186-000,results (5).xls,41.6055737,-93.8010339,ok
+ccs-262,13311 Hickory Ave,The Michels Family,,,not-contacted,,,590000,291/00065-187-000,results (5).xls,41.6054551,-93.8013598,ok
+ccs-263,13331 Hickory Ave,The Yaseen Family,,,not-contacted,,,754300,291/00065-188-000,results (5).xls,41.6054244,-93.8017226,ok
+ccs-264,13361 Hickory Ave,Vyas Family Revocable Trust,,,not-contacted,,,752600,291/00065-189-000,results (5).xls,41.6054191,-93.8021103,ok
+ccs-265,1555 Country Club Blvd,The Ventling Family,,,not-contacted,,,854500,291/00065-190-000,results (5).xls,41.6052736,-93.8025184,ok
+ccs-266,1620 Country Club Blvd,The Anderson Family,,,not-contacted,,,857000,291/00065-191-000,results (5).xls,41.6058132,-93.8039477,ok
+ccs-267,1600 Country Club Blvd,The Dervesh Family,,,not-contacted,,,917100,291/00065-192-000,results (5).xls,41.6055087,-93.8037809,ok
+ccs-268,1580 Country Club Blvd,The Thaden Family,,,not-contacted,,,734400,291/00065-193-000,results (5).xls,41.6053244,-93.8035224,ok
+ccs-269,1560 Country Club Blvd,The Weissenburger Family,,,not-contacted,,,732100,291/00065-194-000,results (5).xls,41.6050994,-93.8032413,ok
+ccs-270,1540 Country Club Blvd,The Dobesh Family,,,not-contacted,,,733100,291/00065-195-000,results (5).xls,41.6049094,-93.8030188,ok
+ccs-271,1520 Country Club Blvd,The Glienke Family,,,not-contacted,,,1108900,291/00065-196-001,results (5).xls,41.6046396,-93.8027839,ok
+ccs-272,1500 Country Club Blvd,Matthew B Brown Revocable Trust,,,not-contacted,,,1607300,291/00065-197-001,results (5).xls,41.6043833,-93.8025952,ok
+ccs-273,1480 Country Club Blvd,R Todd Miller Revocable Trust,,,not-contacted,,,818300,291/00065-198-000,results (5).xls,41.6041518,-93.8024398,ok
+ccs-274,1460 Country Club Blvd,Hagenberg Family Living Trust,,,not-contacted,,,753400,291/00065-199-000,results (5).xls,41.6038736,-93.8022949,ok
+ccs-275,1440 Country Club Blvd,The Mease Family,,,not-contacted,,,839700,291/00065-200-000,results (5).xls,41.6036241,-93.8021842,ok
+ccs-276,1420 Country Club Blvd,The Shivapour Family,,,not-contacted,,,1080800,291/00065-201-000,results (5).xls,41.6033592,-93.8020662,ok
+ccs-277,1400 Country Club Blvd,Shelley L Goodell Revocable Trust,,,not-contacted,,,900400,291/00065-202-000,results (5).xls,41.6031140,-93.8018766,ok
+ccs-278,1380 Country Club Blvd,The Olson Family,,,not-contacted,,,632700,291/00065-203-000,results (5).xls,41.6028975,-93.8016525,ok
+ccs-279,1360 Country Club Blvd,The Anderson Family,,,not-contacted,,,613300,291/00065-204-000,results (5).xls,41.6026657,-93.8014466,ok
+ccs-280,1340 Country Club Blvd,Gwen N Conte Living Trust,,,not-contacted,,,718500,291/00065-205-000,results (5).xls,41.6023539,-93.8012754,ok
+ccs-281,1320 Country Club Blvd,The Jeun Family,,,not-contacted,,,720000,291/00065-206-000,results (5).xls,41.6020419,-93.8012247,ok
+ccs-282,1300 Country Club Blvd,The Erickson Family,,,not-contacted,,,664300,291/00065-207-000,results (5).xls,41.6017019,-93.8011986,ok
+ccs-283,1280 Country Club Blvd,The Scallon Family,,,not-contacted,,,576200,291/00065-208-000,results (5).xls,41.6014450,-93.8012216,ok
+ccs-284,1250 Country Club Blvd,The Johnson Family,,,not-contacted,,,547800,291/00065-209-000,results (5).xls,41.6012252,-93.8012611,ok
+ccs-285,1220 Country Club Blvd,Kristen L Rappe Revocable Trust,,,not-contacted,,,523500,291/00065-210-000,results (5).xls,41.6009220,-93.8013082,ok
+ccs-286,14162 Lakeview Dr,The Sun Family,,,not-contacted,,,773600,291/00065-250-001,results (4).xls,41.6094645,-93.8138140,ok
+ccs-287,14140 Lakeview Dr,The Diehl Family,,,not-contacted,,,751300,291/00065-250-002,results (4).xls,41.6094531,-93.8134516,ok
+ccs-288,14112 Lakeview Dr,The Reimer Family,,,not-contacted,,,799700,291/00065-250-003,results (4).xls,41.6093971,-93.8130919,ok
+ccs-289,14090 Lakeview Dr,The Capobianco Family,,,not-contacted,,,930700,291/00065-250-004,results (4).xls,41.6093288,-93.8127489,ok
+ccs-290,14072 Lakeview Dr,Magdi & Nawal Ghali Revocable Trust,,,not-contacted,,,963700,291/00065-250-005,results (4).xls,41.6092157,-93.8124471,ok
+ccs-291,14050 Lakeview Dr,Saroj S Patel Trust,,,not-contacted,,,868300,291/00065-250-006,results (4).xls,41.6090932,-93.8120679,ok
+ccs-292,14032 Lakeview Dr,The Longnecker Family,,,not-contacted,,,826200,291/00065-250-007,results (4).xls,41.6089673,-93.8117292,ok
+ccs-293,14000 Lakeview Dr,The Hermann Family,,,not-contacted,,,885700,291/00065-250-008,results (4).xls,41.6088723,-93.8113178,ok
+ccs-294,13982 Lakeview Dr,Beverly Blair Albright-Leighton Trust,,,not-contacted,,,796700,291/00065-250-009,results (4).xls,41.6088550,-93.8109535,ok
+ccs-295,13950 Lakeview Dr,Craig J Rowles Revocable Trust,,,not-contacted,,,1150500,291/00065-250-010,results (4).xls,41.6089710,-93.8105340,ok
+ccs-296,13890 Lake Shore Dr,Paul A Drey Revocable Trust,,,not-contacted,,,1143600,291/00065-250-011,results (4).xls,41.6088916,-93.8098648,ok
+ccs-297,13872 Lake Shore Dr,The Mc Gargill Family,,,not-contacted,,,1012500,291/00065-250-012,results (4).xls,41.6087427,-93.8095013,ok
+ccs-298,13850 Lake Shore Dr,Barbara Anne Beatty Revocable Trust,,,not-contacted,,,968600,291/00065-250-013,results (4).xls,41.6086395,-93.8091482,ok
+ccs-299,13832 Lake Shore Dr,Kevin J Pothaven Revocable Trust,,,not-contacted,,,1317600,291/00065-250-014,results (4).xls,41.6085698,-93.8087562,ok
+ccs-300,13800 Lake Shore Dr,Kathleen A Patel Trust,,,not-contacted,,,917700,291/00065-250-015,results (4).xls,41.6085912,-93.8083924,ok
+ccs-301,13782 Lake Shore Dr,The Patel Family,,,not-contacted,,,823600,291/00065-250-016,results (4).xls,41.6086389,-93.8080750,ok
+ccs-302,13750 Lake Shore Dr,The Westberg Family,,,not-contacted,,,871800,291/00065-250-017,results (4).xls,41.6087192,-93.8076754,ok
+ccs-303,13732 Lake Shore Dr,The Manning Family,,,not-contacted,,,166300,291/00065-250-018,results (4).xls,41.6087852,-93.8073177,ok
+ccs-304,13700 Lake Shore Dr,Julie Ann Zierke-Clark Living Trust,,,not-contacted,,,2074000,291/00065-250-019,results (4).xls,41.6088740,-93.8069740,ok
+ccs-305,13682 Lake Shore Dr,Fawad Zafar 2022 Revocable Trust,,,not-contacted,,,1354800,291/00065-250-020,results (4).xls,41.6089868,-93.8066473,ok
+ccs-306,13650 Lake Shore Dr,Madhan Rengarajan Revocable Trust,,,not-contacted,,,918600,291/00065-250-021,results (4).xls,41.6090966,-93.8063109,ok
+ccs-307,13632 Lake Shore Dr,Gopika Myneni Trust,,,not-contacted,,,1105500,291/00065-250-022,results (4).xls,41.6091940,-93.8059494,ok
+ccs-308,13610 Lake Shore Dr,The Boss Family,,,not-contacted,,,910800,291/00065-250-023,results (4).xls,41.6092872,-93.8056185,ok
+ccs-309,13582 Lake Shore Dr,The Miller Family,,,not-contacted,,,762700,291/00065-250-024,results (4).xls,41.6093974,-93.8052710,ok
+ccs-310,13560 Lake Shore Dr,The Hovick Family,,,not-contacted,,,698000,291/00065-250-025,results (4).xls,41.6094969,-93.8049034,ok
+ccs-311,13601 Lake Shore Dr,Wade R Hauser Iii Trust,,,not-contacted,,,758800,291/00065-250-026,results (4).xls,41.6099166,-93.8055735,ok
+ccs-312,13625 Lake Shore Dr,The Blake Family,,,not-contacted,,,713600,291/00065-250-027,results (4).xls,41.6097768,-93.8059614,ok
+ccs-313,13649 Lake Shore Dr,The Hagan Family,,,not-contacted,,,726200,291/00065-250-028,results (4).xls,41.6097034,-93.8062994,ok
+ccs-314,13675 Lake Shore Dr,Nancy J Ball Revocable Trust,,,not-contacted,,,752800,291/00065-250-029,results (4).xls,41.6096268,-93.8066209,ok
+ccs-315,13703 Lake Shore Dr,Marcela Delgado Sanchez Revocable Trust,,,not-contacted,,,584300,291/00065-250-030,results (4).xls,41.6095059,-93.8069528,ok
+ccs-316,13721 Lake Shore Dr,The Vallier Family,,,not-contacted,,,803400,291/00065-250-031,results (4).xls,41.6094258,-93.8072746,ok
+ccs-317,13745 Lake Shore Dr,The Manning Family,,,not-contacted,,,606000,291/00065-250-032,results (4).xls,41.6093425,-93.8076218,ok
+ccs-318,13767 Lake Shore Dr,The Drake Family,,,not-contacted,,,676100,291/00065-250-033,results (4).xls,41.6092579,-93.8079599,ok
+ccs-319,13795 Lake Shore Dr,The Mccombs Family,,,not-contacted,,,592700,291/00065-250-034,results (4).xls,41.6091775,-93.8082678,ok
+ccs-320,13823 Lake Shore Dr,Ajit Kumar & Shyamli Kumar Revocable Trust,,,not-contacted,,,703700,291/00065-250-035,results (4).xls,41.6091453,-93.8086472,ok
+ccs-321,13855 Lake Shore Dr,The Schoen Family,,,not-contacted,,,810300,291/00065-250-036,results (4).xls,41.6091873,-93.8090663,ok
+ccs-322,13880 Lakeview Dr,The Tayal Family,,,not-contacted,,,780600,291/00065-250-037,results (4).xls,41.6094752,-93.8095660,ok
+ccs-323,13852 Lakeview Dr,The Rutledge Family,,,not-contacted,,,857600,291/00065-250-038,results (4).xls,41.6096565,-93.8091849,ok
+ccs-324,13802 Lakeview Dr,The Magee Family,,,not-contacted,,,742700,291/00065-250-040,results (4).xls,41.6098856,-93.8085259,ok
+ccs-325,13790 Lakeview Dr,The Baum Family,,,not-contacted,,,623700,291/00065-250-041,results (4).xls,41.6099624,-93.8081794,ok
+ccs-326,13762 Lakeview Dr,The Bogenrief Family,,,not-contacted,,,724500,291/00065-250-042,results (4).xls,41.6100261,-93.8078400,ok
+ccs-327,13730 Lakeview Dr,Jonathan H Glaser Revocable Trust,,,not-contacted,,,678600,291/00065-250-043,results (4).xls,41.6100719,-93.8075001,ok
+ccs-328,13712 Lakeview Dr,Linda L Murphy Trust,,,not-contacted,,,654400,291/00065-250-044,results (4).xls,41.6101971,-93.8071551,ok
+ccs-329,13680 Lakeview Dr,Wirta Family Trust,,,not-contacted,,,627300,291/00065-250-045,results (4).xls,41.6102877,-93.8067839,ok
+ccs-330,13662 Lakeview Dr,The Konrad Family,,,not-contacted,,,748100,291/00065-250-046,results (4).xls,41.6103647,-93.8063940,ok
+ccs-331,13711 Lakeview Dr,The Parrino Family,,,not-contacted,,,613700,291/00065-250-047,results (4).xls,41.6107921,-93.8072230,ok
+ccs-332,13733 Lakeview Dr,Dl Swanson Family Living Trust,,,not-contacted,,,711300,291/00065-250-048,results (4).xls,41.6107007,-93.8075854,ok
+ccs-333,13755 Lakeview Dr,Carrie D Galles Revocable Trust,,,not-contacted,,,718500,291/00065-250-049,results (4).xls,41.6105920,-93.8079291,ok
+ccs-334,13787 Lakeview Dr,Hein Family Revocable Trust,,,not-contacted,,,677900,291/00065-250-050,results (4).xls,41.6105210,-93.8082755,ok
+ccs-335,13801 Lakeview Dr,The Fitzgerald Family,,,not-contacted,,,604600,291/00065-250-051,results (4).xls,41.6104542,-93.8086118,ok
+ccs-336,13823 Lakeview Dr,Brayton Family Revocable Trust,,,not-contacted,,,678200,291/00065-250-052,results (4).xls,41.6103943,-93.8090015,ok
+ccs-337,13851 Lakeview Dr,The Nelson Family,,,not-contacted,,,621500,291/00065-250-053,results (4).xls,41.6102670,-93.8093478,ok
+ccs-338,13953 Lake Shore Dr,The Comes Family,,,not-contacted,,,784800,291/00065-250-056,results (4).xls,41.6104706,-93.8105530,ok
+ccs-339,14005 Lake Shore Dr,The Maahs Family,,,not-contacted,,,562600,291/00065-250-057,results (4).xls,41.6109368,-93.8112791,ok
+ccs-340,14027 Lake Shore Dr,The Whitecotton Family,,,not-contacted,,,618100,291/00065-250-058,results (4).xls,41.6110987,-93.8116972,ok
+ccs-341,14049 Lake Shore Dr,The Pratt Family,,,not-contacted,,,660900,291/00065-250-059,results (4).xls,41.6112196,-93.8120359,ok
+ccs-342,14071 Lake Shore Dr,Colleen M Biegger Revocable Trust,,,not-contacted,,,618100,291/00065-250-060,results (4).xls,41.6113326,-93.8123804,ok
+ccs-343,14103 Lake Shore Dr,The Johnson Family,,,not-contacted,,,750000,291/00065-250-061,results (4).xls,41.6114113,-93.8127237,ok
+ccs-344,14135 Lake Shore Dr,The Gallo Family,,,not-contacted,,,627700,291/00065-250-062,results (4).xls,41.6114523,-93.8131204,ok
+ccs-345,14157 Lake Shore Dr,Jason B Wittmer Revocable Trust,,,not-contacted,,,666400,291/00065-250-063,results (4).xls,41.6114951,-93.8134779,ok
+ccs-346,14179 Lake Shore Dr,The Vroman Family,,,not-contacted,,,725600,291/00065-250-064,results (4).xls,41.6115191,-93.8138366,ok
+ccs-347,14170 Lake Shore Dr,Jayne E Loos Revocable Trust,,,not-contacted,,,791600,291/00065-250-065,results (4).xls,41.6109162,-93.8138346,ok
+ccs-348,14152 Lake Shore Dr,The Maigaard Family,,,not-contacted,,,772900,291/00065-250-066,results (4).xls,41.6109014,-93.8135037,ok
+ccs-349,14130 Lake Shore Dr,The Wilsbacher Family,,,not-contacted,,,766600,291/00065-250-067,results (4).xls,41.6108741,-93.8131845,ok
+ccs-350,14102 Lake Shore Dr,The Montag Family,,,not-contacted,,,568900,291/00065-250-068,results (4).xls,41.6108116,-93.8128555,ok
+ccs-351,14070 Lake Shore Dr,The Wegman Family,,,not-contacted,,,689200,291/00065-250-069,results (4).xls,41.6107333,-93.8125337,ok
+ccs-352,14052 Lake Shore Dr,The Robinson Family,,,not-contacted,,,528800,291/00065-250-070,results (4).xls,41.6106401,-93.8121881,ok
+ccs-353,14030 Lake Shore Dr,Molly C Ryan Revocable Trust,,,not-contacted,,,659700,291/00065-250-071,results (4).xls,41.6105074,-93.8118862,ok
+ccs-354,14012 Lake Shore Dr,Rinderknecht Family Trust,,,not-contacted,,,650900,291/00065-250-072,results (4).xls,41.6103518,-93.8116216,ok
+ccs-355,13990 Lake Shore Dr,Curtis & Nancy Hoegh Revocable Trust,,,not-contacted,,,715600,291/00065-250-073,results (4).xls,41.6101943,-93.8113036,ok
+ccs-356,13972 Lake Shore Dr,Eva Marie Evans Revocable Trust,,,not-contacted,,,756900,291/00065-250-074,results (4).xls,41.6100067,-93.8110385,ok
+ccs-357,13949 Lakeview Dr,Diane K Skinner Revocable Trust,,,not-contacted,,,665600,291/00065-250-075,results (4).xls,41.6096206,-93.8106493,ok
+ccs-358,13975 Lakeview Dr,The Rowan Family,,,not-contacted,,,543800,291/00065-250-076,results (4).xls,41.6094673,-93.8109330,ok
+ccs-359,14001 Lakeview Dr,The Rupiper Family,,,not-contacted,,,577400,291/00065-250-077,results (4).xls,41.6094746,-93.8113557,ok
+ccs-360,14043 Lakeview Dr,The Freiburger Family,,,not-contacted,,,664700,291/00065-250-078,results (4).xls,41.6095934,-93.8117037,ok
+ccs-361,14055 Lakeview Dr,The Abbott Family,,,not-contacted,,,571600,291/00065-250-079,results (4).xls,41.6097235,-93.8120419,ok
+ccs-362,14077 Lakeview Dr,The Schlapkohl Family,,,not-contacted,,,733200,291/00065-250-080,results (4).xls,41.6098287,-93.8123818,ok
+ccs-363,14099 Lakeview Dr,Cynthia A C Keller Revocable Trust,,,not-contacted,,,777700,291/00065-250-081,results (4).xls,41.6099262,-93.8127163,ok
+ccs-364,14121 Lakeview Dr,The Ducharme Family,,,not-contacted,,,976300,291/00065-250-082,results (4).xls,41.6099969,-93.8130821,ok
+ccs-365,14143 Lakeview Dr,The Funk Family,,,not-contacted,,,769700,291/00065-250-083,results (4).xls,41.6100188,-93.8134594,ok
+ccs-366,14165 Lakeview Dr,The Parks Family,,,not-contacted,,,642500,291/00065-250-084,results (4).xls,41.6100149,-93.8138728,ok
+ccs-367,1953 Country Club Blvd,Bill R Jr & Diane Louise Breckenridge Joint Liv Tr,,,not-contacted,,,680700,291/00065-250-085,results (4).xls,41.6104369,-93.8050414,ok
+ccs-368,13533 Lake Shore Dr,The Angle Family,,,not-contacted,,,639300,291/00065-250-086,results (4).xls,41.6106550,-93.8046539,ok
+ccs-369,13511 Lake Shore Dr,The Bratvold Family,,,not-contacted,,,489100,291/00065-250-087,results (4).xls,41.6107620,-93.8042272,ok
+ccs-370,1875 Country Club Blvd,Steven A Keller Revocable Trust,,,not-contacted,,,988700,291/00065-250-088,results (4).xls,41.6100124,-93.8043387,ok
+ccs-371,13921 Lake Shore Dr,Robert D Shaw Revocable Trust,,,not-contacted,,,969100,291/00065-250-091,results (4).xls,41.6100053,-93.8100353,ok
+ccs-372,13830 Lakeview Dr,The Stier Family,,,not-contacted,,,918200,291/00065-250-092,results (4).xls,41.6097963,-93.8088549,ok
+ccs-373,14167 South Shore Dr,The Schemmel Family,,,not-contacted,,,538100,291/00065-481-001,results.xls,41.6079878,-93.8138740,ok
+ccs-374,14137 South Shore Dr,The Link Jr Family,,,not-contacted,,,773300,291/00065-481-002,results.xls,41.6079313,-93.8134312,ok
+ccs-375,14107 South Shore Dr,Frank J & Mary D Demarco Revocable Trust,,,not-contacted,,,841300,291/00065-481-003,results.xls,41.6078477,-93.8130704,ok
+ccs-376,14097 South Shore Dr,The Keller Family,,,not-contacted,,,942900,291/00065-481-004,results.xls,41.6077464,-93.8127299,ok
+ccs-377,14067 South Shore Dr,The Judkins Josten Family,,,not-contacted,,,715100,291/00065-481-005,results.xls,41.6076585,-93.8123630,ok
+ccs-378,14037 South Shore Dr,The Kumar Family,,,not-contacted,,,976600,291/00065-481-006,results.xls,41.6075674,-93.8119731,ok
+ccs-379,14007 South Shore Dr,Holly B Healey Revocable Trust,,,not-contacted,,,788200,291/00065-481-007,results.xls,41.6075073,-93.8116093,ok
+ccs-380,13981 South Shore Dr,The Elmore Family,,,not-contacted,,,845900,291/00065-481-008,results.xls,41.6074718,-93.8112361,ok
+ccs-381,13971 South Shore Dr,Raymond H Cole Revocable Trust,,,not-contacted,,,903600,291/00065-481-009,results.xls,41.6074212,-93.8108328,ok
+ccs-382,13961 South Shore Dr,The Prasad Family,,,not-contacted,,,856500,291/00065-481-010,results.xls,41.6072968,-93.8104691,ok
+ccs-383,13951 South Shore Dr,Kay D Revocable Trust,,,not-contacted,,,1275700,291/00065-481-011,results.xls,41.6071099,-93.8100970,ok
+ccs-384,13941 South Shore Dr,Mark H Iles Trust,,,not-contacted,,,1497600,291/00065-481-012,results.xls,41.6068367,-93.8098971,ok
+ccs-385,13931 South Shore Dr,The Keshwani Family,,,not-contacted,,,801000,291/00065-481-013,results.xls,41.6065546,-93.8098824,ok
+ccs-386,13921 South Shore Dr,Richard D Mauk Revocable Trust,,,not-contacted,,,905500,291/00065-481-014,results.xls,41.6062483,-93.8099892,ok
+ccs-387,13911 South Shore Dr,The Kiel Family,,,not-contacted,,,923200,291/00065-481-015,results.xls,41.6059876,-93.8102009,ok
+ccs-388,13901 South Shore Dr,The Martin Family,,,not-contacted,,,845900,291/00065-481-016,results.xls,41.6057739,-93.8105196,ok
+ccs-389,13932 Lake Pointe Dr,The Durick Family,,,not-contacted,,,939500,291/00065-481-017,results.xls,41.6053605,-93.8110020,ok
+ccs-390,14000 Willow Dr,The Bump Family,,,not-contacted,,,787600,291/00065-481-018,results.xls,41.6051636,-93.8112966,ok
+ccs-391,14002 Willow Dr,The Singh Family,,,not-contacted,,,743900,291/00065-481-019,results.xls,41.6050511,-93.8116618,ok
+ccs-392,14032 Willow Dr,Robert A Eilertson Trust,,,not-contacted,,,665400,291/00065-481-020,results.xls,41.6049993,-93.8120139,ok
+ccs-393,14062 Willow Dr,Jean Lw Fox Revocable Trust,,,not-contacted,,,765700,291/00065-481-021,results.xls,41.6050251,-93.8124192,ok
+ccs-394,14092 Willow Dr,The Colosimo Family,,,not-contacted,,,721900,291/00065-481-022,results.xls,41.6050784,-93.8127463,ok
+ccs-395,14102 Willow Dr,The Hockett Clark Family,,,not-contacted,,,666200,291/00065-481-023,results.xls,41.6051218,-93.8130914,ok
+ccs-396,14132 Willow Dr,The Leuschen Family,,,not-contacted,,,757000,291/00065-481-024,results.xls,41.6051976,-93.8134224,ok
+ccs-397,14162 Willow Dr,The Carmody Family,,,not-contacted,,,623300,291/00065-481-025,results.xls,41.6052439,-93.8137778,ok
+ccs-398,14161 Willow Dr,The Walterman Family,,,not-contacted,,,653600,291/00065-481-026,results.xls,41.6057463,-93.8137967,ok
+ccs-399,14131 Willow Dr,The Percival Family,,,not-contacted,,,640000,291/00065-481-027,results.xls,41.6056906,-93.8134318,ok
+ccs-400,14101 Willow Dr,The Bertroche Jr Family,,,not-contacted,,,661800,291/00065-481-028,results.xls,41.6056437,-93.8130683,ok
+ccs-401,14091 Willow Dr,The Bogusz Family,,,not-contacted,,,880900,291/00065-481-029,results.xls,41.6055938,-93.8127134,ok
+ccs-402,14061 Willow Dr,The Schumann Family,,,not-contacted,,,572800,291/00065-481-030,results.xls,41.6055437,-93.8123536,ok
+ccs-403,14031 Willow Dr,The Matta Family,,,not-contacted,,,994800,291/00065-481-031,results.xls,41.6055188,-93.8119473,ok
+ccs-404,14001 Willow Dr,The Boffeli Family,,,not-contacted,,,601800,291/00065-481-032,results.xls,41.6057740,-93.8115079,ok
+ccs-405,14032 Lake Pointe Dr,The Deay Family,,,not-contacted,,,734300,291/00065-481-033,results.xls,41.6059420,-93.8118744,ok
+ccs-406,14062 Lake Pointe Dr,The Harshbarger Family,,,not-contacted,,,593300,291/00065-481-034,results.xls,41.6060268,-93.8122717,ok
+ccs-407,14092 Lake Pointe Dr,The Connolly Family,,,not-contacted,,,632300,291/00065-481-035,results.xls,41.6061145,-93.8126289,ok
+ccs-408,14102 Lake Pointe Dr,Pleasant Lake Trust,,,not-contacted,,,632200,291/00065-481-036,results.xls,41.6061603,-93.8129800,ok
+ccs-409,14132 Lake Pointe Dr,Laraine Elizabeth Davis Revocable Trust,,,not-contacted,,,588900,291/00065-481-037,results.xls,41.6061923,-93.8133609,ok
+ccs-410,14162 Lake Pointe Dr,Cheryl L Harding Revocable Trust,,,not-contacted,,,679400,291/00065-481-038,results.xls,41.6063917,-93.8136662,ok
+ccs-411,14161 Lake Pointe Dr,The Hakeman Family,,,not-contacted,,,782700,291/00065-481-039,results.xls,41.6066979,-93.8135478,ok
+ccs-412,14131 Lake Pointe Dr,The Becker Family,,,not-contacted,,,686400,291/00065-481-040,results.xls,41.6067848,-93.8131615,ok
+ccs-413,14101 Lake Pointe Dr,The Goldie Family,,,not-contacted,,,1003100,291/00065-481-041,results.xls,41.6066689,-93.8128093,ok
+ccs-414,14091 Lake Pointe Dr,Ann M Jury Trust,,,not-contacted,,,526700,291/00065-481-042,results.xls,41.6065968,-93.8124578,ok
+ccs-415,14061 Lake Pointe Dr,John P Garbe Revocable Trust,,,not-contacted,,,668600,291/00065-481-043,results.xls,41.6064922,-93.8121069,ok
+ccs-416,14031 Lake Pointe Dr,The Nadel Family,,,not-contacted,,,654300,291/00065-481-044,results.xls,41.6064217,-93.8117541,ok
+ccs-417,14001 Lake Pointe Dr,Kyle & Heidi Hickman Revocable Trust,,,not-contacted,,,682200,291/00065-481-045,results.xls,41.6063343,-93.8113775,ok
+ccs-418,13906 South Shore Dr,The Fleming Family,,,not-contacted,,,582900,291/00065-481-046,results.xls,41.6061777,-93.8110139,ok
+ccs-419,13936 South Shore Dr,Tjtk Estates LLC,,,not-contacted,,,860800,291/00065-481-047,results.xls,41.6065345,-93.8105980,ok
+ccs-420,13966 South Shore Dr,The Njoroge Family,,,not-contacted,,,732200,291/00065-481-048,results.xls,41.6068854,-93.8108537,ok
+ccs-421,13996 South Shore Dr,The Sipe Family,,,not-contacted,,,710200,291/00065-481-049,results.xls,41.6069486,-93.8112638,ok
+ccs-422,14006 South Shore Dr,The Menke Family,,,not-contacted,,,771900,291/00065-481-050,results.xls,41.6069884,-93.8116431,ok
+ccs-423,14036 South Shore Dr,Jms Revocable Trust,,,not-contacted,,,717100,291/00065-481-051,results.xls,41.6070548,-93.8120044,ok
+ccs-424,14066 South Shore Dr,The Lehn Family,,,not-contacted,,,758300,291/00065-481-052,results.xls,41.6071151,-93.8123868,ok
+ccs-425,14096 South Shore Dr,The Adams Family,,,not-contacted,,,615700,291/00065-481-053,results.xls,41.6072129,-93.8127459,ok
+ccs-426,14106 South Shore Dr,The Blanchette Family,,,not-contacted,,,681900,291/00065-481-054,results.xls,41.6073016,-93.8130740,ok
+ccs-427,14136 South Shore Dr,The Hayes Family,,,not-contacted,,,663300,291/00065-481-055,results.xls,41.6073879,-93.8134202,ok
+ccs-428,14166 South Shore Dr,The Fox Family,,,not-contacted,,,647400,291/00065-481-056,results.xls,41.6074684,-93.8137386,ok
+ccs-429,13775 Rosewood Dr,The Howard Family,,,not-contacted,,,586200,291/00065-461-000,results (2).xls,41.6118382,-93.8083388,ok
+ccs-430,13801 Rosewood Dr,The Lynch Family,,,not-contacted,,,557100,291/00065-462-000,results (2).xls,41.6117855,-93.8086735,ok
+ccs-431,13815 Rosewood Dr,The Micka Family,,,not-contacted,,,624600,291/00065-463-000,results (2).xls,41.6117020,-93.8090455,ok
+ccs-432,13831 Rosewood Dr,The Collins Family,,,not-contacted,,,639800,291/00065-464-000,results (2).xls,41.6116204,-93.8094181,ok
+ccs-433,13847 Rosewood Dr,Matthew & Lynn Johnson Living Trust,,,not-contacted,,,653600,291/00065-465-000,results (2).xls,41.6115342,-93.8097872,ok
+ccs-434,13863 Rosewood Dr,The Ward Family,,,not-contacted,,,605400,291/00065-466-000,results (2).xls,41.6114247,-93.8101249,ok
+ccs-435,13915 Rosewood Dr,The Bailey Family,,,not-contacted,,,658100,291/00065-467-000,results (2).xls,41.6112984,-93.8105356,ok
+ccs-436,13935 Rosewood Dr,Cheryl L Rigler Revocable Trust,,,not-contacted,,,811100,291/00065-468-000,results (2).xls,41.6111498,-93.8108667,ok
+ccs-437,13922 Rosewood Dr,Timothy P Derouin Revocable Trust,,,not-contacted,,,710900,291/00065-469-000,results (2).xls,41.6106886,-93.8102861,ok
+ccs-438,13864 Rosewood Dr,The Lessman Family,,,not-contacted,,,615600,291/00065-470-000,results (2).xls,41.6108503,-93.8099791,ok
+ccs-439,13848 Rosewood Dr,The Evans Family,,,not-contacted,,,715000,291/00065-471-000,results (2).xls,41.6109499,-93.8096408,ok
+ccs-440,13832 Rosewood Dr,The Novotny Family,,,not-contacted,,,714800,291/00065-472-000,results (2).xls,41.6110423,-93.8092867,ok
+ccs-441,13816 Rosewood Dr,Mary M Kleinschmit Revocable Trust,,,not-contacted,,,718600,291/00065-473-000,results (2).xls,41.6111144,-93.8089369,ok
+ccs-442,13800 Rosewood Dr,Maxwell S Cosmic Trust,,,not-contacted,,,696400,291/00065-474-000,results (2).xls,41.6111905,-93.8085930,ok
+ccs-443,13780 Rosewood Dr,The Lensing Family,,,not-contacted,,,664900,291/00065-475-000,results (2).xls,41.6112376,-93.8082261,ok
+ccs-444,13760 Rosewood Dr,The Macri Iii Family,,,not-contacted,,,586900,291/00065-476-000,results (2).xls,41.6113564,-93.8079138,ok
