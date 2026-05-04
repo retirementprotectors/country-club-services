@@ -1343,12 +1343,29 @@ function setServiceChecks(containerId, values) {
   container.querySelectorAll('.svc-check').forEach(label => {
     const svc = label.dataset.svc;
     const checked = values.includes(svc);
+    const input = label.querySelector('input');
     label.classList.toggle('checked', checked);
-    label.querySelector('input').checked = checked;
-    label.onclick = function() {
-      const isNowChecked = !label.classList.contains('checked');
-      label.classList.toggle('checked', isNowChecked);
-      label.querySelector('input').checked = isNowChecked;
+    if (input) input.checked = checked;
+    // Toggle on label click. preventDefault stops the browser's default
+    // label→inner-checkbox cascade (which double-fires + cancels the manual toggle).
+    label.onclick = function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const isNow = !label.classList.contains('checked');
+      label.classList.toggle('checked', isNow);
+      const inp = label.querySelector('input');
+      if (inp) inp.checked = isNow;
+      // Persist the change immediately so the user doesn't need to hit Save
+      if (currentHouseId) {
+        const h = houses.find(x => x.id === currentHouseId);
+        if (h) {
+          h.services_interested = getServiceChecks('servicesInterested');
+          h.active_services = getServiceChecks('servicesActive');
+          saveData();
+          if (typeof renderList === 'function') renderList();
+          if (typeof updateCounts === 'function') updateCounts();
+        }
+      }
     };
   });
 }
