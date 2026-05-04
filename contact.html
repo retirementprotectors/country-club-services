@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Brooks — Country Club Services</title>
+  <meta name="description" content="Get in touch with Brooks Millang at Country Club Services. Window washing, lawn & yard, and car detailing in your neighborhood.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <!-- ── HEADER ─────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="wordmark" aria-label="Country Club Services home">
+        <span class="wordmark-top">COUNTRY CLUB</span>
+        <span class="wordmark-rule" aria-hidden="true"></span>
+        <span class="wordmark-sub">SERVICES</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="book.html" class="nav-cta">Book Now</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ── PAGE HERO ───────────────────────────────────────── -->
+  <section class="service-hero" aria-labelledby="contact-heading">
+    <div class="container">
+      <p class="section-label">About &amp; Contact</p>
+      <div class="divider"></div>
+      <h1 id="contact-heading" style="color:var(--cream); font-size:var(--h1); margin-bottom:0.75rem;">
+        Meet Brooks.
+      </h1>
+      <p style="color:rgba(248,244,237,0.7); font-size:1.05rem; max-width:52ch;">
+        A neighbor who shows up, does the work, and does it right.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── ABOUT BROOKS (EXPANDED) ────────────────────────── -->
+  <section class="section section--cream" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="grid-2" style="gap:4rem; align-items:start;">
+        <div>
+          <p class="section-label">Who is Brooks?</p>
+          <div class="divider"></div>
+          <h2 class="section-heading" id="about-heading">A young entrepreneur<br>built on trust.</h2>
+
+          <p style="color:rgba(31,31,31,0.75); margin-bottom:1rem;">
+            Brooks Millang started Country Club Services the old-fashioned way — knocking on doors,
+            summer 2025, with nothing but a handshake offer and a willingness to work. No app. No ads.
+            Just a young entrepreneur who figured out that the best way to build a business is to earn
+            it one neighbor at a time.
+          </p>
+          <p style="color:rgba(31,31,31,0.75);">
+            Every neighbor on the list chose Brooks because he showed up, delivered, and came back.
+            That same reliability is what drives every window wash, every lawn, and every detail job.
+            He takes pride in the work — not because he has to, but because that's how you build
+            something worth building.
+          </p>
+
+          <div style="margin-top:2rem; padding:1.5rem; background:var(--green-light); border-radius:var(--radius-lg); border-left:4px solid var(--gold);">
+            <p style="font-family:'Playfair Display',serif; font-size:1.05rem; font-style:italic; color:var(--green);">
+              "Not happy with the job? Brooks will make it right — that's the guarantee."
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div class="photo-placeholder" style="margin-bottom:2rem;">
+            <span aria-hidden="true">📸</span>
+            <p>{{TBD: photo of Brooks}}</p>
+          </div>
+
+          <!-- Contact card -->
+          <div class="card" style="gap:1.25rem;">
+            <h3 class="card-title">Get in touch</h3>
+            <div>
+              <p class="footer-heading" style="margin-bottom:0.35rem;">Phone / Text</p>
+              <a href="tel:{{TBD-phone}}" style="font-size:1rem; color:var(--green); font-weight:600;">
+                {{TBD: phone number}}
+              </a>
+              <p class="form-note mt-sm">Texting is fastest. Brooks responds same day.</p>
+            </div>
+            <div>
+              <p class="footer-heading" style="margin-bottom:0.35rem;">Email</p>
+              <a href="mailto:{{TBD-email}}" style="font-size:var(--small); color:var(--green);">
+                {{TBD: email address}}
+              </a>
+            </div>
+            <div>
+              <p class="footer-heading" style="margin-bottom:0.35rem;">Service Area</p>
+              <p style="font-size:var(--small); color:rgba(31,31,31,0.7);">
+                {{TBD: name of neighborhood}}, and surrounding streets.
+                Not sure if you're in range? Just ask.
+              </p>
+            </div>
+            <a href="book.html" class="btn btn-primary" style="margin-top:0.5rem;">Book a Service Online</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICE AREA ────────────────────────────────────── -->
+  <section class="section section--white" aria-labelledby="area-heading">
+    <div class="container" style="max-width:700px;">
+      <p class="section-label">Service Area</p>
+      <div class="divider"></div>
+      <h2 class="section-heading" id="area-heading">Your neighborhood. His territory.</h2>
+      <p style="color:rgba(31,31,31,0.7); margin-bottom:1.5rem;">
+        Country Club Services operates in <strong>{{TBD: name of neighborhood}}</strong> and nearby streets.
+        Brooks focuses on a tight service area so he can show up reliably and keep quality high —
+        no driving across town, no cutting corners on time.
+      </p>
+      <p style="color:rgba(31,31,31,0.7);">
+        Not sure if you're in the service area? Text or email Brooks — if he can get to you, he will.
+      </p>
+      <a href="book.html" class="btn btn-green mt-lg" style="display:inline-flex;">Book a Service</a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ──────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div>
+        <a href="index.html" class="wordmark footer-logo" aria-label="Country Club Services">
+          <span class="wordmark-top">COUNTRY CLUB</span>
+          <span class="wordmark-rule" aria-hidden="true"></span>
+          <span class="wordmark-sub">SERVICES</span>
+        </a>
+        <p class="footer-tagline">Neighborhood-trusted. Window washing,<br>lawn &amp; yard, and car detailing.</p>
+        <p class="footer-tagline mt-sm" style="color:rgba(248,244,237,0.3);">{{TBD: insurance status}}</p>
+      </div>
+      <div>
+        <p class="footer-heading">Services</p>
+        <nav class="footer-links">
+          <a href="services/window-washing.html">Window Washing</a>
+          <a href="services/lawn-yardwork.html">Lawn &amp; Yardwork</a>
+          <a href="services/car-detailing.html">Car Detailing</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer-heading">Quick Links</p>
+        <nav class="footer-links">
+          <a href="book.html">Book a Service</a>
+          <a href="index.html">Home</a>
+        </nav>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="footer-year"></span> Country Club Services.</span>
+      <span>Service area: {{TBD: name of neighborhood}}</span>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const siteNav = document.getElementById('site-nav');
+    hamburger.addEventListener('click', () => {
+      const open = siteNav.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', String(open));
+    });
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
