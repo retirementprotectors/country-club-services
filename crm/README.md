@@ -1,5 +1,33 @@
 # Country Club Services CRM
 
+## Initial neighborhood data — already in repo
+
+Brooks' Country Club neighborhood is pre-loaded as a CSV at `../data/neighborhood.csv`:
+- **444 residential properties** across Country Club Blvd, Lake Shore Dr, South Shore Dr, NW 132nd–141st Streets, and Lake Pointe Dr
+- Source: Polk County Assessor public records (consolidated 2026-05-04)
+- Schema: `id, address, household_name, phone, email, status, services_interested, notes, assessed_value, parcel, source_file`
+- All 444 rows default to `status=not-contacted`
+
+### How to load it on first run
+1. Open `crm/index.html` in any modern browser
+2. Click the **Import CSV** button (top-right)
+3. Drop the file `../data/neighborhood.csv` (or open it from your computer)
+4. The CRM stores all 444 rows in localStorage under key `ccs_crm_v1`
+5. Refresh — your neighborhood is now searchable, sortable, and door-knock-ready
+
+### Sorting tips for door-knock day
+- **By assessed value (desc)** — biggest houses first if Brooks wants to start with the highest-paying potential
+- **By street + house number** — efficient walking route
+- **By status = `not-contacted`** — fresh prospects only
+
+### Updating data later
+- The `assessor` source data won't change much year-to-year — re-export from the county site annually
+- Brooks' status updates and service history live in localStorage only (not re-imported on refresh)
+- Use **Export CSV** before any major change for backup
+
+---
+
+
 Browser-based neighborhood CRM for Brooks Millang. No backend, no login, no build step.
 
 ## Open It
