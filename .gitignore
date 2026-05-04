@@ -1,9 +1,9 @@
+# crm/config.js IS committed — contains browser-restricted Maps key (referrer-locked).
+# Server-side keys (.geocode-cache.json, etc.) remain ignored below.
 # Geocoding cache — raw API responses, not committed (regenerate with geocode-neighborhood.js)
 data/.geocode-cache.json
 
 # Maps API key — never commit a real key
-# Copy crm/config.example.js → crm/config.js and fill in your key
-crm/config.js
 
 # OS / editor
 .DS_Store
